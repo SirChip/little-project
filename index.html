@@ -47,12 +47,26 @@
             max-width: 150px;
             border-radius: 50%;
         }
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-right: 10px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Chip's corner</h1>
+            <h1>Chip's Personal Page</h1>
         </header>
         <section>
             <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
@@ -60,13 +74,25 @@
         <section>
             <h2>About Me</h2>
             <p>Hi, I'm Chip, a niche gamer with a potato PC. I enjoy playing a variety of games, but you'll often find me diving into Brawlhalla and Warframe. Sometimes, I also play Among Us with a few friends.</p>
+            <p>Explore my world of gaming and fitness!</p>
+            <a href="#contact" class="button">Get in Touch</a>
+            <a href="#gallery" class="button">View Gallery</a>
         </section>
-        <section>
-            <h2>Here is where you can find and contact me</h2>
+        <section id="contact">
+            <h2>Contact Me</h2>
             <p>Email: <a href="mailto:kidtron4@gmail.com">kidtron4@gmail.com</a></p>
             <p>YouTube: <a href="https://youtube.com/@_sirchip?si=wmpT-45Pmy0nn1Za" target="_blank">SirChip on YouTube</a></p>
             <p>Facebook: <a href="https://www.facebook.com/lilcybers?mibextid=ZbWKwL" target="_blank">Chip on Facebook</a></p>
             <p>Twitter: <a href="https://twitter.com/_SirChip" target="_blank">Chip on Twitter</a></p>
+        </section>
+        <section id="partnerships">
+            <h2>Partnerships & Feedback</h2>
+            <p>For partnerships and feedback, please contact me at <a href="mailto:kidtron4@gmail.com">kidtron4@gmail.com</a>.</p>
+        </section>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <!-- Add your gallery images here -->
+            <p>Gallery coming soon!</p>
         </section>
         <footer>
             <p>&copy; 2024 Chip. All rights reserved.</p>
