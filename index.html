@@ -61,6 +61,42 @@
         .button:hover {
             background-color: #45a049;
         }
+        .game {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+        }
+        .game-details {
+            flex: 1;
+            margin-left: 10px;
+        }
+        .game-title {
+            font-size: 1.2em;
+            margin: 0;
+            color: #333;
+        }
+        .game-description {
+            margin-top: 5px;
+            color: #666;
+        }
+        .game-link {
+            display: block;
+            margin-top: 10px;
+            color: #4CAF50;
+        }
+        .game-link:hover {
+            text-decoration: underline;
+        }
+        .fan-art {
+            margin-top: 20px;
+        }
+        .fan-art p {
+            color: #666;
+        }
     </style>
 </head>
 <body>
@@ -74,7 +110,7 @@
         <section>
             <h2>About Me</h2>
             <p>Hi, I'm Chip, a niche gamer with a potato PC. I enjoy playing a variety of games, but you'll often find me diving into Brawlhalla and Warframe. Sometimes, I also play Among Us with a few friends.</p>
-            <p>Explore my world of gaming and fitness!</p>
+            <p>Explore my world of gaming!</p>
             <a href="#contact" class="button">Get in Touch</a>
             <a href="#gallery" class="button">View Gallery</a>
         </section>
@@ -88,6 +124,29 @@
         <section id="partnerships">
             <h2>Partnerships & Feedback</h2>
             <p>For partnerships and feedback, please contact me at <a href="mailto:kidtron4@gmail.com">kidtron4@gmail.com</a>.</p>
+        </section>
+        <section id="featured-games">
+            <h2>Featured Games</h2>
+            <div class="game">
+                <img src="game1.jpg" alt="Game 1" style="max-width: 150px;">
+                <div class="game-details">
+                    <h3 class="game-title">Brawlhalla</h3>
+                    <p class="game-description">A fast-paced platform fighter game where legends battle it out in intense combat.</p>
+                    <a href="https://www.brawlhalla.com/" class="game-link" target="_blank">Visit Brawlhalla</a>
+                </div>
+            </div>
+            <div class="game">
+                <img src="game2.jpg" alt="Game 2" style="max-width: 150px;">
+                <div class="game-details">
+                    <h3 class="game-title">Warframe</h3>
+                    <p class="game-description">An online action game set in an evolving sci-fi world filled with ninjas, guns, and swords.</p>
+                    <a href="https://www.warframe.com/" class="game-link" target="_blank">Visit Warframe</a>
+                </div>
+            </div>
+        </section>
+        <section id="fan-art" class="fan-art">
+            <h2>Fan Art Showcase</h2>
+            <p>If you have any fan art you'd like to share, please don't hesitate to send it to me on <a href="https://discord.com/invite/aX4tw48ZvE" target="_blank">Discord</a>. I'll showcase the best ones here!</p>
         </section>
         <section id="gallery">
             <h2>Gallery</h2>
