@@ -97,6 +97,54 @@
         .fan-art p {
             color: #666;
         }
+        .art-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .art-item {
+            margin: 10px;
+            text-align: center;
+        }
+        .art-item img {
+            max-width: 200px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .art-item img:hover {
+            transform: scale(1.1);
+        }
+        .recommendation {
+            margin-top: 20px;
+        }
+        .rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .rating-label {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .stars {
+            display: flex;
+            align-items: center;
+        }
+        .star {
+            font-size: 1.2em;
+            color: #FFD700;
+            margin-right: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .star:hover {
+            transform: scale(1.2);
+        }
+        .star.active {
+            color: #FFD700;
+            transform: scale(1.2);
+        }
     </style>
 </head>
 <body>
@@ -146,6 +194,21 @@
         </section>
         <section id="fan-art" class="fan-art">
             <h2>Fan Art Showcase</h2>
+            <div class="art-gallery">
+                <div class="art-item">
+                    <img src="fanart1.jpg" alt="Fan Art 1">
+                    <p>By: GamerArtist123</p>
+                </div>
+                <div class="art-item">
+                    <img src="fanart2.jpg" alt="Fan Art 2">
+                    <p>By: CreativeGamer27</p>
+                </div>
+                <div class="art-item">
+                    <img src="fanart3.jpg" alt="Fan Art 3">
+                    <p>By: ArtisticGamer99</p>
+                </div>
+                <!-- Add more fan art items as needed -->
+            </div>
             <p>If you have any fan art you'd like to share, please don't hesitate to send it to me on <a href="https://discord.com/invite/aX4tw48ZvE" target="_blank">Discord</a>. I'll showcase the best ones here!</p>
         </section>
         <section id="gallery">
@@ -153,9 +216,77 @@
             <!-- Add your gallery images here -->
             <p>Gallery coming soon!</p>
         </section>
+        <section class="recommendation">
+            <h2>Game Recommendations</h2>
+            <p>Looking for a new game to play? Answer a few quick questions and get personalized recommendations!</p>
+            <form id="recommendation-form">
+                <label for="genre">Favorite Genre:</label>
+                <select id="genre" name="genre">
+                    <option value="action">Action</option>
+                    <option value="adventure">Adventure</option>
+                    <option value="strategy">Strategy</option>
+                    <option value="rpg">RPG</option>
+                    <option value="puzzle">Puzzle</option>
+                </select><br><br>
+                <label for="platform">Preferred Platform:</label>
+                <select id="platform" name="platform">
+                    <option value="pc">PC</option>
+                    <option value="console">Console</option>
+                    <option value="mobile">Mobile</option>
+                </select><br><br>
+                <button type="submit" class="button">Get Recommendations</button>
+            </form>
+        </section>
+        <section id="game-ratings">
+            <h2>Game Ratings</h2>
+            <div class="rating">
+                <span class="rating-label">Brawlhalla:</span>
+                <div class="stars">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+            </div>
+            <div class="rating">
+                <span class="rating-label">Warframe:</span>
+                <div class="stars">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+            </div>
+        </section>
         <footer>
             <p>&copy; 2024 Chip. All rights reserved.</p>
         </footer>
     </div>
+    <script>
+        // Interactive game ratings
+        const stars = document.querySelectorAll('.star');
+        
+        stars.forEach(star => {
+            star.addEventListener('click', (e) => {
+                const value = e.target.getAttribute('data-value');
+                const parent = e.target.parentElement;
+                parent.querySelectorAll('.star').forEach(s => s.classList.remove('active'));
+                for (let i = 0; i < value; i++) {
+                    parent.querySelectorAll('.star')[i].classList.add('active');
+                }
+            });
+        });
+
+        // Game recommendations form submission (dummy function for example)
+        const form = document.getElementById('recommendation-form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const genre = document.getElementById('genre').value;
+            const platform = document.getElementById('platform').value;
+            alert(`You selected Genre: ${genre} and Platform: ${platform}. Recommendations feature coming soon!`);
+        });
+    </script>
 </body>
 </html>
