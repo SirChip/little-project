@@ -137,6 +137,24 @@
             font-size: 1.1em;
             color: #666;
         }
+        .audio-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .audio-controls button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+        .audio-controls button:hover {
+            background-color: #45a049;
+        }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -158,6 +176,13 @@
                     });
                 });
             });
+
+            const audio = document.getElementById('background-music');
+            const playButton = document.getElementById('play-music');
+            const pauseButton = document.getElementById('pause-music');
+
+            playButton.addEventListener('click', () => audio.play());
+            pauseButton.addEventListener('click', () => audio.pause());
         });
 
         function recommendGames() {
@@ -203,7 +228,7 @@
         <section id="featured-games">
             <h2>Featured Games</h2>
             <div class="game">
-                <img src="brawlhalla-picture.png" alt="Brawlhalla" style="max-width: 150px;">
+                <img src="game1.png" alt="Brawlhalla" style="max-width: 150px;">
                 <div class="game-details">
                     <h3 class="game-title">Brawlhalla</h3>
                     <p class="game-description">A fast-paced platform fighter game where legends battle it out in intense combat.</p>
@@ -211,7 +236,7 @@
                 </div>
             </div>
             <div class="game">
-                <img src="warframe-picture.jpg" alt="Warframe" style="max-width: 150px;">
+                <img src="game2.jpg" alt="Warframe" style="max-width: 150px;">
                 <div class="game-details">
                     <h3 class="game-title">Warframe</h3>
                     <p class="game-description">An online action game set in an evolving sci-fi world filled with ninjas, guns, and swords.</p>
@@ -267,6 +292,14 @@
                 <a href="https://discord.com/invite/aX4tw48ZvE" target="_blank" class="button">Join My Discord</a>
             </div>
         </section>
+        <audio id="background-music" loop>
+            <source src="background-music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="audio-controls">
+            <button id="play-music">Play Music</button>
+            <button id="pause-music">Pause Music</button>
+        </div>
     </div>
 </body>
 </html>
