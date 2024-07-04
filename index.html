@@ -47,34 +47,103 @@
             max-width: 150px;
             border-radius: 50%;
         }
-
-        /* CSS for Tech-Neon theme ratings */
-        .low-rating {
-            color: #ff5733; /* Neon red for low ratings */
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-right: 10px;
         }
-
-        .medium-rating {
-            color: #33a5ff; /* Electric blue for medium ratings */
+        .button:hover {
+            background-color: #45a049;
         }
-
-        .high-rating {
-            color: #39ff14; /* Bright neon green for high ratings */
+        .game {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
         }
-
-        .star {
-            font-size: 1.5em; /* Increase star size for emphasis */
-            color: rgba(255, 255, 255, 0.6); /* Default star color */
-            transition: transform 0.2s, color 0.2s;
+        .game-details {
+            flex: 1;
+            margin-left: 10px;
+        }
+        .game-title {
+            font-size: 1.2em;
+            margin: 0;
+            color: #333;
+        }
+        .game-description {
+            margin-top: 5px;
+            color: #666;
+        }
+        .game-link {
+            display: block;
+            margin-top: 10px;
+            color: #4CAF50;
+        }
+        .game-link:hover {
+            text-decoration: underline;
+        }
+        .fan-art {
+            margin-top: 20px;
+        }
+        .fan-art p {
+            color: #666;
+        }
+        .art-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .art-item {
+            margin: 10px;
+            text-align: center;
+        }
+        .art-item img {
+            max-width: 200px;
+            border-radius: 5px;
             cursor: pointer;
+            transition: transform 0.3s;
         }
-
+        .art-item img:hover {
+            transform: scale(1.1);
+        }
+        .recommendation {
+            margin-top: 20px;
+        }
+        .rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .rating-label {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .stars {
+            display: flex;
+            align-items: center;
+        }
+        .star {
+            font-size: 1.2em;
+            color: #FFD700;
+            margin-right: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
         .star:hover {
-            transform: scale(1.2); /* Grow stars on hover */
-            color: rgba(255, 255, 255, 1); /* Brighten stars on hover */
+            transform: scale(1.2);
         }
-
         .star.active {
-            color: rgba(255, 255, 255, 1); /* Bright color for active stars */
+            color: #FFD700;
+            transform: scale(1.2);
         }
     </style>
 </head>
@@ -89,46 +158,78 @@
         <section>
             <h2>About Me</h2>
             <p>Hi, I'm Chip, a niche gamer with a potato PC. I enjoy playing a variety of games, but you'll often find me diving into Brawlhalla and Warframe. Sometimes, I also play Among Us with a few friends.</p>
+            <p>Explore my world of gaming!</p>
+            <a href="#contact" class="button">Get in Touch</a>
+            <a href="#gallery" class="button">View Gallery</a>
         </section>
-        <section>
+        <section id="contact">
             <h2>Contact Me</h2>
             <p>Email: <a href="mailto:kidtron4@gmail.com">kidtron4@gmail.com</a></p>
             <p>YouTube: <a href="https://youtube.com/@_sirchip?si=wmpT-45Pmy0nn1Za" target="_blank">SirChip on YouTube</a></p>
             <p>Facebook: <a href="https://www.facebook.com/lilcybers?mibextid=ZbWKwL" target="_blank">Chip on Facebook</a></p>
             <p>Twitter: <a href="https://twitter.com/_SirChip" target="_blank">Chip on Twitter</a></p>
         </section>
-        <section>
-            <h2>Featured Games</h2>
-            <p>Check out my favorite games:</p>
-            <ul>
-                <li><a href="https://www.brawlhalla.com/" target="_blank">Brawlhalla</a></li>
-                <li><a href="https://www.warframe.com/" target="_blank">Warframe</a></li>
-            </ul>
-        </section>
-        <section>
-            <h2>Fan Art Showcase</h2>
-            <p>If you have any kind of fan art you wish to share, please don't hesitate to share it with me on my Discord. I will showcase the best ones here!</p>
-        </section>
-        <section>
-            <h2>Gaming Setup</h2>
-            <p>Here's a glimpse of my gaming setup:</p>
-            <img src="gaming-setup.jpg" alt="Gaming Setup">
+        <section id="partnerships">
+            <h2>Partnerships & Feedback</h2>
             <p>For partnerships and feedback, please contact me at <a href="mailto:kidtron4@gmail.com">kidtron4@gmail.com</a>.</p>
         </section>
-        <section id="recommendation-form">
+        <section id="featured-games">
+            <h2>Featured Games</h2>
+            <div class="game">
+                <img src="game1.jpg" alt="Game 1" style="max-width: 150px;">
+                <div class="game-details">
+                    <h3 class="game-title">Brawlhalla</h3>
+                    <p class="game-description">A fast-paced platform fighter game where legends battle it out in intense combat.</p>
+                    <a href="https://www.brawlhalla.com/" class="game-link" target="_blank">Visit Brawlhalla</a>
+                </div>
+            </div>
+            <div class="game">
+                <img src="game2.jpg" alt="Game 2" style="max-width: 150px;">
+                <div class="game-details">
+                    <h3 class="game-title">Warframe</h3>
+                    <p class="game-description">An online action game set in an evolving sci-fi world filled with ninjas, guns, and swords.</p>
+                    <a href="https://www.warframe.com/" class="game-link" target="_blank">Visit Warframe</a>
+                </div>
+            </div>
+        </section>
+        <section id="fan-art" class="fan-art">
+            <h2>Fan Art Showcase</h2>
+            <div class="art-gallery">
+                <div class="art-item">
+                    <img src="fanart1.jpg" alt="Fan Art 1">
+                    <p>By: GamerArtist123</p>
+                </div>
+                <div class="art-item">
+                    <img src="fanart2.jpg" alt="Fan Art 2">
+                    <p>By: CreativeGamer27</p>
+                </div>
+                <div class="art-item">
+                    <img src="fanart3.jpg" alt="Fan Art 3">
+                    <p>By: ArtisticGamer99</p>
+                </div>
+                <!-- Add more fan art items as needed -->
+            </div>
+            <p>If you have any fan art you'd like to share, please don't hesitate to send it to me on <a href="https://discord.com/invite/aX4tw48ZvE" target="_blank">Discord</a>. I'll showcase the best ones here!</p>
+        </section>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <!-- Add your gallery images here -->
+            <p>Gallery coming soon!</p>
+        </section>
+        <section class="recommendation">
             <h2>Game Recommendations</h2>
-            <p>Let me recommend games for you based on your preferences:</p>
-            <form>
-                <label for="genre">Select your favorite genre:</label>
-                <select id="genre">
+            <p>Looking for a new game to play? Answer a few quick questions and get personalized recommendations!</p>
+            <form id="recommendation-form">
+                <label for="genre">Favorite Genre:</label>
+                <select id="genre" name="genre">
                     <option value="action">Action</option>
                     <option value="adventure">Adventure</option>
-                    <option value="rpg">RPG</option>
                     <option value="strategy">Strategy</option>
-                    <option value="simulation">Simulation</option>
+                    <option value="rpg">RPG</option>
+                    <option value="puzzle">Puzzle</option>
                 </select><br><br>
-                <label for="platform">Select your preferred platform:</label>
-                <select id="platform">
+                <label for="platform">Preferred Platform:</label>
+                <select id="platform" name="platform">
                     <option value="pc">PC</option>
                     <option value="console">Console</option>
                     <option value="mobile">Mobile</option>
@@ -138,6 +239,7 @@
         </section>
         <section id="game-ratings">
             <h2>Game Ratings</h2>
+            <!-- Dynamic game ratings based on data -->
             <div class="rating">
                 <span class="rating-label">Brawlhalla:</span>
                 <div class="stars">
@@ -158,51 +260,57 @@
                     <span class="star" data-value="5">&#9733;</span>
                 </div>
             </div>
-        </section>
-        <footer>
-            <p>&copy; 2024 Chip. All rights reserved.</p>
-        </footer>
-    </div>
-    <script>
-        // JavaScript to handle star ratings with Tech-Neon theme colors
-        const stars = document.querySelectorAll('.star');
+            <!-- Dynamic generation of game ratings based on gamesData -->
+            <script>
+                const gamesData = [
+                    { title: "Call of Duty: Modern Warfare", genre: "action", platforms: ["PC", "Xbox", "PlayStation"] },
+                    { title: "The Legend of Zelda: Breath of the Wild", genre: "adventure", platforms: ["Nintendo Switch"] },
+                    { title: "Civilization VI", genre: "strategy", platforms: ["PC", "Mac", "Linux"] },
+                    { title: "The Witcher 3: Wild Hunt", genre: "rpg", platforms: ["PC", "Xbox", "PlayStation", "Nintendo Switch"] },
+                    { title: "Portal 2", genre: "puzzle", platforms: ["PC", "Xbox", "PlayStation"] },
+                    { title: "Overwatch", genre: "action", platforms: ["PC", "Xbox", "PlayStation"] },
+                    { title: "Red Dead Redemption 2", genre: "adventure", platforms: ["PC", "Xbox", "PlayStation"] },
+                    { title: "XCOM 2", genre: "strategy", platforms: ["PC", "Xbox", "PlayStation"] },
+                    { title: "Divinity: Original Sin 2", genre: "rpg", platforms: ["PC", "Xbox", "PlayStation"] },
+                    { title: "The Witness", genre: "puzzle", platforms: ["PC", "Xbox", "PlayStation"] },
+                    { title: "Fortnite", genre: "action", platforms: ["PC", "Xbox", "PlayStation", "Nintendo Switch"] },
+                    { title: "Assassin's Creed Odyssey", genre: "adventure", platforms: ["PC", "Xbox", "PlayStation"] },
+                    { title: "Total War: Three Kingdoms", genre: "strategy", platforms: ["PC", "Mac", "Linux"] },
+                    { title: "Cyberpunk 2077", genre: "rpg", platforms: ["PC", "Xbox", "PlayStation"] },
+                    { title: "The Talos Principle", genre: "puzzle", platforms: ["PC", "Xbox", "PlayStation"] }
+                    // Add more game data entries as needed
+                ];
 
-        stars.forEach(star => {
-            star.addEventListener('click', (e) => {
-                const value = parseInt(e.target.getAttribute('data-value'));
-                const parent = e.target.parentElement;
+                const gameRatingsSection = document.getElementById('game-ratings');
 
-                // Remove all existing rating classes
-                parent.querySelectorAll('.star').forEach(s => s.classList.remove('low-rating', 'medium-rating', 'high-rating'));
+                gamesData.forEach(game => {
+                    const ratingDiv = document.createElement('div');
+                    ratingDiv.classList.add('rating');
 
-                // Add appropriate rating class based on value
-                if (value <= 2) {
-                    parent.classList.add('low-rating');
-                } else if (value <= 3) {
-                    parent.classList.add('medium-rating');
-                } else {
-                    parent.classList.add('high-rating');
-                }
+                    const ratingLabel = document.createElement('span');
+                    ratingLabel.classList.add('rating-label');
+                    ratingLabel.textContent = game.title + ':';
+                    ratingDiv.appendChild(ratingLabel);
 
-                // Add 'active' class to clicked star and previous stars
-                parent.querySelectorAll('.star').forEach((s, index) => {
-                    if (index < value) {
-                        s.classList.add('active');
-                    } else {
-                        s.classList.remove('active');
+                    const starsDiv = document.createElement('div');
+                    starsDiv.classList.add('stars');
+                    for (let i = 1; i <= 5; i++) {
+                        const starSpan = document.createElement('span');
+                        starSpan.classList.add('star');
+                        starSpan.setAttribute('data-value', i);
+                        starSpan.innerHTML = '&#9733;';
+                        starsDiv.appendChild(starSpan);
                     }
-                });
-            });
-        });
+                    ratingDiv.appendChild(starsDiv);
 
-        // Game recommendations form submission (dummy function for example)
-        const form = document.getElementById('recommendation-form');
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const genre = document.getElementById('genre').value;
-            const platform = document.getElementById('platform').value;
-            alert(`You selected Genre: ${genre} and Platform: ${platform}. Recommendations feature coming soon!`);
-        });
-    </script>
-</body>
-</html>
+                    gameRatingsSection.appendChild(ratingDiv);
+                });
+
+                // Interactive game ratings
+                const stars = document.querySelectorAll('.star');
+
+                stars.forEach(star => {
+                    star.addEventListener('click', (e) => {
+                        const value = e.target.getAttribute('data-value');
+                        const parent = e.target.parentElement;
+                        parent.querySelectorAll('.star').forEach(s => s
