@@ -3,85 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chip's Personal Page</title>
+    <title>Chip's Corner</title>
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #2C2F33;
-            color: #FFF;
+            background-color: #f0f0f0;
+            color: #333;
         }
         .container {
-            width: 90%;
-            max-width: 1200px;
+            width: 80%;
             margin: 0 auto;
             padding: 20px;
-            background-color: #23272A;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         header {
             text-align: center;
             padding: 50px 0;
-            border-bottom: 2px solid #7289DA;
         }
         header h1 {
             margin: 0;
-            font-size: 3em;
-            color: #7289DA;
+            font-size: 2.5em;
+            color: #4CAF50;
         }
-        nav {
-            display: flex;
-            justify-content: center;
+        section {
             margin: 20px 0;
         }
-        nav a {
-            color: #FFF;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9em;
+            color: #777;
         }
-        nav a:hover {
-            background-color: #7289DA;
+        a {
+            color: #4CAF50;
+            text-decoration: none;
         }
         .profile-picture {
             display: block;
-            margin: 20px auto;
-            max-width: 200px;
+            margin: 0 auto;
+            max-width: 150px;
             border-radius: 50%;
-        }
-        section {
-            margin: 40px 0;
-        }
-        section h2 {
-            border-bottom: 2px solid #7289DA;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        .about {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .about p {
-            max-width: 800px;
-            text-align: center;
         }
         .button {
             display: inline-block;
-            background-color: #7289DA;
+            background-color: #4CAF50;
             color: white;
             padding: 10px 20px;
             text-align: center;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s;
-            margin: 10px;
+            margin-right: 10px;
         }
         .button:hover {
-            background-color: #5B6EAE;
+            background-color: #45a049;
         }
         .game {
             display: flex;
@@ -89,30 +67,26 @@
             align-items: center;
             margin-bottom: 20px;
             padding: 10px;
-            background-color: #2C2F33;
+            background-color: #f2f2f2;
             border-radius: 5px;
-        }
-        .game img {
-            max-width: 150px;
-            border-radius: 8px;
         }
         .game-details {
             flex: 1;
-            margin-left: 20px;
+            margin-left: 10px;
         }
         .game-title {
-            font-size: 1.5em;
+            font-size: 1.2em;
             margin: 0;
-            color: #FFF;
+            color: #333;
         }
         .game-description {
-            margin-top: 10px;
-            color: #CCC;
+            margin-top: 5px;
+            color: #666;
         }
         .game-link {
             display: block;
             margin-top: 10px;
-            color: #7289DA;
+            color: #4CAF50;
         }
         .game-link:hover {
             text-decoration: underline;
@@ -134,7 +108,7 @@
             align-items: center;
         }
         .star {
-            font-size: 1.5em;
+            font-size: 1.2em;
             margin-right: 5px;
             cursor: pointer;
             transition: transform 0.2s;
@@ -143,19 +117,25 @@
             transform: scale(1.2);
         }
         .star.red {
-            color: #FF4C4C;
+            color: red;
         }
         .star.orange {
-            color: #FFA500;
+            color: orange;
         }
         .star.green {
-            color: #00FF00;
+            color: green;
         }
-        footer {
+        .fan-art-section {
             text-align: center;
             padding: 20px 0;
-            font-size: 0.9em;
-            color: #CCC;
+            background-color: #f9f9f9;
+        }
+        .fan-art-section h2 {
+            color: #4CAF50;
+        }
+        .fan-art-section p {
+            font-size: 1.1em;
+            color: #666;
         }
         .audio-controls {
             display: flex;
@@ -163,38 +143,74 @@
             margin-top: 20px;
         }
         .audio-controls button {
-            background-color: #7289DA;
+            background-color: #4CAF50;
             color: white;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s;
             margin: 0 10px;
+            transition: background-color 0.3s;
         }
         .audio-controls button:hover {
-            background-color: #5B6EAE;
+            background-color: #45a049;
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const stars = document.querySelectorAll(".star");
+            stars.forEach(star => {
+                star.addEventListener("click", function() {
+                    const value = this.getAttribute("data-value");
+                    this.parentNode.querySelectorAll(".star").forEach(s => {
+                        s.classList.remove("red", "orange", "green");
+                        if (s.getAttribute("data-value") <= value) {
+                            if (value <= 2) {
+                                s.classList.add("red");
+                            } else if (value == 3) {
+                                s.classList.add("orange");
+                            } else {
+                                s.classList.add("green");
+                            }
+                        }
+                    });
+                });
+            });
+
+            const audio = document.getElementById('background-music');
+            const playButton = document.getElementById('play-music');
+            const pauseButton = document.getElementById('pause-music');
+
+            playButton.addEventListener('click', () => audio.play());
+            pauseButton.addEventListener('click', () => audio.pause());
+        });
+
+        function recommendGames() {
+            const genre = document.querySelector('#genre').value;
+            const recommendations = {
+                action: ["Devil May Cry", "Doom Eternal", "Sekiro: Shadows Die Twice"],
+                rpg: ["The Witcher 3", "Persona 5", "Divinity: Original Sin 2"],
+                strategy: ["Civilization VI", "Starcraft II", "XCOM 2"],
+                simulation: ["The Sims 4", "Stardew Valley", "Factorio"]
+            };
+            const recommendedGames = recommendations[genre] || [];
+            const recommendationsDiv = document.querySelector('#recommendations');
+            recommendationsDiv.innerHTML = `<h3>Recommended Games:</h3><ul>${recommendedGames.map(game => `<li>${game}</li>`).join('')}</ul>`;
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>Chip's Corner</h1>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <a href="#featured-games">Featured Games</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#game-ratings">Game Ratings</a>
-                <a href="#game-recommendations">Recommendations</a>
-                <a href="#fan-art">Fan Art</a>
-            </nav>
         </header>
-        <section id="about" class="about">
+        <section>
             <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
+        </section>
+        <section>
             <h2>About Me</h2>
-            <p>Hi, I'm Chip, a niche gamer with a potato PC. I enjoy playing a variety of games, but you'll often find me diving into Brawlhalla and Warframe. Sometimes, I also play Among Us with a few friends. Explore my world of gaming!</p>
+            <p>Hi, I'm Chip, a niche gamer with a potato PC. I enjoy playing a variety of games, but you'll often find me diving into Brawlhalla and Warframe. Sometimes, I also play Among Us with a few friends.</p>
+            <p>Explore my world of gaming!</p>
             <a href="#contact" class="button">Get in Touch</a>
             <a href="#gallery" class="button">View Gallery</a>
         </section>
@@ -205,165 +221,85 @@
             <p>Facebook: <a href="https://www.facebook.com/lilcybers?mibextid=ZbWKwL" target="_blank">Chip on Facebook</a></p>
             <p>Twitter: <a href="https://twitter.com/_SirChip" target="_blank">Chip on Twitter</a></p>
         </section>
+        <section id="partnerships">
+            <h2>Partnerships & Feedback</h2>
+            <p>For partnerships and feedback, please contact me at <a href="mailto:kidtron4@gmail.com">kidtron4@gmail.com</a>.</p>
+        </section>
         <section id="featured-games">
             <h2>Featured Games</h2>
             <div class="game">
-                <img src="brawlhalla-picture.png" alt="Brawlhalla">
+                <img src="brawlhalla-picture.png" alt="Brawlhalla" style="max-width: 150px;">
                 <div class="game-details">
                     <h3 class="game-title">Brawlhalla</h3>
                     <p class="game-description">A fast-paced platform fighter game where legends battle it out in intense combat.</p>
-                    <a href="https://www.brawlhalla.com/" class="game-link" target="_blank">Visit Brawlhalla</a>
+                    <a href="https://www.brawlhalla.com/" class="game-link" target="_blank">Visit the Brawlhalla website</a>
                 </div>
             </div>
             <div class="game">
-                <img src="warframe-picture.jpg" alt="Warframe">
+                <img src="warframe-picture.jpg" alt="Warframe" style="max-width: 150px;">
                 <div class="game-details">
                     <h3 class="game-title">Warframe</h3>
                     <p class="game-description">An online action game set in an evolving sci-fi world filled with ninjas, guns, and swords.</p>
-                    <a href="https://www.warframe.com/" class="game-link" target="_blank">Visit Warframe</a>
+                    <a href="https://www.warframe.com/" class="game-link" target="_blank">Learn more about Warframe</a>
                 </div>
             </div>
         </section>
         <section id="gallery">
             <h2>Gallery</h2>
+            <!-- Add your gallery images here -->
             <p>Gallery coming soon!</p>
         </section>
         <section id="game-ratings">
             <h2>Game Ratings</h2>
+            <!-- Dynamic game ratings based on data -->
             <div class="rating">
                 <span class="rating-label">Brawlhalla:</span>
                 <div class="stars">
-                    <span class="star red" data-value="1">&#9733;</span>
-                    <span class="star red" data-value="2">&#9733;</span>
-                    <span class="star orange" data-value="3">&#9733;</span>
-                    <span class="star green" data-value="4">&#9733;</span>
-                    <span class="star green" data-value="5">&#9733;</span>
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
                 </div>
             </div>
             <div class="rating">
                 <span class="rating-label">Warframe:</span>
                 <div class="stars">
-                    <span class="star red" data-value="1">&#9733;</span>
-                    <span class="star red" data-value="2">&#9733;</span>
-                    <span class="star orange" data-value="3">&#9733;</span>
-                    <span class="star green" data-value="4">&#9733;</span>
-                    <span class="star green" data-value="5">&#9733;</span>
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
                 </div>
             </div>
         </section>
         <section id="game-recommendations">
             <h2>Game Recommendations</h2>
-            <form id="recommendation-form">
-                <label for="genre">Favorite Genre:</label>
-                <select id="genre" name="genre">
-                    <option value="action">Action</option>
-                    <option value="adventure">Adventure</option>
-                    <option value="rpg">RPG</option>
-                    <option value="strategy">Strategy</option>
-                    <option value="fps">FPS</option>
-                </select>
-                <br>
-                <label for="platform">Preferred Platform:</label>
-                <select id="platform" name="platform">
-                    <option value="pc">PC</option>
-                    <option value="console">Console</option>
-                    <option value="mobile">Mobile</option>
-                </select>
-                <br>
-                <button type="button" onclick="recommendGames()">Get Recommendations</button>
-            </form>
-            <div id="recommendations" class="recommendation"></div>
+            <p>Get personalized game recommendations based on your favorite genre:</p>
+            <select id="genre" onchange="recommendGames()">
+                <option value="">Select a genre</option>
+                <option value="action">Action</option>
+                <option value="rpg">RPG</option>
+                <option value="strategy">Strategy</option>
+                <option value="simulation">Simulation</option>
+            </select>
+            <div id="recommendations"></div>
         </section>
         <section id="fan-art">
-            <h2>Fan Art</h2>
-            <p>If you have any fan art you wish to share, send it through my <a href="https://discord.com/invite/aX4tw48ZvE" target="_blank">Discord</a> and I will showcase the best ones here!</p>
-            <div id="fan-art-gallery">
-                <p>Fan art gallery coming soon!</p>
+            <div class="fan-art-section">
+                <h2>Fan Art Showcase</h2>
+                <p>If you have any fan art you wish to share, send it through my Discord and I will showcase the best ones here!</p>
+                <a href="https://discord.com/invite/aX4tw48ZvE" target="_blank" class="button">Join My Discord</a>
             </div>
         </section>
+        <audio id="background-music" loop>
+            <source src="background-music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
         <div class="audio-controls">
-            <button onclick="toggleMusic()">Toggle Background Music</button>
+            <button id="play-music">Play Music</button>
+            <button id="pause-music">Pause Music</button>
         </div>
     </div>
-    <audio id="background-music" loop>
-        <source src="background-music.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <script>
-        const stars = document.querySelectorAll('.star');
-        stars.forEach(star => {
-            star.addEventListener('click', () => {
-                const value = star.getAttribute('data-value');
-                const parent = star.parentElement;
-                parent.querySelectorAll('.star').forEach(s => {
-                    s.classList.remove('active');
-                });
-                star.classList.add('active');
-                if (value <= 2) {
-                    parent.querySelectorAll('.star').forEach(s => {
-                        s.classList.remove('orange', 'green');
-                        s.classList.add('red');
-                    });
-                } else if (value == 3) {
-                    parent.querySelectorAll('.star').forEach(s => {
-                        s.classList.remove('red', 'green');
-                        s.classList.add('orange');
-                    });
-                } else {
-                    parent.querySelectorAll('.star').forEach(s => {
-                        s.classList.remove('red', 'orange');
-                        s.classList.add('green');
-                    });
-                }
-            });
-        });
-
-        function recommendGames() {
-            const genre = document.getElementById('genre').value;
-            const platform = document.getElementById('platform').value;
-            const recommendations = {
-                'action': {
-                    'pc': ['Doom Eternal', 'Devil May Cry 5'],
-                    'console': ['God of War', 'Spider-Man'],
-                    'mobile': ['PUBG Mobile', 'Call of Duty Mobile']
-                },
-                'adventure': {
-                    'pc': ['The Witcher 3', 'Cyberpunk 2077'],
-                    'console': ['Uncharted 4', 'The Last of Us'],
-                    'mobile': ['Monument Valley', 'Oceanhorn']
-                },
-                'rpg': {
-                    'pc': ['Divinity: Original Sin 2', 'Baldur\'s Gate 3'],
-                    'console': ['Persona 5', 'Final Fantasy XV'],
-                    'mobile': ['Genshin Impact', 'Dragon Quest of the Stars']
-                },
-                'strategy': {
-                    'pc': ['Civilization VI', 'StarCraft II'],
-                    'console': ['Fire Emblem: Three Houses', 'XCOM 2'],
-                    'mobile': ['Clash of Clans', 'Plants vs. Zombies']
-                },
-                'fps': {
-                    'pc': ['Counter-Strike: Global Offensive', 'Valorant'],
-                    'console': ['Halo Infinite', 'Call of Duty: Warzone'],
-                    'mobile': ['Modern Combat 5', 'Dead Trigger 2']
-                }
-            };
-            const selectedGames = recommendations[genre][platform];
-            const recommendationsDiv = document.getElementById('recommendations');
-            recommendationsDiv.innerHTML = `<h3>Recommended Games:</h3><ul>${selectedGames.map(game => `<li>${game}</li>`).join('')}</ul>`;
-        }
-
-        let isMusicPlaying = false;
-        const backgroundMusic = document.getElementById('background-music');
-
-        function toggleMusic() {
-            if (isMusicPlaying) {
-                backgroundMusic.pause();
-            } else {
-                backgroundMusic.play();
-            }
-            isMusicPlaying = !isMusicPlaying;
-        }
-    </script>
 </body>
 </html>
