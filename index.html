@@ -109,16 +109,11 @@
         }
         .star {
             font-size: 1.2em;
-            color: #FFD700;
             margin-right: 5px;
             cursor: pointer;
-            transition: transform 0.2s;
+            transition: transform 0.2s, color 0.2s;
         }
         .star:hover {
-            transform: scale(1.2);
-        }
-        .star.active {
-            color: #FFD700;
             transform: scale(1.2);
         }
     </style>
@@ -198,5 +193,36 @@
             </div>
         </section>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const stars = document.querySelectorAll('.star');
+            stars.forEach(star => {
+                star.addEventListener('click', setRating);
+            });
+
+            function setRating(event) {
+                const clickedStar = event.target;
+                const ratingValue = parseInt(clickedStar.getAttribute('data-value'));
+                const starContainer = clickedStar.parentElement;
+                const allStars = starContainer.querySelectorAll('.star');
+
+                allStars.forEach(star => {
+                    star.classList.remove('active');
+                    star.style.color = '#FFD700'; // Default color (gold)
+                });
+
+                for (let i = 0; i < ratingValue; i++) {
+                    allStars[i].classList.add('active');
+                    if (ratingValue <= 2) {
+                        allStars[i].style.color = 'red';
+                    } else if (ratingValue === 3) {
+                        allStars[i].style.color = 'orange';
+                    } else {
+                        allStars[i].style.color = 'green';
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
