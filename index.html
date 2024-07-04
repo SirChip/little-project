@@ -157,7 +157,7 @@
         </section>
         <section>
             <h2>About Me</h2>
-            <p>Hi, I'm Chip, a niche gamer with a potato PC. I enjoy playing a variety of games, but you'll often find me diving into Brawlhalla and Warframe. Sometimes, I also play Among Us with a few friends.</p>
+            <p>Hi, I'm Chip, a niche gamer with a potato PC. I enjoy playing a variety of games, but you'll often find me diving into Brawlhalla, Warframe, and Valorant. Sometimes, I also play Among Us with a few friends.</p>
             <p>Explore my world of gaming!</p>
             <a href="#contact" class="button">Get in Touch</a>
             <a href="#gallery" class="button">View Gallery</a>
@@ -189,6 +189,14 @@
                     <h3 class="game-title">Warframe</h3>
                     <p class="game-description">An online action game set in an evolving sci-fi world filled with ninjas, guns, and swords.</p>
                     <a href="https://www.warframe.com/" class="game-link" target="_blank">Visit Warframe</a>
+                </div>
+            </div>
+            <div class="game">
+                <img src="game3.jpg" alt="Game 3" style="max-width: 150px;">
+                <div class="game-details">
+                    <h3 class="game-title">Valorant</h3>
+                    <p class="game-description">A tactical first-person shooter game where precise gunplay meets unique agent abilities.</p>
+                    <a href="https://playvalorant.com/" class="game-link" target="_blank">Visit Valorant</a>
                 </div>
             </div>
         </section>
@@ -239,7 +247,6 @@
         </section>
         <section id="game-ratings">
             <h2>Game Ratings</h2>
-            <!-- Dynamic game ratings based on data -->
             <div class="rating">
                 <span class="rating-label">Brawlhalla:</span>
                 <div class="stars">
@@ -260,57 +267,43 @@
                     <span class="star" data-value="5">&#9733;</span>
                 </div>
             </div>
-            <!-- Dynamic generation of game ratings based on gamesData -->
-            <script>
-                const gamesData = [
-                    { title: "Call of Duty: Modern Warfare", genre: "action", platforms: ["PC", "Xbox", "PlayStation"] },
-                    { title: "The Legend of Zelda: Breath of the Wild", genre: "adventure", platforms: ["Nintendo Switch"] },
-                    { title: "Civilization VI", genre: "strategy", platforms: ["PC", "Mac", "Linux"] },
-                    { title: "The Witcher 3: Wild Hunt", genre: "rpg", platforms: ["PC", "Xbox", "PlayStation", "Nintendo Switch"] },
-                    { title: "Portal 2", genre: "puzzle", platforms: ["PC", "Xbox", "PlayStation"] },
-                    { title: "Overwatch", genre: "action", platforms: ["PC", "Xbox", "PlayStation"] },
-                    { title: "Red Dead Redemption 2", genre: "adventure", platforms: ["PC", "Xbox", "PlayStation"] },
-                    { title: "XCOM 2", genre: "strategy", platforms: ["PC", "Xbox", "PlayStation"] },
-                    { title: "Divinity: Original Sin 2", genre: "rpg", platforms: ["PC", "Xbox", "PlayStation"] },
-                    { title: "The Witness", genre: "puzzle", platforms: ["PC", "Xbox", "PlayStation"] },
-                    { title: "Fortnite", genre: "action", platforms: ["PC", "Xbox", "PlayStation", "Nintendo Switch"] },
-                    { title: "Assassin's Creed Odyssey", genre: "adventure", platforms: ["PC", "Xbox", "PlayStation"] },
-                    { title: "Total War: Three Kingdoms", genre: "strategy", platforms: ["PC", "Mac", "Linux"] },
-                    { title: "Cyberpunk 2077", genre: "rpg", platforms: ["PC", "Xbox", "PlayStation"] },
-                    { title: "The Talos Principle", genre: "puzzle", platforms: ["PC", "Xbox", "PlayStation"] }
-                    // Add more game data entries as needed
-                ];
+            <div class="rating">
+                <span class="rating-label">Valorant:</span>
+                <div class="stars">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2024 Chip. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        // Interactive game ratings
+        const stars = document.querySelectorAll('.star');
+        
+        stars.forEach(star => {
+            star.addEventListener('click', (e) => {
+                const value = e.target.getAttribute('data-value');
+                const parent = e.target.parentElement;
+                parent.querySelectorAll('.star').forEach(s => s.classList.remove('active'));
+                for (let i = 0; i < value; i++) {
+                    parent.querySelectorAll('.star')[i].classList.add('active');
+                }
+            });
+        });
 
-                const gameRatingsSection = document.getElementById('game-ratings');
-
-                gamesData.forEach(game => {
-                    const ratingDiv = document.createElement('div');
-                    ratingDiv.classList.add('rating');
-
-                    const ratingLabel = document.createElement('span');
-                    ratingLabel.classList.add('rating-label');
-                    ratingLabel.textContent = game.title + ':';
-                    ratingDiv.appendChild(ratingLabel);
-
-                    const starsDiv = document.createElement('div');
-                    starsDiv.classList.add('stars');
-                    for (let i = 1; i <= 5; i++) {
-                        const starSpan = document.createElement('span');
-                        starSpan.classList.add('star');
-                        starSpan.setAttribute('data-value', i);
-                        starSpan.innerHTML = '&#9733;';
-                        starsDiv.appendChild(starSpan);
-                    }
-                    ratingDiv.appendChild(starsDiv);
-
-                    gameRatingsSection.appendChild(ratingDiv);
-                });
-
-                // Interactive game ratings
-                const stars = document.querySelectorAll('.star');
-
-                stars.forEach(star => {
-                    star.addEventListener('click', (e) => {
-                        const value = e.target.getAttribute('data-value');
-                        const parent = e.target.parentElement;
-                        parent.querySelectorAll('.star').forEach(s => s
+        // Game recommendations form submission (dummy function for example)
+        const form = document.getElementById('recommendation-form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const genre = document.getElementById('genre').value;
+            const platform = document.getElementById('platform').value;
+            alert(`You selected Genre: ${genre} and Platform: ${platform}. Recommendations feature coming soon!`);
+        });
+    </script>
+</body>
