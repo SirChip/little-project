@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chip's Corner</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKFS3GHRP8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-GKFS3GHRP8');
+    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -212,7 +221,7 @@
             <p>Hi, I'm Chip, a niche gamer with a potato PC. I enjoy playing a variety of games, but you'll often find me diving into Brawlhalla and Warframe. Sometimes, I also play Among Us with a few friends.</p>
             <p>Explore my world of gaming!</p>
             <a href="#contact" class="button">Get in Touch</a>
-            <a href="gallery.html" class="button">View My Gallery</a>
+            <a href="gallery.html" class="button">View Gallery</a>
         </section>
         <section id="contact">
             <h2>Contact Me</h2>
@@ -231,7 +240,7 @@
                 <img src="brawlhalla-picture.png" alt="Brawlhalla" style="max-width: 150px;">
                 <div class="game-details">
                     <h3 class="game-title">Brawlhalla</h3>
-                    <p class="game-description">An epic platform fighter for up to 8 players online or locally. Try casual free-for-alls, ranked matches, or invite friends to a private room.</p>
+                    <p class="game-description">A fast-paced platform fighter game where legends battle it out in intense combat.</p>
                     <a href="https://www.brawlhalla.com/" class="game-link" target="_blank">Visit the Brawlhalla website</a>
                 </div>
             </div>
@@ -239,66 +248,66 @@
                 <img src="warframe-picture.jpg" alt="Warframe" style="max-width: 150px;">
                 <div class="game-details">
                     <h3 class="game-title">Warframe</h3>
-                    <p class="game-description">A cooperative free-to-play third person online action game set in an evolving sci-fi world.</p>
-                    <a href="https://www.warframe.com/" class="game-link" target="_blank">Visit the Warframe website</a>
+                    <p class="game-description">An online action game set in an evolving sci-fi world filled with ninjas, guns, and swords.</p>
+                    <a href="https://www.warframe.com/" class="game-link" target="_blank">Learn more about Warframe</a>
                 </div>
             </div>
         </section>
-        <section id="game-recommendations">
-            <h2>Game Recommendations</h2>
-            <div class="recommendation">
-                <label for="genre">Choose a genre:</label>
-                <select id="genre" name="genre" onchange="recommendGames()">
-                    <option value="">Select a genre</option>
-                    <option value="action">Action</option>
-                    <option value="rpg">RPG</option>
-                    <option value="strategy">Strategy</option>
-                    <option value="simulation">Simulation</option>
-                </select>
-            </div>
-            <div id="recommendations"></div>
-        </section>
-        <section id="latest-updates">
+        <section id="gallery">
             <h2>Latest Updates</h2>
             <p>Stay tuned for the latest news, updates, and events related to my content. I'll be sharing exciting developments and announcements here!</p>
         </section>
-        <section id="interactive-game-ratings">
-            <h2>Interactive Game Ratings</h2>
+        <section id="game-ratings">
+            <h2>Game Ratings</h2>
+            <!-- Dynamic game ratings based on data -->
             <div class="rating">
                 <span class="rating-label">Brawlhalla:</span>
                 <div class="stars">
-                    <span class="star" data-value="1">★</span>
-                    <span class="star" data-value="2">★</span>
-                    <span class="star" data-value="3">★</span>
-                    <span class="star" data-value="4">★</span>
-                    <span class="star" data-value="5">★</span>
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
                 </div>
             </div>
             <div class="rating">
                 <span class="rating-label">Warframe:</span>
                 <div class="stars">
-                    <span class="star" data-value="1">★</span>
-                    <span class="star" data-value="2">★</span>
-                    <span class="star" data-value="3">★</span>
-                    <span class="star" data-value="4">★</span>
-                    <span class="star" data-value="5">★</span>
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
                 </div>
             </div>
         </section>
-        <section id="background-music">
-            <h2>Background Music</h2>
-            <audio id="background-music" loop>
-                <source src="your-music-file.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-            <div class="audio-controls">
-                <button id="play-music">Play Music</button>
-                <button id="pause-music">Pause Music</button>
+        <section id="game-recommendations">
+            <h2>Game Recommendations</h2>
+            <p>Get personalized game recommendations based on your favorite genre:</p>
+            <select id="genre" onchange="recommendGames()">
+                <option value="">Select a genre</option>
+                <option value="action">Action</option>
+                <option value="rpg">RPG</option>
+                <option value="strategy">Strategy</option>
+                <option value="simulation">Simulation</option>
+            </select>
+            <div id="recommendations"></div>
+        </section>
+        <section id="fan-art">
+            <div class="fan-art-section">
+                <h2>Fan Art Showcase</h2>
+                <p>If you have any fan art you wish to share, send it through my Discord and I will showcase the best ones here!</p>
+                <a href="https://discord.com/invite/aX4tw48ZvE" target="_blank" class="button">Join My Discord</a>
             </div>
         </section>
-        <footer>
-            <p>&copy; 2024 Chip's Corner. All rights reserved.</p>
-        </footer>
+        <audio id="background-music" loop>
+            <source src="background-music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="audio-controls">
+            <button id="play-music">Play Music</button>
+            <button id="pause-music">Pause Music</button>
+        </div>
     </div>
 </body>
 </html>
