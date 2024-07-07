@@ -196,13 +196,34 @@
 
         function recommendGames() {
             const genre = document.querySelector('#genre').value;
+            const platform = document.querySelector('#platform').value;
             const recommendations = {
-                action: ["Devil May Cry", "Doom Eternal", "Sekiro: Shadows Die Twice"],
-                rpg: ["The Witcher 3", "Persona 5", "Divinity: Original Sin 2"],
-                strategy: ["Civilization VI", "Starcraft II", "XCOM 2"],
-                simulation: ["The Sims 4", "Stardew Valley", "Factorio"]
+                action: {
+                    pc: ["Devil May Cry", "Doom Eternal", "Sekiro: Shadows Die Twice"],
+                    ps4: ["God of War", "Uncharted 4", "Horizon Zero Dawn"],
+                    xbox: ["Gears 5", "Halo 5", "Sunset Overdrive"],
+                    switch: ["Bayonetta 2", "Astral Chain", "Hyrule Warriors"]
+                },
+                rpg: {
+                    pc: ["The Witcher 3", "Persona 5", "Divinity: Original Sin 2"],
+                    ps4: ["Final Fantasy XV", "Bloodborne", "Ni no Kuni II"],
+                    xbox: ["Dragon Age: Inquisition", "The Outer Worlds", "Mass Effect: Andromeda"],
+                    switch: ["Xenoblade Chronicles 2", "Octopath Traveler", "Fire Emblem: Three Houses"]
+                },
+                strategy: {
+                    pc: ["Civilization VI", "Starcraft II", "XCOM 2"],
+                    ps4: ["Valkyria Chronicles 4", "XCOM 2", "Northgard"],
+                    xbox: ["Halo Wars 2", "Gears Tactics", "Frostpunk"],
+                    switch: ["Mario + Rabbids Kingdom Battle", "Into the Breach", "Fire Emblem: Three Houses"]
+                },
+                simulation: {
+                    pc: ["The Sims 4", "Stardew Valley", "Factorio"],
+                    ps4: ["Cities: Skylines", "Stardew Valley", "Planet Coaster"],
+                    xbox: ["Zoo Tycoon", "Stardew Valley", "Jurassic World Evolution"],
+                    switch: ["Animal Crossing: New Horizons", "Stardew Valley", "Story of Seasons"]
+                }
             };
-            const recommendedGames = recommendations[genre] || [];
+            const recommendedGames = (recommendations[genre] && recommendations[genre][platform]) || [];
             const recommendationsDiv = document.querySelector('#recommendations');
             recommendationsDiv.innerHTML = `<h3>Recommended Games:</h3><ul>${recommendedGames.map(game => `<li>${game}</li>`).join('')}</ul>`;
         }
@@ -226,18 +247,13 @@
         <section id="contact">
             <h2>Contact Me</h2>
             <p>Email: <a href="mailto:kidtron4@gmail.com">kidtron4@gmail.com</a></p>
-            <p>YouTube: <a href="https://youtube.com/@_sirchip?si=wmpT-45Pmy0nn1Za" target="_blank">SirChip on YouTube</a></p>
-            <p>Facebook: <a href="https://www.facebook.com/lilcybers?mibextid=ZbWKwL" target="_blank">Chip on Facebook</a></p>
-            <p>Twitter: <a href="https://twitter.com/_SirChip" target="_blank">Chip on Twitter</a></p>
-        </section>
-        <section id="partnerships">
-            <h2>Partnerships & Feedback</h2>
-            <p>For partnerships and feedback, please contact me at <a href="mailto:kidtron4@gmail.com">kidtron4@gmail.com</a>.</p>
+            <p>YouTube: <a href="https://youtube.com/@_sirchip?si=wmpT-45Pmy0nn1Za" target="_blank">@_sirchip</a></p>
+            <p>Discord: <a href="https://discord.com/invite/aX4tw48ZvE" target="_blank">Join My Discord</a></p>
         </section>
         <section id="featured-games">
             <h2>Featured Games</h2>
             <div class="game">
-                <img src="brawlhalla-picture.png" alt="Brawlhalla" style="max-width: 150px;">
+                <img src="brawlhalla-picture.jpg" alt="Brawlhalla" style="max-width: 150px;">
                 <div class="game-details">
                     <h3 class="game-title">Brawlhalla</h3>
                     <p class="game-description">A fast-paced platform fighter game where legends battle it out in intense combat.</p>
@@ -283,13 +299,20 @@
         </section>
         <section id="game-recommendations">
             <h2>Game Recommendations</h2>
-            <p>Get personalized game recommendations based on your favorite genre:</p>
+            <p>Get personalized game recommendations based on your favorite genre and platform:</p>
             <select id="genre" onchange="recommendGames()">
                 <option value="">Select a genre</option>
                 <option value="action">Action</option>
                 <option value="rpg">RPG</option>
                 <option value="strategy">Strategy</option>
                 <option value="simulation">Simulation</option>
+            </select>
+            <select id="platform" onchange="recommendGames()">
+                <option value="">Select a platform</option>
+                <option value="pc">PC</option>
+                <option value="ps4">PS4</option>
+                <option value="xbox">Xbox</option>
+                <option value="switch">Switch</option>
             </select>
             <div id="recommendations"></div>
         </section>
