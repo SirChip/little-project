@@ -164,6 +164,26 @@
         .audio-controls button:hover {
             background-color: #45a049;
         }
+        .donation-section {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #fff0f0;
+        }
+        .donation-section h2 {
+            color: #FF6F61;
+        }
+        .donation-section p {
+            font-size: 1.1em;
+            color: #333;
+        }
+        .donation-section a {
+            color: #FF6F61;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .donation-section a:hover {
+            text-decoration: underline;
+        }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -200,30 +220,26 @@
             const recommendations = {
                 action: {
                     pc: ["Devil May Cry", "Doom Eternal", "Sekiro: Shadows Die Twice"],
-                    ps4: ["God of War", "Uncharted 4", "Horizon Zero Dawn"],
-                    xbox: ["Gears 5", "Halo 5", "Sunset Overdrive"],
-                    switch: ["Bayonetta 2", "Astral Chain", "Hyrule Warriors"]
+                    ps4: ["God of War", "Uncharted 4", "Spider-Man"],
+                    xbox: ["Halo Infinite", "Gears 5", "Forza Horizon 4"]
                 },
                 rpg: {
                     pc: ["The Witcher 3", "Persona 5", "Divinity: Original Sin 2"],
-                    ps4: ["Final Fantasy XV", "Bloodborne", "Ni no Kuni II"],
-                    xbox: ["Dragon Age: Inquisition", "The Outer Worlds", "Mass Effect: Andromeda"],
-                    switch: ["Xenoblade Chronicles 2", "Octopath Traveler", "Fire Emblem: Three Houses"]
+                    ps4: ["Final Fantasy VII Remake", "Bloodborne", "Persona 5"],
+                    xbox: ["The Outer Worlds", "Cyberpunk 2077", "Assassin's Creed Valhalla"]
                 },
                 strategy: {
                     pc: ["Civilization VI", "Starcraft II", "XCOM 2"],
-                    ps4: ["Valkyria Chronicles 4", "XCOM 2", "Northgard"],
-                    xbox: ["Halo Wars 2", "Gears Tactics", "Frostpunk"],
-                    switch: ["Mario + Rabbids Kingdom Battle", "Into the Breach", "Fire Emblem: Three Houses"]
+                    ps4: ["XCOM 2", "Tropico 6", "Valkyria Chronicles 4"],
+                    xbox: ["Halo Wars 2", "Gears Tactics", "Planet Coaster"]
                 },
                 simulation: {
                     pc: ["The Sims 4", "Stardew Valley", "Factorio"],
-                    ps4: ["Cities: Skylines", "Stardew Valley", "Planet Coaster"],
-                    xbox: ["Zoo Tycoon", "Stardew Valley", "Jurassic World Evolution"],
-                    switch: ["Animal Crossing: New Horizons", "Stardew Valley", "Story of Seasons"]
+                    ps4: ["Stardew Valley", "Cities: Skylines", "Jurassic World Evolution"],
+                    xbox: ["Zoo Tycoon", "Farming Simulator 19", "Microsoft Flight Simulator"]
                 }
             };
-            const recommendedGames = (recommendations[genre] && recommendations[genre][platform]) || [];
+            const recommendedGames = recommendations[genre] ? recommendations[genre][platform] : [];
             const recommendationsDiv = document.querySelector('#recommendations');
             recommendationsDiv.innerHTML = `<h3>Recommended Games:</h3><ul>${recommendedGames.map(game => `<li>${game}</li>`).join('')}</ul>`;
         }
@@ -247,90 +263,40 @@
         <section id="contact">
             <h2>Contact Me</h2>
             <p>Email: <a href="mailto:kidtron4@gmail.com">kidtron4@gmail.com</a></p>
-            <p>YouTube: <a href="https://youtube.com/@_sirchip?si=wmpT-45Pmy0nn1Za" target="_blank">@_sirchip</a></p>
-            <p>Discord: <a href="https://discord.com/invite/aX4tw48ZvE" target="_blank">Join My Discord</a></p>
+            <p>YouTube: <a href="https://youtube.com/@_sirchip?si=wmpT-45Pmy0nn1Za">https://youtube.com/@_sirchip?si=wmpT-45Pmy0nn1Za</a></p>
+            <p>Discord: <a href="https://discord.com/invite/aX4tw48ZvE">https://discord.com/invite/aX4tw48ZvE</a></p>
         </section>
-        <section id="featured-games">
-            <h2>Featured Games</h2>
-            <div class="game">
-                <img src="brawlhalla-picture.jpg" alt="Brawlhalla" style="max-width: 150px;">
-                <div class="game-details">
-                    <h3 class="game-title">Brawlhalla</h3>
-                    <p class="game-description">A fast-paced platform fighter game where legends battle it out in intense combat.</p>
-                    <a href="https://www.brawlhalla.com/" class="game-link" target="_blank">Visit the Brawlhalla website</a>
-                </div>
-            </div>
-            <div class="game">
-                <img src="warframe-picture.jpg" alt="Warframe" style="max-width: 150px;">
-                <div class="game-details">
-                    <h3 class="game-title">Warframe</h3>
-                    <p class="game-description">An online action game set in an evolving sci-fi world filled with ninjas, guns, and swords.</p>
-                    <a href="https://www.warframe.com/" class="game-link" target="_blank">Learn more about Warframe</a>
-                </div>
-            </div>
-        </section>
-        <section id="gallery">
-            <h2>Latest Updates</h2>
-            <p>Stay tuned for the latest news, updates, and events related to my content. I'll be sharing exciting developments and announcements here!</p>
-        </section>
-        <section id="game-ratings">
-            <h2>Game Ratings</h2>
-            <!-- Dynamic game ratings based on data -->
-            <div class="rating">
-                <span class="rating-label">Brawlhalla:</span>
-                <div class="stars">
-                    <span class="star" data-value="1">&#9733;</span>
-                    <span class="star" data-value="2">&#9733;</span>
-                    <span class="star" data-value="3">&#9733;</span>
-                    <span class="star" data-value="4">&#9733;</span>
-                    <span class="star" data-value="5">&#9733;</span>
-                </div>
-            </div>
-            <div class="rating">
-                <span class="rating-label">Warframe:</span>
-                <div class="stars">
-                    <span class="star" data-value="1">&#9733;</span>
-                    <span class="star" data-value="2">&#9733;</span>
-                    <span class="star" data-value="3">&#9733;</span>
-                    <span class="star" data-value="4">&#9733;</span>
-                    <span class="star" data-value="5">&#9733;</span>
-                </div>
-            </div>
-        </section>
-        <section id="game-recommendations">
+        <section>
             <h2>Game Recommendations</h2>
-            <p>Get personalized game recommendations based on your favorite genre and platform:</p>
+            <label for="genre">Choose a genre:</label>
             <select id="genre" onchange="recommendGames()">
-                <option value="">Select a genre</option>
                 <option value="action">Action</option>
                 <option value="rpg">RPG</option>
                 <option value="strategy">Strategy</option>
                 <option value="simulation">Simulation</option>
             </select>
+            <br>
+            <label for="platform">Choose a platform:</label>
             <select id="platform" onchange="recommendGames()">
-                <option value="">Select a platform</option>
                 <option value="pc">PC</option>
                 <option value="ps4">PS4</option>
                 <option value="xbox">Xbox</option>
-                <option value="switch">Switch</option>
             </select>
-            <div id="recommendations"></div>
+            <div id="recommendations" class="recommendation"></div>
         </section>
-        <section id="fan-art">
-            <div class="fan-art-section">
-                <h2>Fan Art Showcase</h2>
-                <p>If you have any fan art you wish to share, send it through my Discord and I will showcase the best ones here!</p>
-                <a href="https://discord.com/invite/aX4tw48ZvE" target="_blank" class="button">Join My Discord</a>
-            </div>
+        <section class="fan-art-section">
+            <h2>Fan Art Showcase</h2>
+            <p>Share your fan art on our <a href="https://discord.com/invite/aX4tw48ZvE">Discord server</a> and get featured on our website!</p>
         </section>
-        <audio id="background-music" loop>
-            <source src="Senyu Ending 02.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <div class="audio-controls">
-            <button id="play-music">Play Music</button>
-            <button id="pause-music">Pause Music</button>
-        </div>
+        <section class="donation-section">
+            <h2>Support Me</h2>
+            <p>Love the content? Want to go a step further and support me and my channel? Your contributions help keep this corner of the gaming world alive and thriving.</p>
+            <p>If you'd like to support me, consider buying me a coffee!</p>
+            <p><a href="https://buymeacoffee.com/_sirchip" class="button">Buy Me a Coffee</a></p>
+        </section>
+        <footer>
+            <p>&copy; 2024 Chip's Corner. All rights reserved.</p>
+        </footer>
     </div>
 </body>
 </html>
