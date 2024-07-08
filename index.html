@@ -164,22 +164,6 @@
         .audio-controls button:hover {
             background-color: #45a049;
         }
-        .donation-section {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .donation-section a {
-            display: inline-block;
-            background-color: #ffdd57;
-            color: #333;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .donation-section a:hover {
-            background-color: #ffd700;
-        }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -212,30 +196,13 @@
 
         function recommendGames() {
             const genre = document.querySelector('#genre').value;
-            const platform = document.querySelector('#platform').value;
             const recommendations = {
-                action: {
-                    pc: ["Devil May Cry", "Doom Eternal", "Sekiro: Shadows Die Twice"],
-                    console: ["Spider-Man", "God of War", "Uncharted 4"],
-                    mobile: ["PUBG Mobile", "Call of Duty Mobile", "Shadowgun Legends"]
-                },
-                rpg: {
-                    pc: ["The Witcher 3", "Persona 5", "Divinity: Original Sin 2"],
-                    console: ["Final Fantasy XV", "Dragon Quest XI", "Kingdom Hearts III"],
-                    mobile: ["Genshin Impact", "AFK Arena", "Fate/Grand Order"]
-                },
-                strategy: {
-                    pc: ["Civilization VI", "Starcraft II", "XCOM 2"],
-                    console: ["Halo Wars 2", "Wargroove", "Valkyria Chronicles 4"],
-                    mobile: ["Clash of Clans", "Plague Inc.", "Hearthstone"]
-                },
-                simulation: {
-                    pc: ["The Sims 4", "Stardew Valley", "Factorio"],
-                    console: ["Animal Crossing: New Horizons", "Two Point Hospital", "Planet Zoo"],
-                    mobile: ["SimCity BuildIt", "BitLife", "RollerCoaster Tycoon"]
-                }
+                action: ["Devil May Cry", "Doom Eternal", "Sekiro: Shadows Die Twice"],
+                rpg: ["The Witcher 3", "Persona 5", "Divinity: Original Sin 2"],
+                strategy: ["Civilization VI", "Starcraft II", "XCOM 2"],
+                simulation: ["The Sims 4", "Stardew Valley", "Factorio"]
             };
-            const recommendedGames = (recommendations[genre] && recommendations[genre][platform]) || [];
+            const recommendedGames = recommendations[genre] || [];
             const recommendationsDiv = document.querySelector('#recommendations');
             recommendationsDiv.innerHTML = `<h3>Recommended Games:</h3><ul>${recommendedGames.map(game => `<li>${game}</li>`).join('')}</ul>`;
         }
@@ -260,48 +227,51 @@
             <h2>Contact Me</h2>
             <p>Email: <a href="mailto:kidtron4@gmail.com">kidtron4@gmail.com</a></p>
             <p>YouTube: <a href="https://youtube.com/@_sirchip?si=wmpT-45Pmy0nn1Za" target="_blank">SirChip on YouTube</a></p>
+            <p>Facebook: <a href="https://www.facebook.com/lilcybers?mibextid=ZbWKwL" target="_blank">Chip on Facebook</a></p>
+            <p>Twitter: <a href="https://twitter.com/_SirChip" target="_blank">Chip on Twitter</a></p>
         </section>
-        <section>
+        <section id="partnerships">
+            <h2>Partnerships & Feedback</h2>
+            <p>For partnerships and feedback, please contact me at <a href="mailto:kidtron4@gmail.com">kidtron4@gmail.com</a>.</p>
+        </section>
+        <section id="featured-games">
             <h2>Featured Games</h2>
             <div class="game">
-                <img src="brawlhalla.jpg" alt="Brawlhalla" width="100">
+                <img src="brawlhalla-picture.png" alt="Brawlhalla" style="max-width: 150px;">
                 <div class="game-details">
                     <h3 class="game-title">Brawlhalla</h3>
-                    <p class="game-description">An epic platform fighter for up to 8 players online or locally. Try casual free-for-alls, ranked matches, or invite friends to a private room. And it's free! Play cross-platform with millions of players on PS4, Xbox One, Nintendo Switch, and Steam!</p>
-                    <a href="https://www.brawlhalla.com" class="game-link" target="_blank">Learn more</a>
+                    <p class="game-description">A fast-paced platform fighter game where legends battle it out in intense combat.</p>
+                    <a href="https://www.brawlhalla.com/" class="game-link" target="_blank">Visit the Brawlhalla website</a>
                 </div>
             </div>
             <div class="game">
-                <img src="warframe.jpg" alt="Warframe" width="100">
+                <img src="warframe-picture.jpg" alt="Warframe" style="max-width: 150px;">
                 <div class="game-details">
                     <h3 class="game-title">Warframe</h3>
-                    <p class="game-description">Join the fight in this fast-paced, third-person action game. Use your Warframe's unique abilities to outmaneuver and outgun your enemies. Download and play Warframe for free on PC, PS4, PS5, Xbox One, Xbox Series X|S, and Nintendo Switch.</p>
-                    <a href="https://www.warframe.com" class="game-link" target="_blank">Learn more</a>
+                    <p class="game-description">An online action game set in an evolving sci-fi world filled with ninjas, guns, and swords.</p>
+                    <a href="https://www.warframe.com/" class="game-link" target="_blank">Learn more about Warframe</a>
                 </div>
             </div>
         </section>
-        <section class="recommendation">
-            <h2>Game Recommendations</h2>
-            <label for="genre">Select Genre:</label>
-            <select id="genre">
-                <option value="action">Action</option>
-                <option value="rpg">RPG</option>
-                <option value="strategy">Strategy</option>
-                <option value="simulation">Simulation</option>
-            </select>
-            <label for="platform">Select Platform:</label>
-            <select id="platform">
-                <option value="pc">PC</option>
-                <option value="console">Console</option>
-                <option value="mobile">Mobile</option>
-            </select>
-            <button onclick="recommendGames()">Get Recommendations</button>
-            <div id="recommendations"></div>
+        <section id="gallery">
+            <h2>Latest Updates</h2>
+            <p>Stay tuned for the latest news, updates, and events related to my content. I'll be sharing exciting developments and announcements here!</p>
         </section>
-        <section>
-            <h2>Interactive Game Ratings</h2>
+        <section id="game-ratings">
+            <h2>Game Ratings</h2>
+            <!-- Dynamic game ratings based on data -->
             <div class="rating">
-                <span class="rating-label">Rate the Website:</span>
+                <span class="rating-label">Brawlhalla:</span>
+                <div class="stars">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+            </div>
+            <div class="rating">
+                <span class="rating-label">Warframe:</span>
                 <div class="stars">
                     <span class="star" data-value="1">&#9733;</span>
                     <span class="star" data-value="2">&#9733;</span>
@@ -311,17 +281,25 @@
                 </div>
             </div>
         </section>
-        <section class="fan-art-section">
+        <section id="game-recommendations">
+            <h2>Game Recommendations</h2>
+            <p>Get personalized game recommendations based on your favorite genre:</p>
+            <select id="genre" onchange="recommendGames()">
+                <option value="">Select a genre</option>
+                <option value="action">Action</option>
+                <option value="rpg">RPG</option>
+                <option value="strategy">Strategy</option>
+                <option value="simulation">Simulation</option>
+            </select>
+            <div id="recommendations"></div>
+        </section>
+        <section id="fan-art">
+            <div class="fan-art-section">
                 <h2>Fan Art Showcase</h2>
                 <p>If you have any fan art you wish to share, send it through my Discord and I will showcase the best ones here!</p>
                 <a href="https://discord.com/invite/aX4tw48ZvE" target="_blank" class="button">Join My Discord</a>
             </div>
-       <!-- Adding the donation section -->
-<section id="donation">
-    <h2>Support Me</h2>
-    <p>If you enjoy my content and want to support me, consider buying me a coffee!</p>
-    <a href="https://www.buymeacoffee.com/_sirchip" target="_blank" class="button">Buy Me a Coffee</a>
-</section>
+        </section>
         <audio id="background-music" loop>
             <source src="Senyu Ending 02.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
