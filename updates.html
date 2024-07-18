@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8486768995234253"
-     crossorigin="anonymous"></script>
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8486768995234253" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Latest Updates - Chip's Corner</title>
@@ -51,6 +51,29 @@
             color: #4CAF50;
             text-decoration: none;
         }
+        form {
+            margin: 20px 0;
+        }
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        form button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -73,9 +96,30 @@
             <p>Find out about upcoming events and announcements.</p>
             <!-- Add more content as needed -->
         </section>
+        <section>
+            <h2>Newsletter Signup</h2>
+            <form id="signup-form" action="https://formspree.io/f/xgvwvjbe" method="post">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">I consent to receive newsletters and updates.</label>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
         <footer>
             <p>&copy; 2024 Chip's Corner</p>
         </footer>
     </div>
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            var email = document.getElementById('email').value;
+            var consent = document.getElementById('consent').checked;
+
+            if (!email || !consent) {
+                alert('Please enter your email and agree to the consent.');
+                event.preventDefault();
+            }
+        });
+    </script>
 </body>
 </html>
