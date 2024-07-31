@@ -11,10 +11,9 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-GKFS3GHRP8');
     </script>
-      <!-- Favicon -->
+    <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         body {
@@ -40,8 +39,20 @@
             font-size: 2.5em;
             color: #4CAF50;
         }
-        section {
+        .updates {
             margin: 20px 0;
+        }
+        .update {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .update .date {
+            font-size: 0.9em;
+            color: #888;
+        }
+        .update .content {
+            margin-top: 5px;
         }
         footer {
             text-align: center;
@@ -98,20 +109,26 @@
         <header>
             <h1>Latest Updates</h1>
         </header>
-        <section>
-            <h2>News</h2>
-            <p>Stay tuned for the latest news and updates about my content and activities!</p>
-            I’ve got some exciting news—I’m officially kicking off my content creator journey this December! I’m super pumped to share my gaming adventures, achievements, and lots of awesome content with you all. Mark your calendars and get ready for some epic fun. Thanks for the support, and I can’t wait to see you there!I'll be going live on twitch and Youtube on the special day so sign up for a newsletter to get notified when i go live!
-        </section>
-        <section>
-            <h2>Achievements</h2>
-            <p>Check out my latest achievements and milestones.</p>
-            <!-- Add more content as needed -->
-        </section>
-        <section>
-            <h2>Events</h2>
-            <p>Find out about upcoming events and announcements.</p>
-            <!-- Add more content as needed -->
+        <div class="updates">
+            <div class="update">
+                <time class="date" datetime="2024-12-01">December 1, 2024</time>
+                <div class="content">
+                    Exciting news! I'm officially launching my content creator journey in December. Stay tuned for awesome content!
+                </div>
+            </div>
+            <div class="update">
+                <time class="date" datetime="2024-11-20">November 20, 2024</time>
+                <div class="content">
+                    Just hit 100 subscribers on my YouTube channel! Thank you all for the support.
+                </div>
+            </div>
+            <div class="update">
+                <time class="date" datetime="2024-11-15">November 15, 2024</time>
+                <div class="content">
+                    Join me for a live stream on December 5th to celebrate my content creator journey launch.
+                </div>
+            </div>
+        </div>
         <section>
             <h2>Newsletter Signup</h2>
             <form id="signup-form" action="https://formspree.io/f/xgvwvjbe?redirect=https://cryptxc06.github.io/privacy-policy.html" method="post">
