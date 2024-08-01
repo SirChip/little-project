@@ -17,9 +17,8 @@
     </script>
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <!-- New CSS file link -->
+    <!-- CSS file link -->
     <link rel="stylesheet" href="styles.css">
-    <!-- You can remove the existing <style> tag as we've moved the CSS to styles.css -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const stars = document.querySelectorAll(".star");
@@ -68,7 +67,6 @@
         <header>
             <h1>Chip's Corner</h1>
         </header>
-        <!-- New navigation with dropdown menu -->
         <nav>
             <div class="dropdown">
                 <button class="button">Menu</button>
@@ -80,8 +78,10 @@
                 </div>
             </div>
         </nav>
-        <section>
-            <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
+        <section class="profile-section">
+            <div class="profile-picture-container">
+                <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
+            </div>
         </section>
         <section id="about">
             <h2>About Me</h2>
