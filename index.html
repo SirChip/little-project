@@ -12,71 +12,60 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+
       gtag('config', 'G-GKFS3GHRP8');
     </script>
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- CSS file link -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Added CSS libraries -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <!-- Added JavaScript libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Existing star rating code...
-
-            // Slick carousel initialization
-            $('.game-carousel').slick({
-                dots: true,
-                infinite: true,
-                speed: 300,
-                slidesToShow: 1,
-                adaptiveHeight: true
+            const stars = document.querySelectorAll(".star");
+            stars.forEach(star => {
+                star.addEventListener("click", function() {
+                    const value = this.getAttribute("data-value");
+                    this.parentNode.querySelectorAll(".star").forEach(s => {
+                        s.classList.remove("red", "orange", "green");
+                        if (s.getAttribute("data-value") <= value) {
+                            if (value <= 2) {
+                                s.classList.add("red");
+                            } else if (value == 3) {
+                                s.classList.add("orange");
+                            } else {
+                                s.classList.add("green");
+                            }
+                        }
+                    });
+                });
             });
 
-            // Typed.js initialization
-            var typed = new Typed('#typed-text', {
-                strings: ["Welcome to Chip's Corner", "Explore My Gaming World", "Join Me on My Adventures"],
-                typeSpeed: 50,
-                backSpeed: 30,
-                loop: true
-            });
+            const audio = document.getElementById('background-music');
+            const playButton = document.getElementById('play-music');
+            const pauseButton = document.getElementById('pause-music');
 
-            // Particles.js initialization
-            particlesJS.load('particles-js', 'particles.json', function() {
-                console.log('particles.js loaded');
-            });
-
-            // Counter-Up initialization
-            $('.counter').counterUp({
-                delay: 10,
-                time: 1000
-            });
-
-            // Parallax scrolling effect
-            $(window).scroll(function() {
-                var scrolled = $(window).scrollTop();
-                $('.parallax-bg').css('background-position-y', -(scrolled * 0.3) + 'px');
-            });
+            playButton.addEventListener('click', () => audio.play());
+            pauseButton.addEventListener('click', () => audio.pause());
         });
 
-        // Existing game recommendation function...
+        function recommendGames() {
+            const genre = document.querySelector('#genre').value;
+            const recommendations = {
+                action: ["Devil May Cry", "Doom Eternal", "Sekiro: Shadows Die Twice"],
+                rpg: ["The Witcher 3", "Persona 5", "Divinity: Original Sin 2"],
+                strategy: ["Civilization VI", "Starcraft II", "XCOM 2"],
+                simulation: ["The Sims 4", "Stardew Valley", "Factorio"]
+            };
+            const recommendedGames = recommendations[genre] || [];
+            const recommendationsDiv = document.querySelector('#recommendations');
+            recommendationsDiv.innerHTML = `<h3>Recommended Games:</h3><ul>${recommendedGames.map(game => `<li>${game}</li>`).join('')}</ul>`;
+        }
     </script>
 </head>
 <body>
-    <div id="particles-js"></div>
     <div class="container">
-        <header class="parallax-bg">
+        <header>
             <h1>Chip's Corner</h1>
-            <div id="typed-text"></div>
         </header>
         <nav>
             <div class="dropdown">
@@ -101,34 +90,12 @@
             <a href="#contact" class="button">Get in Touch</a>
             <a href="gallery.html" class="button">View Gallery</a>
         </section>
-        <section id="stats">
-            <h2>Gaming Stats</h2>
-            <div class="stat-container">
-                <div class="stat-item">
-                    <i class="fas fa-gamepad"></i>
-                    <span class="counter">1000</span>
-                    <p>Games Played</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-clock"></i>
-                    <span class="counter">5000</span>
-                    <p>Hours Streamed</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-users"></i>
-                    <span class="counter">10000</span>
-                    <p>Subscribers</p>
-                </div>
-            </div>
-        </section>
         <section id="contact">
             <h2>Here is where you can find me</h2>
-            <div class="social-icons">
-                <a href="mailto:kidtron4@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
-                <a href="https://youtube.com/@_sirchip?si=wmpT-45Pmy0nn1Za" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.facebook.com/lilcybers?mibextid=ZbWKwL" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
-                <a href="https://twitter.com/_SirChip" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
-            </div>
+            <p>Email: <a href="mailto:kidtron4@gmail.com">kidtron4@gmail.com</a></p>
+            <p>YouTube: <a href="https://youtube.com/@_sirchip?si=wmpT-45Pmy0nn1Za" target="_blank">SirChip on YouTube</a></p>
+            <p>Facebook: <a href="https://www.facebook.com/lilcybers?mibextid=ZbWKwL" target="_blank">Cryptxc's Gaming Odyssey on Facebook</a></p>
+            <p>Twitter: <a href="https://twitter.com/_SirChip" target="_blank">_SirChip on Twitter</a></p>
         </section>
         <section id="partnerships">
             <h2>Partnerships & Feedback</h2>
@@ -136,63 +103,27 @@
         </section>
         <section id="featured-games">
             <h2>Featured Games</h2>
-            <div class="game-carousel">
-                <div class="game">
-                    <img src="brawlhalla-picture.png" alt="Brawlhalla">
-                    <div class="game-details">
-                        <h3 class="game-title">Brawlhalla</h3>
-                        <p class="game-description">A fast-paced platform fighter game where legends battle it out in intense combat.</p>
-                        <a href="https://www.brawlhalla.com/" class="game-link" target="_blank">Visit the Brawlhalla website</a>
-                    </div>
+            <div class="game">
+                <img src="brawlhalla-picture.png" alt="Brawlhalla" style="max-width: 150px;">
+                <div class="game-details">
+                    <h3 class="game-title">Brawlhalla</h3>
+                    <p class="game-description">A fast-paced platform fighter game where legends battle it out in intense combat.</p>
+                    <a href="https://www.brawlhalla.com/" class="game-link" target="_blank">Visit the Brawlhalla website</a>
                 </div>
-                <div class="game">
-                    <img src="warframe-picture.jpg" alt="Warframe">
-                    <div class="game-details">
-                        <h3 class="game-title">Warframe</h3>
-                        <p class="game-description">An online action game set in an evolving sci-fi world filled with ninjas, guns, and swords.</p>
-                        <a href="https://www.warframe.com/" class="game-link" target="_blank">Learn more about Warframe</a>
-                    </div>
+            </div>
+            <div class="game">
+                <img src="warframe-picture.jpg" alt="Warframe" style="max-width: 150px;">
+                <div class="game-details">
+                    <h3 class="game-title">Warframe</h3>
+                    <p class="game-description">An online action game set in an evolving sci-fi world filled with ninjas, guns, and swords.</p>
+                    <a href="https://www.warframe.com/" class="game-link" target="_blank">Learn more about Warframe</a>
                 </div>
             </div>
         </section>
-        <section id="latest-video">
-            <h2>Latest YouTube Video</h2>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/LATEST_VIDEO_ID" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-        </section>
-        <section id="gaming-journey">
-            <h2>My Gaming Journey</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>2010</h3>
-                        <p>Started gaming with my first console</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>2015</h3>
-                        <p>Discovered PC gaming and never looked back</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>2020</h3>
-                        <p>Started my YouTube channel</p>
-                    </div>
-                </div>
-                <!-- Add more timeline items as needed -->
-            </div>
-        </section>
-        <section id="game-of-the-month">
-            <h2>Game of the Month</h2>
-            <div class="game-of-the-month">
-                <img src="game-of-the-month.jpg" alt="Game of the Month">
-                <h3>Elden Ring</h3>
-                <p>An epic action RPG set in a vast, interconnected world.</p>
-                <a href="#" class="button">Read Review</a>
-            </div>
+        <section id="gallery">
+            <h2>Latest Updates</h2>
+            <p>Stay tuned for the latest news, updates, and events related to my content. I'll be sharing exciting developments and announcements here!</p>
+            <a href="updates.html" class="button">Read More</a>
         </section>
         <section id="game-ratings">
             <h2>Game Ratings</h2>
