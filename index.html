@@ -168,13 +168,21 @@
         </section>
         <section id="game-recommendations">
             <h2>Game Recommendations</h2>
-            <p>Get personalized game recommendations based on your favorite genre:</p>
-            <select id="genre" onchange="recommendGames()">
+            <p>Get personalized game recommendations based on your preferences:</p>
+            <select id="platform" onchange="updateRecommendations()">
+                <option value="">Select a platform</option>
+                <option value="pc">PC</option>
+                <option value="console">Console</option>
+                <option value="mobile">Mobile</option>
+            </select>
+            <select id="genre" onchange="updateRecommendations()">
                 <option value="">Select a genre</option>
                 <option value="action">Action</option>
                 <option value="rpg">RPG</option>
                 <option value="strategy">Strategy</option>
                 <option value="simulation">Simulation</option>
+                <option value="sports">Sports</option>
+                <option value="puzzle">Puzzle</option>
             </select>
             <div id="recommendations"></div>
         </section>
@@ -185,19 +193,52 @@
                 <a href="https://discord.com/invite/aX4tw48ZvE" target="_blank" class="button">Join My Discord</a>
             </div>
         </section>
-        <audio id="background-music" loop>
-            <source src="Senyu Ending 02.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <div class="audio-controls">
-            <button id="play-music">Play Music</button>
-            <button id="pause-music">Pause Music</button>
-        </div>
     </div>
     <footer>
         <p>&copy; 2024 Chip's Corner</p>
         <p><a href="privacy-policy.html">Privacy Policy</a></p>
     </footer>
     <script src="script.js"></script>
+    <script>
+    function updateRecommendations() {
+        const platform = document.getElementById('platform').value;
+        const genre = document.getElementById('genre').value;
+        const recommendationsDiv = document.getElementById('recommendations');
+        
+        if (platform && genre) {
+            const gameRecommendations = {
+                pc: {
+                    action: ["Half-Life 2", "Doom Eternal", "Grand Theft Auto V"],
+                    rpg: ["The Witcher 3", "Divinity: Original Sin 2", "Disco Elysium"],
+                    strategy: ["Civilization VI", "XCOM 2", "Age of Empires II: Definitive Edition"],
+                    simulation: ["Cities: Skylines", "Euro Truck Simulator 2", "Stardew Valley"],
+                    sports: ["Rocket League", "FIFA 22", "NBA 2K22"],
+                    puzzle: ["Portal 2", "Baba Is You", "The Witness"]
+                },
+                console: {
+                    action: ["God of War", "Spider-Man: Miles Morales", "Ratchet & Clank: Rift Apart"],
+                    rpg: ["Final Fantasy VII Remake", "Persona 5 Royal", "Nier: Automata"],
+                    strategy: ["Fire Emblem: Three Houses", "Valkyria Chronicles 4", "Mario + Rabbids Kingdom Battle"],
+                    simulation: ["Animal Crossing: New Horizons", "Planet Coaster: Console Edition", "Two Point Hospital"],
+                    sports: ["Madden NFL 22", "MLB The Show 21", "Tony Hawk's Pro Skater 1+2"],
+                    puzzle: ["Tetris Effect: Connected", "Puyo Puyo Tetris 2", "Captain Toad: Treasure Tracker"]
+                },
+                mobile: {
+                    action: ["PUBG Mobile", "Call of Duty: Mobile", "Genshin Impact"],
+                    rpg: ["Another Eden", "Final Fantasy Brave Exvius", "Star Wars: Knights of the Old Republic"],
+                    strategy: ["Clash Royale", "Plants vs. Zombies 2", "Chess - Play & Learn"],
+                    simulation: ["Minecraft", "The Sims Mobile", "Plague Inc."],
+                    sports: ["FIFA Mobile", "8 Ball Pool", "Golf Clash"],
+                    puzzle: ["Monument Valley", "Two Dots", "Threes!"]
+                }
+            };
+
+            const recommendations = gameRecommendations[platform][genre];
+            recommendationsDiv.innerHTML = `<h3>Recommended Games:</h3><ul>${recommendations.map(game => `<li>${game}</li>`).join('')}</ul>`;
+        } else {
+            recommendationsDiv.innerHTML = "Please select both a platform and a genre for recommendations.";
+        }
+    }
+    </script>
 </body>
 </html>
