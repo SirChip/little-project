@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8486768995234253"
-     crossorigin="anonymous"></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - Chip's Corner</title>
@@ -11,42 +10,80 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-GKFS3GHRP8');
     </script>
-       <!-- Favicon -->
+    <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;
             color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
+
         .container {
             width: 80%;
-            margin: 0 auto;
-            padding: 20px;
+            max-width: 600px;
+            padding: 40px;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             text-align: center;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
         }
+
+        .container:hover {
+            transform: translateY(-5px);
+        }
+
         h1 {
             color: #4CAF50;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-out;
         }
+
         p {
             font-size: 1.1em;
             color: #666;
+            line-height: 1.6;
+            animation: slideIn 1s ease-out;
         }
-        a {
-            color: #4CAF50;
-            text-decoration: none;
+
+        .btn {
             display: inline-block;
-            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 30px;
         }
-        a:hover {
-            text-decoration: underline;
+
+        .btn:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
     </style>
 </head>
@@ -54,7 +91,7 @@
     <div class="container">
         <h1>Gallery</h1>
         <p>Oops, it looks like you discovered this section before we could put anything on it, but no worries! Come back soon and you'll find something here.</p>
-        <a href="index.html">Go back to the homepage</a>
+        <a href="index.html" class="btn">Go back to the homepage</a>
     </div>
 </body>
 </html>
