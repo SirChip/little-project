@@ -14,267 +14,56 @@
     </script>
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-
-        body {
-            font-family: 'Roboto', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            transition: background-color 0.3s ease;
-        }
-
-        .container {
-            width: 80%;
-            max-width: 600px;
-            padding: 40px;
-            background-color: #fff;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .container:hover {
-            transform: translateY(-5px);
-        }
-
-        h1 {
-            color: #4CAF50;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            animation: fadeIn 1s ease-out;
-        }
-
-        p {
-            font-size: 1.1em;
-            color: #666;
-            line-height: 1.6;
-            animation: slideIn 1s ease-out;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            margin-top: 30px;
-        }
-
-        .btn:hover {
-            background-color: #45a049;
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideIn {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        /* Newsletter Signup */
-        .newsletter {
-            margin-top: 20px;
-        }
-
-        .newsletter input[type="email"] {
-            padding: 10px;
-            width: 70%;
-            margin-right: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .newsletter button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .newsletter button:hover {
-            background-color: #45a049;
-        }
-
-        /* Social Media Links */
-        .social-links {
-            margin: 20px 0;
-        }
-
-        .social-links a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #4CAF50;
-            font-size: 1.2em;
-        }
-
-        /* Interactive Background */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, rgba(0, 150, 136, 0.1), rgba(76, 175, 80, 0.1));
-            z-index: -1;
-            animation: backgroundAnimation 15s infinite alternate;
-        }
-
-        @keyframes backgroundAnimation {
-            0% { background-position: 0 0; }
-            100% { background-position: 100% 100%; }
-        }
-
-        /* Dark Mode Toggle */
-        .dark-mode-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .dark-mode-toggle:hover {
-            background-color: #45a049;
-        }
-
-        /* Dark Mode Styles */
-        body.dark-mode {
-            background-color: #333;
-            color: #f0f0f0;
-        }
-
-        body.dark-mode .container {
-            background-color: #444;
-            color: #f0f0f0;
-        }
-
-        /* Breadcrumb Navigation */
-        .breadcrumb {
-            margin-bottom: 20px;
-            font-size: 0.9em;
-        }
-
-        .breadcrumb a {
-            text-decoration: none;
-            color: #4CAF50;
-            margin-right: 5px;
-        }
-
-        .breadcrumb span {
-            margin-right: 5px;
-        }
-
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-
-        /* Loading Animation */
-        #loader-wrapper {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.3s ease-out;
-        }
-
-        #loader {
-            border: 5px solid #f3f3f3;
-            border-top: 5px solid #4CAF50;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .loaded #loader-wrapper {
-            opacity: 0;
-            visibility: hidden;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <!-- Loading Animation -->
-    <div id="loader-wrapper">
-        <div id="loader"></div>
-    </div>
-
-    <!-- Dark Mode Toggle -->
-    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-
+    <div id="particles-js"></div>
     <div class="container">
-        <!-- Breadcrumb Navigation -->
-        <div class="breadcrumb">
-            <a href="index.html">Home</a> <span>></span> <span>Gallery</span>
-        </div>
-
-        <h1>Gallery</h1>
-        <p>Oops, it looks like you discovered this section before we could put anything on it, but no worries! Come back soon and you'll find something here.</p>
+        <header>
+            <h1>Gallery</h1>
+            <nav>
+                <div class="dropdown">
+                    <button class="button">Menu</button>
+                    <div class="dropdown-content">
+                        <a href="index.html">Home</a>
+                        <a href="index.html#about">About Me</a>
+                        <a href="index.html#contact">Contact</a>
+                        <a href="index.html#featured-games">Featured Games</a>
+                        <a href="index.html#game-ratings">Game Ratings</a>
+                        <a href="updates.html">Updates</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
         
-        <!-- Newsletter Signup -->
-        <div class="newsletter">
-            <form action="https://formspree.io/f/xgvwvjbe" method="post">
-                <input type="email" name="email" placeholder="Enter your email" required>
-                <button type="submit">Sign Up</button>
-            </form>
-        </div>
+        <main>
+            <p>Oops, it looks like you discovered this section before we could put anything on it, but no worries! Come back soon and you'll find something here.</p>
+            
+            <div class="newsletter">
+                <form action="https://formspree.io/f/xgvwvjbe" method="post">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit" class="button">Sign Up</button>
+                </form>
+            </div>
 
-        <!-- Social Media Links -->
-        <div class="social-links">
-            <a href="#" target="_blank">Facebook</a>
-            <a href="#" target="_blank">Twitter</a>
-            <a href="#" target="_blank">Instagram</a>
-        </div>
+            <div class="social-icons">
+                <a href="#" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
 
-        <a href="index.html" class="btn">Go back to the homepage</a>
+            <a href="index.html" class="button">Go back to the homepage</a>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Chip's Corner</p>
+            <p><a href="privacy-policy.html">Privacy Policy</a></p>
+        </footer>
     </div>
 
-    <!-- JavaScript for Dark Mode Toggle -->
-    <script>
-        // Dark Mode Toggle
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-        }
-
-        // Loading Animation
-        window.addEventListener('load', function() {
-            document.body.classList.add('loaded');
-        });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
