@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8486768995234253"
-     crossorigin="anonymous"></script>
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8486768995234253" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Chip's Corner</title>
@@ -11,47 +11,107 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-GKFS3GHRP8');
     </script>
-       <!-- Favicon -->
+    <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #f5f5f5;
             color: #333;
+            line-height: 1.6;
         }
+
         .container {
-            width: 80%;
-            margin: 0 auto;
+            max-width: 800px;
+            margin: 50px auto;
             padding: 20px;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
+
         header {
             text-align: center;
-            padding: 50px 0;
+            padding: 30px 0;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 10px 10px 0 0;
         }
+
         header h1 {
             margin: 0;
             font-size: 2.5em;
-            color: #4CAF50;
+            animation: fadeInDown 1s ease-out;
         }
+
         section {
-            margin: 20px 0;
+            margin: 30px 0;
+            padding: 0 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s ease-out forwards;
         }
+
+        h2 {
+            color: #4CAF50;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        h2:hover {
+            color: #45a049;
+        }
+
         footer {
             text-align: center;
             padding: 20px 0;
             font-size: 0.9em;
             color: #777;
+            border-top: 1px solid #ddd;
         }
+
         a {
             color: #4CAF50;
             text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #45a049;
+            text-decoration: underline;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
@@ -70,7 +130,7 @@
         </section>
         <section>
             <h2>How We Use Your Information</h2>
-            <p>We use the information we collect or receive to communicate directly with you. We may also send you emails containing but not limited to newsletters,new video alerts and special promotions.</p>
+            <p>We use the information we collect or receive to communicate directly with you. We may also send you emails containing but not limited to newsletters, new video alerts and special promotions.</p>
         </section>
         <section>
             <h2>Will Your Information Be Shared With Anyone?</h2>
