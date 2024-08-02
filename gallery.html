@@ -87,13 +87,6 @@
             to { transform: translateY(0); opacity: 1; }
         }
 
-        /* Countdown Timer */
-        .countdown {
-            font-size: 1.5em;
-            color: #ff5722;
-            margin: 20px 0;
-        }
-
         /* Newsletter Signup */
         .newsletter {
             margin-top: 20px;
@@ -214,13 +207,12 @@
         <h1>Gallery</h1>
         <p>Oops, it looks like you discovered this section before we could put anything on it, but no worries! Come back soon and you'll find something here.</p>
         
-        <!-- Countdown Timer -->
-        <div class="countdown" id="countdown"></div>
-
         <!-- Newsletter Signup -->
         <div class="newsletter">
-            <input type="email" placeholder="Enter your email">
-            <button>Sign Up</button>
+            <form action="https://formspree.io/f/xgvwvjbe" method="post">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Sign Up</button>
+            </form>
         </div>
 
         <!-- Social Media Links -->
@@ -233,28 +225,8 @@
         <a href="index.html" class="btn">Go back to the homepage</a>
     </div>
 
-    <!-- JavaScript for Countdown Timer -->
+    <!-- JavaScript for Dark Mode Toggle -->
     <script>
-        function countdown() {
-            const countDate = new Date('Dec 31, 2024 23:59:59').getTime();
-            const now = new Date().getTime();
-            const gap = countDate - now;
-
-            const second = 1000;
-            const minute = second * 60;
-            const hour = minute * 60;
-            const day = hour * 24;
-
-            const days = Math.floor(gap / day);
-            const hours = Math.floor((gap % day) / hour);
-            const minutes = Math.floor((gap % hour) / minute);
-            const seconds = Math.floor((gap % minute) / second);
-
-            document.getElementById('countdown').innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-        }
-
-        setInterval(countdown, 1000);
-
         // Dark Mode Toggle
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
