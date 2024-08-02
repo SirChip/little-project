@@ -16,6 +16,10 @@
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
+        * {
+            transition: all 0.3s ease;
+        }
+        
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -23,70 +27,137 @@
             background-color: #f0f0f0;
             color: #333;
         }
+        
         .container {
-            width: 80%;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
+        
         header {
-            text-align: center;
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            color: white;
             padding: 50px 0;
+            border-radius: 0 0 50% 50% / 20px;
+            text-align: center;
         }
+        
         header h1 {
             margin: 0;
             font-size: 2.5em;
-            color: #4CAF50;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
+        
         .updates {
             margin: 20px 0;
         }
+        
         .update {
             margin-bottom: 20px;
             padding: 10px;
             border-bottom: 1px solid #ccc;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            animation: fadeIn 0.5s ease-out forwards;
+            opacity: 0;
         }
+        
+        .update:hover {
+            transform: translateY(-5px);
+        }
+        
+        .update:nth-child(1) { animation-delay: 0.1s; }
+        .update:nth-child(2) { animation-delay: 0.2s; }
+        .update:nth-child(3) { animation-delay: 0.3s; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
         .update .date {
             font-size: 0.9em;
             color: #888;
         }
+        
         .update .content {
             margin-top: 5px;
         }
+        
         footer {
             text-align: center;
             padding: 20px 0;
             font-size: 0.9em;
             color: #777;
         }
+        
         a {
             color: #4CAF50;
             text-decoration: none;
+            position: relative;
         }
+        
+        a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #4CAF50;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        a:hover::after {
+            transform: scaleX(1);
+        }
+        
         form {
             margin: 20px 0;
         }
+        
         form label {
             display: block;
             margin: 10px 0 5px;
         }
+        
         form input[type="email"],
         form textarea {
             width: 100%;
             padding: 10px;
             margin-bottom: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            transition: border-color 0.3s ease;
         }
+        
+        form input[type="email"]:focus,
+        form textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+        
         form button {
             background-color: #4CAF50;
             color: #fff;
             border: none;
             padding: 10px 20px;
             cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
+        
         form button:hover {
             background-color: #45a049;
+            transform: scale(1.05);
         }
+        
         .return-button {
             display: block;
             width: 200px;
@@ -98,9 +169,12 @@
             text-decoration: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
+        
         .return-button:hover {
             background-color: #45a049;
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -113,7 +187,8 @@
             <div class="update">
                 <time class="date" datetime="2024-07-31">July 31, 2024</time>
                 <div class="content">
-                    I’ve got some exciting news—I’m officially kicking off my content creator journey this December! I’m super pumped to share my gaming adventures, achievements, and lots of awesome content with you all. Mark your calendars and get ready for some epic fun. Thanks for the support, and I can’t wait to see you there!
+                    I've got some exciting news—I'm officially kicking off my content creator journey this December! I'm super pumped to share my gaming adventures, achievements, and lots of awesome content with you all. Mark your calendars and get ready for some epic fun. Thanks for the support, and I can't wait to see you there!
+                </div>
             </div>
             <div class="update">
                 <time class="date" datetime="2024-07-27">July 27, 2024</time>
