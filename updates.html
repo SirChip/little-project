@@ -176,6 +176,17 @@
             background-color: #45a049;
             transform: scale(1.05);
         }
+
+        .countdown {
+            font-size: 2em;
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
@@ -183,6 +194,7 @@
         <header>
             <h1>Latest Updates</h1>
         </header>
+        <div id="countdown" class="countdown"></div>
         <div class="updates">
             <div class="update">
                 <time class="date" datetime="2024-07-31">July 31, 2024</time>
@@ -228,6 +240,27 @@
                 event.preventDefault();
             }
         });
+
+        // Countdown Timer
+        var countDownDate = new Date("Dec 20, 2024 00:00:00").getTime();
+
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s " + "until launch!";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "The journey has begun!";
+            }
+        }, 1000);
     </script>
 </body>
 </html>
