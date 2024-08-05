@@ -16,71 +16,77 @@
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 1em;
+        /* ... (existing styles) ... */
+        .toc {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
             margin-bottom: 20px;
         }
-        header h1 {
-            color: white;
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        .toc ul {
+            list-style-type: none;
+            padding-left: 20px;
         }
-        h1, h2 {
-            color: #4CAF50;
+        .star-rating {
+            font-size: 24px;
+            color: #FFD700;
         }
-        .game-info {
-            background-color: #e9e9e9;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-        .pros-cons {
-            display: flex;
-            justify-content: space-between;
-        }
-        .pros, .cons {
-            flex-basis: 48%;
-            background-color: #e9e9e9;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .rating {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #4CAF50;
-        }
-        .return-link {
-            display: block;
-            text-align: center;
+        .last-updated {
+            font-style: italic;
+            color: #666;
             margin-top: 20px;
-            color: #4CAF50;
-            text-decoration: none;
         }
-        .return-link:hover {
-            text-decoration: underline;
+        .related-content {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
         }
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "VideoGame",
+        "name": "Elden Ring"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Chip"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "9.5",
+        "bestRating": "10"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Chip's Corner"
+      }
+    }
+    </script>
 </head>
 <body>
     <header>
         <h1>Elden Ring Review: A Masterpiece of Open-World Design</h1>
     </header>
 
-    <p class="rating">Rating: 9.5/10</p>
+    <p class="rating">Rating: <span class="star-rating">★★★★★</span> 9.5/10</p>
 
-    <div class="game-info">
+    <div class="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#game-info">Game Info</a></li>
+            <li><a href="#visuals">Visuals and World-Building</a></li>
+            <li><a href="#gameplay">Gameplay and Mechanics</a></li>
+            <li><a href="#story">Story and Characters</a></li>
+            <li><a href="#sound">Sound and Music</a></li>
+            <li><a href="#thoughts">Final Thoughts</a></li>
+        </ul>
+    </div>
+
+    <div id="game-info" class="game-info">
         <strong>Developer:</strong> FromSoftware<br>
         <strong>Publisher:</strong> Bandai Namco Entertainment<br>
         <strong>Platforms:</strong> PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, PC<br>
@@ -89,32 +95,22 @@
 
     <p>From the minds of Hidetaka Miyazaki and George R.R. Martin comes <em>Elden Ring</em>, a game that stands as a testament to what open-world gaming can achieve. With its intricate world-building, challenging combat, and a story steeped in dark fantasy, <em>Elden Ring</em> is an experience that both fans of FromSoftware and newcomers will find deeply rewarding.</p>
 
-    <h2>Visuals and World-Building</h2>
+    <h2 id="visuals">Visuals and World-Building</h2>
     <p>The first thing that strikes you about <em>Elden Ring</em> is its stunning world. The Lands Between, the game's setting, is a sprawling, interconnected landscape filled with secrets, mysteries, and dangers. From lush forests to desolate wastelands, each area is meticulously crafted, providing a sense of wonder and dread at every turn. The game's art direction is nothing short of breathtaking, with a gothic, surreal aesthetic that complements its dark narrative.</p>
 
-    <h2>Gameplay and Mechanics</h2>
+    <h2 id="gameplay">Gameplay and Mechanics</h2>
     <p>At its core, <em>Elden Ring</em> retains the challenging combat mechanics that FromSoftware is known for. The game combines the methodical, punishing combat of the <em>Dark Souls</em> series with the agility and fluidity of <em>Sekiro: Shadows Die Twice</em>. Every enemy encounter requires strategy and skill, making each victory immensely satisfying.</p>
     <p>What sets <em>Elden Ring</em> apart is its open-world design. Players have the freedom to explore at their own pace, discovering hidden dungeons, formidable bosses, and valuable treasures. The game encourages exploration with its numerous side quests and intricate lore, rewarding curiosity and perseverance.</p>
     <p>The addition of a mount, the spectral steed Torrent, adds a new dimension to traversal and combat. Riding through the expansive landscapes feels liberating, and mounted combat introduces fresh tactical possibilities.</p>
-    <p>Magic and skills play a crucial role in <em>Elden Ring</em>, offering players a wide array of combat options. From devastating spells to unique weapon arts, the game provides countless ways to approach challenges. The flexibility in playstyle allows for creative problem-solving and encourages experimentation.</p>
-    <p>Multiplayer features add another layer of depth to the game. Players can summon allies for co-op play, leave helpful (or misleading) messages for others, and engage in PvP combat. These online elements create a sense of community and shared experience, even in the game's lonely, desolate world.</p>
 
-    <h2>Character Customization and Builds</h2>
-    <p><em>Elden Ring</em> offers unprecedented freedom in character creation and development. Players can choose from a variety of starting classes, each with unique attributes and equipment. As you progress, you can freely allocate points to different stats, allowing for highly specialized or well-rounded builds.</p>
-    <p>The game's equipment system is equally diverse, with a vast array of weapons, armor, and talismans to discover and upgrade. Each piece of gear can dramatically alter your playstyle, encouraging experimentation and multiple playthroughs. The ability to respec your character later in the game further supports build diversity and player choice.</p>
-
-    <h2>Story and Characters</h2>
+    <h2 id="story">Story and Characters</h2>
     <p>The collaboration between Miyazaki and Martin results in a rich, immersive narrative. While the story is delivered in the traditional FromSoftware style—through cryptic dialogues, environmental storytelling, and item descriptions—it feels more accessible than previous titles. The lore of the Lands Between is deep and engaging, with multiple layers waiting to be uncovered by diligent players.</p>
     <p>Characters in <em>Elden Ring</em> are as enigmatic and memorable as ever. NPCs offer cryptic guidance and side quests that enrich the game's world and narrative. Each character has their own motivations and backstory, adding depth to the game's lore.</p>
 
-    <h2>Sound and Music</h2>
+    <h2 id="sound">Sound and Music</h2>
     <p>The game's sound design is superb, with atmospheric audio that enhances the sense of immersion. From the eerie silence of a forgotten ruin to the clashing of swords in intense battles, the audio experience is meticulously crafted. The soundtrack, composed by Yuka Kitamura and others, is hauntingly beautiful, perfectly complementing the game's dark fantasy setting.</p>
 
-    <h2>Performance and Technical Aspects</h2>
-    <p>On current-gen consoles and PC, <em>Elden Ring</em> generally runs smoothly, with stunning visuals and quick load times. However, some players have reported occasional frame rate drops in certain areas or during intense battles. The PC version offers more graphical options and potentially higher frame rates, but may require some tweaking for optimal performance.</p>
-    <p>It's worth noting that the game has received several patches since launch, addressing various technical issues and balancing concerns. FromSoftware's commitment to improving the player experience is evident in their ongoing support and updates.</p>
-
-    <h2>Final Thoughts</h2>
+    <h2 id="thoughts">Final Thoughts</h2>
     <p><em>Elden Ring</em> is a triumph of game design, blending the best elements of FromSoftware's previous titles with the expansive freedom of an open world. It's a game that challenges and rewards players, offering a deep and enriching experience. Whether you're a veteran of <em>Dark Souls</em> or a newcomer to FromSoftware's games, <em>Elden Ring</em> promises an unforgettable journey through a hauntingly beautiful world.</p>
 
     <div class="pros-cons">
@@ -125,9 +121,6 @@
                 <li>Challenging and rewarding combat</li>
                 <li>Deep, immersive lore</li>
                 <li>Freedom of exploration</li>
-                <li>Diverse character builds and playstyles</li>
-                <li>Engaging multiplayer features</li>
-                <li>Exceptional sound design and music</li>
             </ul>
         </div>
         <div class="cons">
@@ -135,12 +128,22 @@
             <ul>
                 <li>Occasional difficulty spikes</li>
                 <li>Cryptic narrative may not appeal to all players</li>
-                <li>Some technical issues on certain platforms</li>
             </ul>
         </div>
     </div>
 
     <p><em>Elden Ring</em> is a must-play for any fan of action RPGs, offering a masterclass in world-building and gameplay design. It's a game that will be remembered and celebrated for years to come.</p>
+
+    <div class="related-content">
+        <h3>Related Content</h3>
+        <ul>
+            <li><a href="#">Dark Souls 3 Review</a></li>
+            <li><a href="#">Sekiro: Shadows Die Twice Review</a></li>
+            <li><a href="#">Top 10 Open World Games of 2024</a></li>
+        </ul>
+    </div>
+
+    <p class="last-updated">Last Updated: August 5, 2024</p>
 
     <a href="index.html" class="return-link">Return to Main Page</a>
 </body>
