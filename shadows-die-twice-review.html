@@ -71,7 +71,7 @@
             text-decoration: none;
         }
         .return-link:hover {
-            text-decoration: underline.
+            text-decoration: underline;
         }
         .toc {
             background-color: #e9e9e9;
@@ -112,6 +112,29 @@
         }
         .explore-reviews-btn:hover {
             background-color: #45a049;
+        }
+        .scroll-top-btn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .scroll-top-btn:hover {
+            background-color: #45a049;
+        }
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+        .fade-in.active {
+            opacity: 1;
         }
     </style>
     <script type="application/ld+json">
@@ -204,7 +227,7 @@
 
     <p><em>Sekiro: Shadows Die Twice</em> is a standout title from FromSoftware, offering a unique and challenging experience that will test your skills and patience. It’s a journey worth taking for those who crave intense action and deep lore.</p>
 
-    <div class="related-content">
+    <div class="related-content fade-in">
         <h3>Related Content</h3>
         <ul>
             <li><a href="elden-ring-review.html">Elden Ring Review</a></li>
@@ -217,5 +240,30 @@
 
     <a href="game-reviews.html" class="explore-reviews-btn">Explore More Game Reviews</a>
     <a href="index.html" class="return-link">Return to Main Page</a>
+
+    <button class="scroll-top-btn" onclick="scrollToTop()">Top</button>
+
+    <script>
+        // Show scroll-to-top button when scrolled down
+        window.addEventListener('scroll', function() {
+            const scrollTopBtn = document.querySelector('.scroll-top-btn');
+            if (window.scrollY > 300) {
+                scrollTopBtn.style.display = 'block';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        });
+
+        // Smooth scroll to top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Fade-in effect for related content
+        window.addEventListener('load', function() {
+            const relatedContent = document.querySelector('.related-content');
+            relatedContent.classList.add('active');
+        });
+    </script>
 </body>
 </html>
