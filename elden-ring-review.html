@@ -151,6 +151,32 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #45a049;
         }
+        .scroll-top-btn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+        .scroll-top-btn:hover {
+            background-color: #45a049;
+        }
+        .related-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .related-content.active {
+            max-height: 1000px; /* Adjust based on content height */
+        }
     </style>
     <script type="application/ld+json">
     {
@@ -273,5 +299,27 @@
     <a href="game-reviews.html" class="explore-reviews-btn">Explore More Game Reviews</a>
 
     <a href="index.html" class="return-link">Return to Main Page</a>
+
+    <button class="scroll-top-btn" onclick="scrollToTop()">↑</button>
+
+    <script>
+        document.addEventListener('scroll', function() {
+            const scrollTopBtn = document.querySelector('.scroll-top-btn');
+            if (window.scrollY > 200) {
+                scrollTopBtn.style.display = 'block';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const relatedContent = document.querySelector('.related-content');
+            relatedContent.classList.add('active');
+        });
+    </script>
 </body>
 </html>
