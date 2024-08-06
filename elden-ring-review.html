@@ -28,7 +28,7 @@
             background-color: #f4f4f4;
         }
         header {
-            background-color: #4CAF50;
+            background: linear-gradient(to right, #4CAF50, #45a049);
             color: white;
             text-align: center;
             padding: 1em;
@@ -42,21 +42,24 @@
         h1, h2 {
             color: #4CAF50;
         }
-        .game-info {
+        .game-info, .pros, .cons, .related-content {
             background-color: #e9e9e9;
             padding: 10px;
             border-radius: 5px;
             margin-bottom: 20px;
+            transition: box-shadow 0.3s ease;
+        }
+        .game-info:hover, .pros:hover, .cons:hover, .related-content:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .pros-cons {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
         .pros, .cons {
             flex-basis: 48%;
-            background-color: #e9e9e9;
-            padding: 10px;
-            border-radius: 5px;
+            margin-bottom: 20px;
         }
         .rating {
             font-size: 1.5em;
@@ -69,6 +72,7 @@
             margin-top: 20px;
             color: #4CAF50;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
         .return-link:hover {
             text-decoration: underline;
@@ -83,6 +87,15 @@
             list-style-type: none;
             padding-left: 20px;
         }
+        .toc a {
+            color: #4CAF50;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .toc a:hover {
+            color: #45a049;
+            text-decoration: underline;
+        }
         .star-rating {
             font-size: 24px;
             color: #FFD700;
@@ -91,12 +104,6 @@
             font-style: italic;
             color: #666;
             margin-top: 20px;
-        }
-        .related-content {
-            margin-top: 30px;
-            padding: 15px;
-            background-color: #e9e9e9;
-            border-radius: 5px;
         }
         .explore-reviews-btn {
             display: inline-block;
@@ -108,10 +115,41 @@
             font-size: 16px;
             margin: 20px 0;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
         .explore-reviews-btn:hover {
             background-color: #45a049;
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+        @media (max-width: 768px) {
+            .pros-cons {
+                flex-direction: column;
+            }
+            .pros, .cons {
+                flex-basis: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        /* For WebKit browsers */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f4f4f4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4CAF50;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #45a049;
         }
     </style>
     <script type="application/ld+json">
@@ -159,7 +197,7 @@
         </ul>
     </div>
 
-    <div id="game-info" class="game-info">
+    <div id="game-info" class="game-info fade-in">
         <strong>Developer:</strong> FromSoftware<br>
         <strong>Publisher:</strong> Bandai Namco Entertainment<br>
         <strong>Platforms:</strong> PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, PC<br>
@@ -221,7 +259,7 @@
 
     <p><em>Elden Ring</em> is a must-play for any fan of action RPGs, offering a masterclass in world-building and gameplay design. It's a game that will be remembered and celebrated for years to come.</p>
 
-    <div class="related-content">
+    <div class="related-content fade-in">
         <h3>Related Content</h3>
         <ul>
             <li><a href="dark-souls-3-review.html">Dark Souls 3 Review</a></li>
