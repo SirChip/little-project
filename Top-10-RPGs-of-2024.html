@@ -47,10 +47,6 @@
             padding: 10px;
             border-radius: 5px;
             margin-bottom: 20px;
-            transition: transform 0.3s;
-        }
-        .game-info:hover {
-            transform: scale(1.05);
         }
         .rating {
             font-size: 1.5em;
@@ -63,10 +59,8 @@
             margin-top: 20px;
             color: #4A148C;
             text-decoration: none;
-            transition: color 0.3s;
         }
         .return-link:hover {
-            color: #6A1B9A;
             text-decoration: underline;
         }
         .toc {
@@ -79,20 +73,9 @@
             list-style-type: none;
             padding-left: 20px;
         }
-        .toc ul li a {
-            transition: color 0.3s, padding-left 0.3s;
-        }
-        .toc ul li a:hover {
-            color: #4A148C;
-            padding-left: 5px;
-        }
         .star-rating {
             font-size: 24px;
             color: #FFD700;
-            transition: transform 0.3s;
-        }
-        .star-rating:hover {
-            transform: scale(1.2);
         }
         .last-updated {
             font-style: italic;
@@ -115,22 +98,10 @@
             font-size: 16px;
             margin: 20px 0;
             border-radius: 5px;
-            transition: transform 0.3s, background-color 0.3s;
+            transition: background-color 0.3s;
         }
         .explore-reviews-btn:hover {
             background-color: #6A1B9A;
-            animation: pulse 1s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        h2 {
-            transition: transform 0.3s;
-        }
-        h2:hover {
-            transform: translateX(10px);
         }
     </style>
 </head>
@@ -231,7 +202,7 @@
     <div class="game-info">
         <strong>Developer:</strong> Cygames<br>
         <strong>Publisher:</strong> Cygames<br>
-        <strong>Platforms:</strong> PlayStation 5, PC<br>
+        <Platforms:</strong> PlayStation 5, PC<br>
         <strong>Release Date:</strong> February 1, 2024
     </div>
     <p><em>Granblue Fantasy: Relink</em> brings the popular mobile RPG to consoles and PC with stunning visuals and action-packed gameplay. Set in the same world as the original game, Relink offers a new story, deep character progression, and both single-player and multiplayer modes.</p>
@@ -259,15 +230,5 @@
 
     <a href="game-reviews.html" class="explore-reviews-btn">Explore More Game Reviews</a>
     <a href="index.html" class="return-link">Return to Main Page</a>
-
-    <script>
-        // Add star ratings to each game
-        document.querySelectorAll('.game-info').forEach((info, index) => {
-            const rating = document.createElement('div');
-            rating.className = 'star-rating';
-            rating.innerHTML = '★'.repeat(5 - index % 2) + '☆'.repeat(index % 2);
-            info.appendChild(rating);
-        });
-    </script>
 </body>
-</html>
+            </html>
