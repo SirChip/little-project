@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8486768995234253"
+     crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the top 5 action games of 2024. Experience intense gameplay, thrilling combat, and adrenaline-pumping adventures in these must-play titles.">
+    <title>Top 5 Action Games of 2024 - Chip's Corner</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKFS3GHRP8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GKFS3GHRP8');
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #D32F2F;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            color: white;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        h1, h2 {
+            color: #D32F2F;
+        }
+        .game-info {
+            background-color: #e9e9e9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .rating {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #D32F2F;
+        }
+        .return-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #D32F2F;
+            text-decoration: none;
+        }
+        .return-link:hover {
+            text-decoration: underline;
+        }
+        .toc {
+            background-color: #e9e9e9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .toc ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        .star-rating {
+            font-size: 24px;
+            color: #FFD700;
+        }
+        .last-updated {
+            font-style: italic;
+            color: #666;
+            margin-top: 20px;
+        }
+        .related-content {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #e9e9e9;
+            border-radius: 5px;
+        }
+        .explore-reviews-btn {
+            display: inline-block;
+            background-color: #D32F2F;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 20px 0;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .explore-reviews-btn:hover {
+            background-color: #B71C1C;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Top 5 Action Games of 2024</h1>
+    </header>
+
+    <div class="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#game1">1. Cyberpunk 2077: Phantom Liberty</a></li>
+            <li><a href="#game2">2. God of War: Ragnarök - Valhalla</a></li>
+            <li><a href="#game3">3. Devil May Cry 6</a></li>
+            <li><a href="#game4">4. Spider-Man: Venom</a></li>
+            <li><a href="#game5">5. Bayonetta 4</a></li>
+        </ul>
+    </div>
+
+    <h2 id="game1">1. Cyberpunk 2077: Phantom Liberty</h2>
+    <div class="game-info">
+        <strong>Developer:</strong> CD Projekt Red<br>
+        <strong>Publisher:</strong> CD Projekt<br>
+        <strong>Platforms:</strong> PlayStation 5, Xbox Series X/S, PC<br>
+        <strong>Release Date:</strong> September 26, 2023
+    </div>
+    <p><em>Cyberpunk 2077: Phantom Liberty</em> is an expansion to the base game that brings new life to Night City. With improved gameplay mechanics, a gripping spy-thriller storyline, and the addition of Idris Elba to the cast, this expansion offers intense action and deep narrative experiences in a richly detailed cyberpunk world.</p>
+
+    <h2 id="game2">2. God of War: Ragnarök - Valhalla</h2>
+    <div class="game-info">
+        <strong>Developer:</strong> Santa Monica Studio<br>
+        <strong>Publisher:</strong> Sony Interactive Entertainment<br>
+        <strong>Platforms:</strong> PlayStation 5<br>
+        <strong>Release Date:</strong> March 15, 2024
+    </div>
+    <p><em>God of War: Ragnarök - Valhalla</em> continues the Norse saga of Kratos and Atreus. This standalone expansion builds on the critically acclaimed God of War: Ragnarök, offering new combat mechanics, epic boss battles, and a deeper exploration of Norse mythology. The game pushes the boundaries of action-adventure gaming with its cinematic storytelling and visceral combat.</p>
+
+    <h2 id="game3">3. Devil May Cry 6</h2>
+    <div class="game-info">
+        <strong>Developer:</strong> Capcom<br>
+        <strong>Publisher:</strong> Capcom<br>
+        <strong>Platforms:</strong> PlayStation 5, Xbox Series X/S, PC<br>
+        <strong>Release Date:</strong> June 7, 2024
+    </div>
+    <p><em>Devil May Cry 6</em> brings the stylish action series to new heights. Featuring Dante, Nero, and a new playable character, the game offers more diverse gameplay than ever. With its signature blend of swordplay and gunplay, enhanced by next-gen graphics and physics, Devil May Cry 6 delivers an unparalleled action experience.</p>
+
+    <h2 id="game4">4. Spider-Man: Venom</h2>
+    <div class="game-info">
+        <strong>Developer:</strong> Insomniac Games<br>
+        <strong>Publisher:</strong> Sony Interactive Entertainment<br>
+        <strong>Platforms:</strong> PlayStation 5<br>
+        <strong>Release Date:</strong> October 4, 2024
+    </div>
+    <p><em>Spider-Man: Venom</em> is the latest installment in Insomniac's Spider-Man series. Players take control of both Spider-Man and Venom in this action-packed adventure. The game features an expanded New York City, new web-slinging mechanics, and a darker storyline that explores the complex relationship between hero and anti-hero.</p>
+
+    <h2 id="game5">5. Bayonetta 4</h2>
+    <div class="game-info">
+        <strong>Developer:</strong> PlatinumGames<br>
+        <strong>Publisher:</strong> Nintendo<br>
+        <strong>Platforms:</strong> Nintendo Switch 2<br>
+        <strong>Release Date:</strong> December 13, 2024
+    </div>
+    <p><em>Bayonetta 4</em> continues the over-the-top action series with more outrageous combos, stylish moves, and epic boss fights. Utilizing the power of the next-gen Nintendo console, the game offers smoother gameplay, more detailed environments, and an expanded combat system that pushes the boundaries of the hack-and-slash genre.</p>
+
+    <div class="related-content">
+        <h3>Related Content</h3>
+        <ul>
+            <li><a href="#">Cyberpunk 2077: Phantom Liberty Review</a></li>
+            <li><a href="#">God of War: Ragnarök - Valhalla Preview</a></li>
+            <li><a href="#">Top 10 Action RPGs of 2024</a></li>
+            <li><a href="#">The Evolution of the Devil May Cry Series</a></li>
+        </ul>
+    </div>
+
+    <p class="last-updated">Last Updated: August 11, 2024</p>
+
+    <a href="game-reviews.html" class="explore-reviews-btn">Explore More Game Reviews</a>
+    <a href="index.html" class="return-link">Return to Main Page</a>
+</body>
+</html>
