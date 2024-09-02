@@ -41,23 +41,6 @@
             width: 100%;
             height: 100%;
         }
-        .stars {
-            display: inline-block;
-        }
-        .star {
-            font-size: 2em;
-            color: #ccc; /* default star color */
-            cursor: pointer;
-        }
-        .star.selected,
-        .star:hover,
-        .star:hover ~ .star {
-            color: gold; /* highlighted star color */
-        }
-        .average-rating {
-            margin-left: 10px;
-            font-weight: bold;
-        }
     </style>
 </head>
 <body>
@@ -84,16 +67,16 @@
                 <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
             </div>
         </section>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hi, I'm Chip, a niche gamer with a potato PC. I enjoy playing a variety of games, but you'll often find me diving into Brawlhalla and Warframe. Sometimes, I also play Among Us with a few friends.</p>
-            <p>Explore my world of gaming!</p>
-            <div class="button-container">
-                <a href="#contact" class="button">Get in Touch</a>
-                <a href="gallery.html" class="button">View Gallery</a>
-                <a href="updates.html" class="button">Updates</a>
-            </div>
-        </section>
+       <section id="about">
+    <h2>About Me</h2>
+    <p>Hi, I'm Chip, a niche gamer with a potato PC. I enjoy playing a variety of games, but you'll often find me diving into Brawlhalla and Warframe. Sometimes, I also play Among Us with a few friends.</p>
+    <p>Explore my world of gaming!</p>
+    <div class="button-container">
+        <a href="#contact" class="button">Get in Touch</a>
+        <a href="gallery.html" class="button">View Gallery</a>
+        <a href="updates.html" class="button">Updates</a>
+    </div>
+</section>
         <section id="stats">
             <h2>Gaming Stats</h2>
             <div class="stat-container">
@@ -119,8 +102,8 @@
             <div class="social-icons">
                 <a href="mailto:kidtron4@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
                 <a href="https://youtube.com/@_sirchip?si=wmpT-45Pmy0nn1Za" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.facebook.com/lilcybers?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-facebook"></i></a>
-                <a href="https://twitter.com/_SirChip" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-twitter"></i></a>
+<a href="https://www.facebook.com/lilcybers?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-facebook"></i></a>
+<a href="https://twitter.com/_SirChip" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-twitter"></i></a>
             </div>
         </section>
         <section id="partnerships">
@@ -155,17 +138,17 @@
             </div>
         </section>
         <section id="game-of-the-month">
-            <h2>Game of the Month</h2>
-            <div class="game-of-the-month">
-                <img src="game-of-the-month.jpg" alt="Elden Ring">
-                <h3>Elden Ring</h3>
-                <p>An epic action RPG set in a vast, interconnected world.</p>
-                <a href="elden-ring-review.html" class="button">Read Review</a>
-            </div>
-        </section>
+    <h2>Game of the Month</h2>
+    <div class="game-of-the-month">
+        <img src="game-of-the-month.jpg" alt="Elden Ring">
+        <h3>Elden Ring</h3>
+        <p>An epic action RPG set in a vast, interconnected world.</p>
+        <a href="elden-ring-review.html" class="button">Read Review</a>
+    </div>
+</section>
         <section id="game-ratings">
             <h2>Game Ratings</h2>
-            <div class="rating" data-game="Brawlhalla">
+            <div class="rating">
                 <span class="rating-label">Brawlhalla:</span>
                 <div class="stars">
                     <span class="star" data-value="1">&#9733;</span>
@@ -174,9 +157,8 @@
                     <span class="star" data-value="4">&#9733;</span>
                     <span class="star" data-value="5">&#9733;</span>
                 </div>
-                <span class="average-rating">Average Rating: 0</span>
             </div>
-            <div class="rating" data-game="Warframe">
+            <div class="rating">
                 <span class="rating-label">Warframe:</span>
                 <div class="stars">
                     <span class="star" data-value="1">&#9733;</span>
@@ -185,69 +167,81 @@
                     <span class="star" data-value="4">&#9733;</span>
                     <span class="star" data-value="5">&#9733;</span>
                 </div>
-                <span class="average-rating">Average Rating: 0</span>
             </div>
         </section>
-        <footer>
-            <p>&copy; 2024 Chip's Corner. All rights reserved.</p>
-        </footer>
+        <section id="game-recommendations">
+            <h2>Game Recommendations</h2>
+            <p>Get personalized game recommendations based on your preferences:</p>
+            <select id="platform" onchange="updateRecommendations()">
+                <option value="">Select a platform</option>
+                <option value="pc">PC</option>
+                <option value="console">Console</option>
+                <option value="mobile">Mobile</option>
+            </select>
+            <select id="genre" onchange="updateRecommendations()">
+                <option value="">Select a genre</option>
+                <option value="action">Action</option>
+                <option value="rpg">RPG</option>
+                <option value="strategy">Strategy</option>
+                <option value="simulation">Simulation</option>
+                <option value="sports">Sports</option>
+                <option value="puzzle">Puzzle</option>
+            </select>
+            <div id="recommendations"></div>
+        </section>
+        <section id="fan-art">
+            <div class="fan-art-section">
+                <h2>Fan Art Showcase</h2>
+                <p>If you have any fan art you wish to share, send it through my Discord and I will showcase the best ones here!</p>
+                <a href="https://discord.com/invite/aX4tw48ZvE" target="_blank" class="button">Join My Discord</a>
+            </div>
+        </section>
     </div>
+    <footer>
+        <p>&copy; 2024 Chip's Corner</p>
+        <p><a href="privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+    <script src="script.js"></script>
     <script>
-        particlesJS.load('particles-js', 'particles.json', function() {
-            console.log('Particles.js config loaded');
-        });
+    function updateRecommendations() {
+        const platform = document.getElementById('platform').value;
+        const genre = document.getElementById('genre').value;
+        const recommendationsDiv = document.getElementById('recommendations');
+        
+        if (platform && genre) {
+            const gameRecommendations = {
+                pc: {
+                    action: ["Half-Life 2", "Doom Eternal", "Grand Theft Auto V"],
+                    rpg: ["The Witcher 3", "Divinity: Original Sin 2", "Disco Elysium"],
+                    strategy: ["Civilization VI", "XCOM 2", "Age of Empires II: Definitive Edition"],
+                    simulation: ["Cities: Skylines", "Euro Truck Simulator 2", "Stardew Valley"],
+                    sports: ["Rocket League", "FIFA 22", "NBA 2K22"],
+                    puzzle: ["Portal 2", "Baba Is You", "The Witness"]
+                },
+                console: {
+                    action: ["God of War", "Spider-Man: Miles Morales", "Ratchet & Clank: Rift Apart"],
+                    rpg: ["Final Fantasy VII Remake", "Persona 5 Royal", "Nier: Automata"],
+                    strategy: ["Fire Emblem: Three Houses", "Valkyria Chronicles 4", "Mario + Rabbids Kingdom Battle"],
+                    simulation: ["Animal Crossing: New Horizons", "Planet Coaster: Console Edition", "Two Point Hospital"],
+                    sports: ["Madden NFL 22", "MLB The Show 21", "Tony Hawk's Pro Skater 1+2"],
+                    puzzle: ["Tetris Effect: Connected", "Puyo Puyo Tetris 2", "Captain Toad: Treasure Tracker"]
+                },
+                mobile: {
+                    action: ["PUBG Mobile", "Call of Duty: Mobile", "Genshin Impact"],
+                    rpg: ["Another Eden", "Final Fantasy Brave Exvius", "Star Wars: Knights of the Old Republic"],
+                    strategy: ["Clash Royale", "Plants vs. Zombies 2", "Chess - Play & Learn"],
+                    simulation: ["Minecraft", "The Sims Mobile", "Plague Inc."],
+                    sports: ["FIFA Mobile", "8 Ball Pool", "Golf Clash"],
+                    puzzle: ["Monument Valley", "Two Dots", "Threes!"]
+                }
+            };
 
-        var typed = new Typed('#typed-text', {
-            strings: ["Welcome to Chip's Corner!", "Your go-to gaming blog.", "Join the adventure today!"],
-            typeSpeed: 50,
-            backSpeed: 25,
-            loop: true
-        });
-
-        // Star Rating Functionality
-        document.addEventListener("DOMContentLoaded", function () {
-            const ratings = document.querySelectorAll(".rating");
-
-            ratings.forEach(rating => {
-                const stars = rating.querySelectorAll(".star");
-                const averageRatingElement = rating.querySelector(".average-rating");
-
-                stars.forEach(star => {
-                    star.addEventListener("click", function () {
-                        const selectedValue = this.getAttribute("data-value");
-                        highlightStars(stars, selectedValue);
-                        updateAverageRating(rating, selectedValue);
-                    });
-                });
-            });
-
-            function highlightStars(stars, selectedValue) {
-                stars.forEach(star => {
-                    if (star.getAttribute("data-value") <= selectedValue) {
-                        star.classList.add("selected");
-                    } else {
-                        star.classList.remove("selected");
-                    }
-                });
-            }
-
-            function updateAverageRating(rating, selectedValue) {
-                let totalRatings = parseInt(rating.getAttribute("data-total-ratings")) || 0;
-                let totalScore = parseFloat(rating.getAttribute("data-total-score")) || 0;
-
-                totalRatings += 1;
-                totalScore += parseInt(selectedValue);
-
-                const average = (totalScore / totalRatings).toFixed(1);
-
-                rating.setAttribute("data-total-ratings", totalRatings);
-                rating.setAttribute("data-total-score", totalScore);
-
-                const averageRatingElement = rating.querySelector(".average-rating");
-                averageRatingElement.textContent = `Average Rating: ${average}`;
-            }
-        });
+            const recommendations = gameRecommendations[platform][genre];
+            recommendationsDiv.innerHTML = `<h3>Recommended Games:</h3><ul>${recommendations.map(game => `<li>${game}</li>`).join('')}</ul>`;
+        } else {
+            recommendationsDiv.innerHTML = "Please select both a platform and a genre for recommendations.";
+        }
+    }
     </script>
-    <script src="star-rating.js"></script>
 </body>
 </html>
