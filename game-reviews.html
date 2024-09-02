@@ -58,21 +58,29 @@
             border-radius: 5px;
             padding: 15px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
         }
         .review-card img {
             width: 100%;
             height: auto;
             border-radius: 5px;
         }
-        .return-link {
-            display: block;
-            text-align: center;
-            margin-top: 20px;
+        .review-card h3 {
+            margin: 10px 0;
+        }
+        .review-card a {
             color: #4CAF50;
             text-decoration: none;
         }
-        .return-link:hover {
+        .review-card a:hover {
             text-decoration: underline;
+        }
+        .coming-soon {
+            background-color: #f8f8f8;
+            border: 2px dashed #4CAF50;
+        }
+        .coming-soon img {
+            opacity: 0.6;
         }
     </style>
 </head>
@@ -118,6 +126,12 @@
             <h3>Top 10 action games of 2024</h3>
             <p>From God of War Ragnarök: Valhalla to Devil May Cry 6, explore the top 10 action games of 2024.</p>
             <a href="Top-5-Action-Games-of-2024.html">Read Full Review</a>
+        </div>
+        <!-- Coming Soon Review Card -->
+        <div class="review-card coming-soon">
+            <img src="Horizon-Forbidden-West.jpg" alt="Coming Soon">
+            <h3>Coming Soon!</h3>
+            <p>Stay tuned for our next review. It's going to be an exciting one!</p>
         </div>
     </div>
 
