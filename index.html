@@ -26,11 +26,7 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
-    <!-- Added smooth scrolling for better user experience -->
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
         .video-container {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 aspect ratio */
@@ -44,58 +40,6 @@
             left: 0;
             width: 100%;
             height: 100%;
-        }
-        /* Sticky navigation */
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background-color: #333;
-            padding: 10px 0;
-        }
-        nav .button {
-            background-color: #444;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        nav .button:hover {
-            background-color: #666;
-        }
-        /* Hover effects for buttons */
-        .button-container a.button {
-            background-color: #008cba;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-        .button-container a.button:hover {
-            background-color: #005f5f;
-        }
-        /* Lazy loading images for performance improvement */
-        img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-            transition: transform 0.2s ease-in-out;
-        }
-        img.lazyload {
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        img.lazyloaded {
-            opacity: 1;
-        }
-        /* Viewport adjustment for better mobile responsiveness */
-        @media (max-width: 768px) {
-            .profile-section,
-            .game-grid {
-                display: block;
-            }
         }
     </style>
 </head>
@@ -118,42 +62,21 @@
                 </div>
             </div>
         </nav>
-
-        <!-- Profile Picture Section -->
         <section class="profile-section">
-            <h2>About Me</h2>
             <div class="profile-picture-container">
-                <img data-src="profile-picture.jpg" alt="Profile Picture" class="profile-picture lazyload">
-            </div>
-            <p>Hi, I'm Chip, a niche gamer with a potato PC. I enjoy playing a variety of games, but you'll often find me diving into Brawlhalla and Warframe. Sometimes, I also play Among Us with a few friends.</p>
-            <p>Explore my world of gaming!</p>
-            <div class="button-container">
-                <a href="#contact" class="button">Get in Touch</a>
-                <a href="gallery.html" class="button">View Gallery</a>
-                <a href="updates.html" class="button">Updates</a>
+                <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
             </div>
         </section>
-
-        <!-- Latest YouTube Video Section -->
-        <section id="latest-video">
-            <h2>Latest YouTube Video</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/31UYyOA5RaI?si=j7spB5kSWJCrwzjv" title="Latest Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </section>
-
-        <!-- Game of the Month Section -->
-        <section id="game-of-the-month">
-            <h2>Game of the Month</h2>
-            <div class="game-card">
-                <img data-src="dark-souls-3.jpg" alt="Game of the Month" class="game-image lazyload">
-                <div class="game-details">
-                    <h3 class="game-title">Baldur's Gate 3</h3>
-                    <p class="game-description">This month, dive into the world of Dark souls 3. Whether you're rolling a new character or continuing your campaign, the choices are yours in this medieval inspired game.</p>
-                </div>
-            </div>
-        </section>
-
+       <section id="about">
+    <h2>About Me</h2>
+    <p>Hi, I'm Chip, a niche gamer with a potato PC. I enjoy playing a variety of games, but you'll often find me diving into Brawlhalla and Warframe. Sometimes, I also play Among Us with a few friends.</p>
+    <p>Explore my world of gaming!</p>
+    <div class="button-container">
+        <a href="#contact" class="button">Get in Touch</a>
+        <a href="gallery.html" class="button">View Gallery</a>
+        <a href="updates.html" class="button">Updates</a>
+    </div>
+</section>
         <section id="stats">
             <h2>Gaming Stats</h2>
             <div class="stat-container">
@@ -174,66 +97,151 @@
                 </div>
             </div>
         </section>
-
         <section id="contact">
             <h2>Here is where you can find me</h2>
             <div class="social-icons">
                 <a href="mailto:kidtron4@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
                 <a href="https://youtube.com/@_sirchip?si=wmpT-45Pmy0nn1Za" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.facebook.com/lilcybers?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-facebook"></i></a>
-                <a href="https://twitter.com/_SirChip" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-twitter"></i></a>
+<a href="https://www.facebook.com/lilcybers?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-facebook"></i></a>
+<a href="https://twitter.com/_SirChip" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-twitter"></i></a>
             </div>
         </section>
-
+        <section id="partnerships">
+            <h2>Partnerships & Feedback</h2>
+            <p>For partnerships and feedback, please contact me at <a href="mailto:kidtron4@gmail.com">kidtron4@gmail.com</a>.</p>
+        </section>
         <section id="featured-games">
             <h2>Featured Games</h2>
             <div class="game-grid">
                 <div class="game-card">
-                    <img data-src="brawlhalla-picture.png" alt="Brawlhalla" class="game-image lazyload">
+                    <img src="brawlhalla-picture.png" alt="Brawlhalla" class="game-image">
                     <div class="game-details">
                         <h3 class="game-title">Brawlhalla</h3>
                         <p class="game-description">A fast-paced platform fighter game where legends battle it out in intense combat.</p>
-                        <a href="https://www.brawlhalla.com/" class="game-link">Learn More</a>
+                        <a href="https://www.brawlhalla.com/" class="game-link" target="_blank" rel="noopener noreferrer">Visit the Brawlhalla website</a>
                     </div>
                 </div>
                 <div class="game-card">
-                    <img data-src="warframe-picture.jpg" alt="Warframe" class="game-image lazyload">
+                    <img src="warframe-picture.jpg" alt="Warframe" class="game-image">
                     <div class="game-details">
                         <h3 class="game-title">Warframe</h3>
-                        <p class="game-description">Take control of a Tenno and engage in high-paced, third-person combat in the vast expanse of the Warframe universe.</p>
-                        <a href="https://www.warframe.com/" class="game-link">Learn More</a>
+                        <p class="game-description">An online action game set in an evolving sci-fi world filled with ninjas, guns, and swords.</p>
+                        <a href="https://www.warframe.com/" class="game-link" target="_blank">Learn more about Warframe</a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <footer>
-            <p>© 2024 Chip's Corner. All rights reserved.</p>
-        </footer>
+        <section id="latest-video">
+            <h2>Latest YouTube Video</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/31UYyOA5RaI?si=j7spB5kSWJCrwzjv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section id="game-of-the-month">
+    <h2>Game of the Month</h2>
+    <div class="game-of-the-month">
+        <img src="game-of-the-month.jpg" alt="Elden Ring">
+        <h3>Elden Ring</h3>
+        <p>An epic action RPG set in a vast, interconnected world.</p>
+        <a href="elden-ring-review.html" class="button">Read Review</a>
     </div>
-
-    <!-- Lazy load script -->
+</section>
+        <section id="game-ratings">
+            <h2>Game Ratings</h2>
+            <div class="rating">
+                <span class="rating-label">Brawlhalla:</span>
+                <div class="stars">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+            </div>
+            <div class="rating">
+                <span class="rating-label">Warframe:</span>
+                <div class="stars">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+            </div>
+        </section>
+        <section id="game-recommendations">
+            <h2>Game Recommendations</h2>
+            <p>Get personalized game recommendations based on your preferences:</p>
+            <select id="platform" onchange="updateRecommendations()">
+                <option value="">Select a platform</option>
+                <option value="pc">PC</option>
+                <option value="console">Console</option>
+                <option value="mobile">Mobile</option>
+            </select>
+            <select id="genre" onchange="updateRecommendations()">
+                <option value="">Select a genre</option>
+                <option value="action">Action</option>
+                <option value="rpg">RPG</option>
+                <option value="strategy">Strategy</option>
+                <option value="simulation">Simulation</option>
+                <option value="sports">Sports</option>
+                <option value="puzzle">Puzzle</option>
+            </select>
+            <div id="recommendations"></div>
+        </section>
+        <section id="fan-art">
+            <div class="fan-art-section">
+                <h2>Fan Art Showcase</h2>
+                <p>If you have any fan art you wish to share, send it through my Discord and I will showcase the best ones here!</p>
+                <a href="https://discord.com/invite/aX4tw48ZvE" target="_blank" class="button">Join My Discord</a>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Chip's Corner</p>
+        <p><a href="privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+    <script src="script.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
-            if ("IntersectionObserver" in window) {
-                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                            let lazyImage = entry.target;
-                            lazyImage.src = lazyImage.dataset.src;
-                            lazyImage.classList.remove("lazyload");
-                            lazyImage.classList.add("lazyloaded");
-                            lazyImageObserver.unobserve(lazyImage);
-                        }
-                    });
-                });
-                lazyImages.forEach(function(lazyImage) {
-                    lazyImageObserver.observe(lazyImage);
-                });
-            }
-        });
+    function updateRecommendations() {
+        const platform = document.getElementById('platform').value;
+        const genre = document.getElementById('genre').value;
+        const recommendationsDiv = document.getElementById('recommendations');
+        
+        if (platform && genre) {
+            const gameRecommendations = {
+                pc: {
+                    action: ["Half-Life 2", "Doom Eternal", "Grand Theft Auto V"],
+                    rpg: ["The Witcher 3", "Divinity: Original Sin 2", "Disco Elysium"],
+                    strategy: ["Civilization VI", "XCOM 2", "Age of Empires II: Definitive Edition"],
+                    simulation: ["Cities: Skylines", "Euro Truck Simulator 2", "Stardew Valley"],
+                    sports: ["Rocket League", "FIFA 22", "NBA 2K22"],
+                    puzzle: ["Portal 2", "Baba Is You", "The Witness"]
+                },
+                console: {
+                    action: ["God of War", "Spider-Man: Miles Morales", "Ratchet & Clank: Rift Apart"],
+                    rpg: ["Final Fantasy VII Remake", "Persona 5 Royal", "Nier: Automata"],
+                    strategy: ["Fire Emblem: Three Houses", "Valkyria Chronicles 4", "Mario + Rabbids Kingdom Battle"],
+                    simulation: ["Animal Crossing: New Horizons", "Planet Coaster: Console Edition", "Two Point Hospital"],
+                    sports: ["Madden NFL 22", "MLB The Show 21", "Tony Hawk's Pro Skater 1+2"],
+                    puzzle: ["Tetris Effect: Connected", "Puyo Puyo Tetris 2", "Captain Toad: Treasure Tracker"]
+                },
+                mobile: {
+                    action: ["PUBG Mobile", "Call of Duty: Mobile", "Genshin Impact"],
+                    rpg: ["Another Eden", "Final Fantasy Brave Exvius", "Star Wars: Knights of the Old Republic"],
+                    strategy: ["Clash Royale", "Plants vs. Zombies 2", "Chess - Play & Learn"],
+                    simulation: ["Minecraft", "The Sims Mobile", "Plague Inc."],
+                    sports: ["FIFA Mobile", "8 Ball Pool", "Golf Clash"],
+                    puzzle: ["Monument Valley", "Two Dots", "Threes!"]
+                }
+            };
+
+            const recommendations = gameRecommendations[platform][genre];
+            recommendationsDiv.innerHTML = `<h3>Recommended Games:</h3><ul>${recommendations.map(game => `<li>${game}</li>`).join('')}</ul>`;
+        } else {
+            recommendationsDiv.innerHTML = "Please select both a platform and a genre for recommendations.";
+        }
+    }
     </script>
-    <script src="scripts.js"></script>
 </body>
 </html>
