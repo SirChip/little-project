@@ -118,13 +118,13 @@
                 </div>
             </div>
         </nav>
+
+        <!-- Profile Picture Section -->
         <section class="profile-section">
+            <h2>About Me</h2>
             <div class="profile-picture-container">
                 <img data-src="profile-picture.jpg" alt="Profile Picture" class="profile-picture lazyload">
             </div>
-        </section>
-        <section id="about">
-            <h2>About Me</h2>
             <p>Hi, I'm Chip, a niche gamer with a potato PC. I enjoy playing a variety of games, but you'll often find me diving into Brawlhalla and Warframe. Sometimes, I also play Among Us with a few friends.</p>
             <p>Explore my world of gaming!</p>
             <div class="button-container">
@@ -133,6 +133,27 @@
                 <a href="updates.html" class="button">Updates</a>
             </div>
         </section>
+
+        <!-- Latest YouTube Video Section -->
+        <section id="latest-video">
+            <h2>Latest YouTube Video</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Latest Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Game of the Month Section -->
+        <section id="game-of-the-month">
+            <h2>Game of the Month</h2>
+            <div class="game-card">
+                <img data-src="game-of-the-month.jpg" alt="Game of the Month" class="game-image lazyload">
+                <div class="game-details">
+                    <h3 class="game-title">Baldur's Gate 3</h3>
+                    <p class="game-description">This month, dive into the world of Baldur's Gate 3. Whether you're rolling a new character or continuing your campaign, the choices are yours in this D&D-inspired world.</p>
+                </div>
+            </div>
+        </section>
+
         <section id="stats">
             <h2>Gaming Stats</h2>
             <div class="stat-container">
@@ -153,6 +174,7 @@
                 </div>
             </div>
         </section>
+
         <section id="contact">
             <h2>Here is where you can find me</h2>
             <div class="social-icons">
@@ -162,6 +184,7 @@
                 <a href="https://twitter.com/_SirChip" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-twitter"></i></a>
             </div>
         </section>
+
         <section id="featured-games">
             <h2>Featured Games</h2>
             <div class="game-grid">
@@ -170,24 +193,47 @@
                     <div class="game-details">
                         <h3 class="game-title">Brawlhalla</h3>
                         <p class="game-description">A fast-paced platform fighter game where legends battle it out in intense combat.</p>
-                        <a href="https://www.brawlhalla.com/" class="game-link" target="_blank" rel="noopener noreferrer">Visit the Brawlhalla website</a>
+                        <a href="https://www.brawlhalla.com/" class="game-link">Learn More</a>
                     </div>
                 </div>
                 <div class="game-card">
                     <img data-src="warframe-picture.jpg" alt="Warframe" class="game-image lazyload">
                     <div class="game-details">
                         <h3 class="game-title">Warframe</h3>
-                        <p class="game-description">An online action game set in an evolving sci-fi world filled with ninjas, guns, and swords.</p>
-                        <a href="https://www.warframe.com/" class="game-link" target="_blank">Learn more about Warframe</a>
+                        <p class="game-description">Take control of a Tenno and engage in high-paced, third-person combat in the vast expanse of the Warframe universe.</p>
+                        <a href="https://www.warframe.com/" class="game-link">Learn More</a>
                     </div>
                 </div>
             </div>
         </section>
+
         <footer>
-            <p>&copy; 2024 Chip's Corner</p>
-            <p><a href="privacy-policy.html">Privacy Policy</a></p>
+            <p>© 2024 Chip's Corner. All rights reserved.</p>
         </footer>
     </div>
-    <script src="script.js"></script>
+
+    <!-- Lazy load script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var lazyImages = [].slice.call(document.querySelectorAll("img.lazyload"));
+            if ("IntersectionObserver" in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.classList.remove("lazyload");
+                            lazyImage.classList.add("lazyloaded");
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            }
+        });
+    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
