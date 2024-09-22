@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8486768995234253" crossorigin="anonymous"></script>
@@ -16,9 +16,11 @@
     </script>
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- CSS file link -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Added CSS libraries -->
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- Added JavaScript libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -27,6 +29,90 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
     <style>
+        /* General Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            font-weight: 700;
+        }
+        p {
+            line-height: 1.6;
+        }
+
+        /* Header and Navigation */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #333;
+            color: white;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #ff9800;
+            color: #fff;
+        }
+
+        /* Button Styling */
+        .button {
+            background-color: #ff9800;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition: 0.3s;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        .button:hover {
+            background-color: #ff5722;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        footer nav {
+            margin: 20px 0;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Video Responsiveness */
         .video-container {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 aspect ratio */
@@ -41,42 +127,56 @@
             width: 100%;
             height: 100%;
         }
+
+        /* Stats Section */
+        .stat-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+        .stat-item {
+            text-align: center;
+            margin: 20px;
+        }
+
+        /* Responsive for smaller screens */
+        @media (max-width: 768px) {
+            .stat-item {
+                flex-basis: 100%;
+                margin: 10px 0;
+            }
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
     </style>
 </head>
 <body>
     <div id="particles-js"></div>
     <div class="container">
-        <header class="parallax-bg">
+        <header>
             <h1>Chip's Corner</h1>
             <div id="typed-text"></div>
         </header>
         <nav>
-            <div class="dropdown">
-                <button class="button">Menu</button>
-                <div class="dropdown-content">
-                    <a href="#about">About Me</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#featured-games">Featured Games</a>
-                    <a href="#game-ratings">Game Ratings</a>
-                    <a href="updates.html">Updates</a>
-                </div>
-            </div>
+            <a href="#about">About Me</a>
+            <a href="#contact">Contact</a>
+            <a href="#featured-games">Featured Games</a>
+            <a href="#game-ratings">Game Ratings</a>
+            <a href="updates.html">Updates</a>
         </nav>
-        <section class="profile-section">
-            <div class="profile-picture-container">
-                <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi, I'm Chip, a niche gamer with a potato PC. I enjoy playing a variety of games, but you'll often find me diving into Brawlhalla and Warframe. Sometimes, I also play Among Us with a few friends.</p>
+            <div class="button-container">
+                <a href="#contact" class="button">Get in Touch</a>
+                <a href="gallery.html" class="button">View Gallery</a>
             </div>
         </section>
-       <section id="about">
-    <h2>About Me</h2>
-    <p>Hi, I'm Chip, a niche gamer with a potato PC. I enjoy playing a variety of games, but you'll often find me diving into Brawlhalla and Warframe. Sometimes, I also play Among Us with a few friends.</p>
-    <p>Explore my world of gaming!</p>
-    <div class="button-container">
-        <a href="#contact" class="button">Get in Touch</a>
-        <a href="gallery.html" class="button">View Gallery</a>
-        <a href="updates.html" class="button">Updates</a>
-    </div>
-</section>
+
         <section id="stats">
             <h2>Gaming Stats</h2>
             <div class="stat-container">
@@ -97,19 +197,17 @@
                 </div>
             </div>
         </section>
+
         <section id="contact">
             <h2>Here is where you can find me</h2>
             <div class="social-icons">
                 <a href="mailto:kidtron4@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
-                <a href="https://youtube.com/@_sirchip?si=wmpT-45Pmy0nn1Za" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-youtube"></i></a>
-<a href="https://www.facebook.com/lilcybers?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-facebook"></i></a>
-<a href="https://twitter.com/_SirChip" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://youtube.com/@_sirchip" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/lilcybers" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/_SirChip" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
             </div>
         </section>
-        <section id="partnerships">
-            <h2>Partnerships & Feedback</h2>
-            <p>For partnerships and feedback, please contact me at <a href="mailto:kidtron4@gmail.com">kidtron4@gmail.com</a>.</p>
-        </section>
+
         <section id="featured-games">
             <h2>Featured Games</h2>
             <div class="game-grid">
@@ -118,130 +216,69 @@
                     <div class="game-details">
                         <h3 class="game-title">Brawlhalla</h3>
                         <p class="game-description">A fast-paced platform fighter game where legends battle it out in intense combat.</p>
-                        <a href="https://www.brawlhalla.com/" class="game-link" target="_blank" rel="noopener noreferrer">Visit the Brawlhalla website</a>
+                        <a href="https://www.brawlhalla.com/" class="game-link" target="_blank">Visit the Brawlhalla website</a>
                     </div>
                 </div>
                 <div class="game-card">
                     <img src="warframe-picture.jpg" alt="Warframe" class="game-image">
                     <div class="game-details">
                         <h3 class="game-title">Warframe</h3>
-                        <p class="game-description">An online action game set in an evolving sci-fi world filled with ninjas, guns, and swords.</p>
+                        <p>An online action game set in an evolving sci-fi world filled with ninjas, guns, and swords.</p>
                         <a href="https://www.warframe.com/" class="game-link" target="_blank">Learn more about Warframe</a>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="latest-video">
-            <h2>Latest YouTube Video</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/31UYyOA5RaI?si=j7spB5kSWJCrwzjv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </section>
-        <section id="game-of-the-month">
-    <h2>Game of the Month</h2>
-    <div class="game-of-the-month">
-        <img src="game-of-the-month.jpg" alt="Elden Ring">
-        <h3>Elden Ring</h3>
-        <p>An epic action RPG set in a vast, interconnected world.</p>
-        <a href="elden-ring-review.html" class="button">Read Review</a>
-    </div>
-</section>
-        <section id="game-ratings">
-            <h2>Game Ratings</h2>
-            <div class="rating">
-                <span class="rating-label">Brawlhalla:</span>
-                <div class="stars">
-                    <span class="star" data-value="1">&#9733;</span>
-                    <span class="star" data-value="2">&#9733;</span>
-                    <span class="star" data-value="3">&#9733;</span>
-                    <span class="star" data-value="4">&#9733;</span>
-                    <span class="star" data-value="5">&#9733;</span>
-                </div>
-            </div>
-            <div class="rating">
-                <span class="rating-label">Warframe:</span>
-                <div class="stars">
-                    <span class="star" data-value="1">&#9733;</span>
-                    <span class="star" data-value="2">&#9733;</span>
-                    <span class="star" data-value="3">&#9733;</span>
-                    <span class="star" data-value="4">&#9733;</span>
-                    <span class="star" data-value="5">&#9733;</span>
-                </div>
-            </div>
-        </section>
-        <section id="game-recommendations">
-            <h2>Game Recommendations</h2>
-            <p>Get personalized game recommendations based on your preferences:</p>
-            <select id="platform" onchange="updateRecommendations()">
-                <option value="">Select a platform</option>
-                <option value="pc">PC</option>
-                <option value="console">Console</option>
-                <option value="mobile">Mobile</option>
-            </select>
-            <select id="genre" onchange="updateRecommendations()">
-                <option value="">Select a genre</option>
-                <option value="action">Action</option>
-                <option value="rpg">RPG</option>
-                <option value="strategy">Strategy</option>
-                <option value="simulation">Simulation</option>
-                <option value="sports">Sports</option>
-                <option value="puzzle">Puzzle</option>
-            </select>
-            <div id="recommendations"></div>
-        </section>
-        <section id="fan-art">
-            <div class="fan-art-section">
-                <h2>Fan Art Showcase</h2>
-                <p>If you have any fan art you wish to share, send it through my Discord and I will showcase the best ones here!</p>
-                <a href="https://discord.com/invite/aX4tw48ZvE" target="_blank" class="button">Join My Discord</a>
-            </div>
-        </section>
-    </div>
-    <footer>
-        <p>&copy; 2024 Chip's Corner</p>
-        <p><a href="privacy-policy.html">Privacy Policy</a></p>
-    </footer>
-    <script src="script.js"></script>
-    <script>
-    function updateRecommendations() {
-        const platform = document.getElementById('platform').value;
-        const genre = document.getElementById('genre').value;
-        const recommendationsDiv = document.getElementById('recommendations');
-        
-        if (platform && genre) {
-            const gameRecommendations = {
-                pc: {
-                    action: ["Half-Life 2", "Doom Eternal", "Grand Theft Auto V"],
-                    rpg: ["The Witcher 3", "Divinity: Original Sin 2", "Disco Elysium"],
-                    strategy: ["Civilization VI", "XCOM 2", "Age of Empires II: Definitive Edition"],
-                    simulation: ["Cities: Skylines", "Euro Truck Simulator 2", "Stardew Valley"],
-                    sports: ["Rocket League", "FIFA 22", "NBA 2K22"],
-                    puzzle: ["Portal 2", "Baba Is You", "The Witness"]
-                },
-                console: {
-                    action: ["God of War", "Spider-Man: Miles Morales", "Ratchet & Clank: Rift Apart"],
-                    rpg: ["Final Fantasy VII Remake", "Persona 5 Royal", "Nier: Automata"],
-                    strategy: ["Fire Emblem: Three Houses", "Valkyria Chronicles 4", "Mario + Rabbids Kingdom Battle"],
-                    simulation: ["Animal Crossing: New Horizons", "Planet Coaster: Console Edition", "Two Point Hospital"],
-                    sports: ["Madden NFL 22", "MLB The Show 21", "Tony Hawk's Pro Skater 1+2"],
-                    puzzle: ["Tetris Effect: Connected", "Puyo Puyo Tetris 2", "Captain Toad: Treasure Tracker"]
-                },
-                mobile: {
-                    action: ["PUBG Mobile", "Call of Duty: Mobile", "Genshin Impact"],
-                    rpg: ["Another Eden", "Final Fantasy Brave Exvius", "Star Wars: Knights of the Old Republic"],
-                    strategy: ["Clash Royale", "Plants vs. Zombies 2", "Chess - Play & Learn"],
-                    simulation: ["Minecraft", "The Sims Mobile", "Plague Inc."],
-                    sports: ["FIFA Mobile", "8 Ball Pool", "Golf Clash"],
-                    puzzle: ["Monument Valley", "Two Dots", "Threes!"]
-                }
-            };
 
-            const recommendations = gameRecommendations[platform][genre];
-            recommendationsDiv.innerHTML = `<h3>Recommended Games:</h3><ul>${recommendations.map(game => `<li>${game}</li>`).join('')}</ul>`;
-        } else {
-            recommendationsDiv.innerHTML = "Please select both a platform and a genre for recommendations.";
-        }
-    }
+        <!-- YouTube Video -->
+        <section id="video">
+            <h2>Latest Video</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/YbJOTdZBX1g" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Chip's Corner</p>
+            <nav>
+                <a href="privacy-policy.html">Privacy Policy</a> |
+                <a href="#about">About</a> |
+                <a href="#contact">Contact</a> |
+                <a href="https://twitter.com/_SirChip" target="_blank">Twitter</a>
+            </nav>
+        </footer>
+    </div>
+
+    <!-- Particles.js configuration -->
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 50
+                },
+                "size": {
+                    "value": 3
+                },
+                "move": {
+                    "speed": 2
+                }
+            }
+        });
+
+        // Typed.js for animated text
+        new Typed('#typed-text', {
+            strings: ['Welcome to Chip\'s Corner.', 'Explore reviews, recommendations, and more.'],
+            typeSpeed: 50,
+            backSpeed: 25,
+            loop: true
+        });
+
+        // Counter Up plugin for stats
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1000
+        });
     </script>
 </body>
 </html>
