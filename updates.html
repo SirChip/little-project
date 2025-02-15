@@ -1,39 +1,114 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latest Updates</title>
+    <title>Chip's Corner - Updates</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
         }
+        
         .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
         }
+        
         header {
-            background: #4CAF50;
-            color: white;
-            padding: 20px;
             text-align: center;
+            padding: 20px 0;
         }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #4CAF50;
+        }
+        
         .updates {
-            background: white;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin: 20px 0;
         }
+        
         .update {
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #ddd;
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
+        
+        .date {
+            display: block;
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 5px;
+        }
+        
+        .content {
+            font-size: 1.1em;
+        }
+        
+        section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+        
+        section h2 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        form label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        
+        form input[type="email"],
+        form textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        
+        form input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        
+        form input[type="email"]:focus,
+        form textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+        
+        form button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        form button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        
         .return-button {
             display: block;
             width: 200px;
@@ -47,16 +122,18 @@
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
+        
         .return-button:hover {
             background-color: #45a049;
             transform: scale(1.05);
         }
-        .hollow-knight-struggles {
-            font-size: 1.2em;
+
+        .countdown {
+            font-size: 2em;
             text-align: center;
             margin: 20px 0;
-            padding: 15px;
-            background-color: #ff4d4d;
+            padding: 10px;
+            background-color: #4CAF50;
             color: white;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -68,25 +145,30 @@
         <header>
             <h1>Latest Updates</h1>
         </header>
-
-        <div class="hollow-knight-struggles">
-            <strong>Hollow Knight Struggles:</strong><br>
-            "I gave Hollow Knight a shot, but after dying <strong>53 times</strong> to Hornet, I decided to call it quits.  
-            Beating her was supposed to open up more of the game... but I guess I'll never know what’s beyond that fight!"
-        </div>
-
+        <div id="countdown" class="countdown"></div>
         <div class="updates">
+            <div class="update">
+                <time class="date" datetime="2025-02-16">February 16, 2025</time>
+                <div class="content">
+                    Tried out *Hollow Knight* recently, and wow, it’s tough! I got stuck on an early boss and decided to take a break. Might revisit it later, but for now, I’m exploring other games. Any tips for getting back into it?
+                </div>
+            </div>
+            <div class="update">
+                <time class="date" datetime="2025-01-15">January 15, 2025</time>
+                <div class="content">
+                    Life’s been a rollercoaster lately, and I’ve stepped back from some big plans. Still gaming when I can—mostly sticking to what I enjoy. Thinking about diving deeper into *Counter-Strike* after an epic dream comeback!
+                </div>
+            </div>
             <div class="update">
                 <time class="date" datetime="2024-07-27">July 27, 2024</time>
                 <div class="content">
-                    I've been able to progress through most of the Heart of Deimos quest in Warframe, BUT... bad news, I encountered a problem after one of the cutscenes in the last part of the quest. So while I find a way to fix that, I'll be playing the parts of the nodes that I have already unlocked.
+                    I’ve been grinding through *Warframe*’s Heart of Deimos quest. Hit a snag after a cutscene in the final part, so I’m exploring other nodes while I figure it out. Loving the game’s vibe though!
                 </div>
             </div>
         </div>
-
         <section>
             <h2>Newsletter Signup</h2>
-            <p>Sign up for the newsletter to stay updated with any random thoughts or gaming updates I decide to post.</p>
+            <p>Sign up for my newsletter to stay updated on my gaming adventures and thoughts. No giveaways for now, just sharing the journey!</p>
             <form id="signup-form" action="https://formspree.io/f/xgvwvjbe?redirect=https://cryptxc06.github.io/privacy-policy.html" method="post">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
@@ -95,14 +177,11 @@
                 <button type="submit">Subscribe</button>
             </form>
         </section>
-
         <a href="index.html" class="return-button">Return to Main Menu</a>
-
         <footer>
-            <p>&copy; 2025 Chip's Corner</p>
+            <p>© 2025 Chip's Corner</p>
         </footer>
     </div>
-
     <script>
         document.getElementById('signup-form').addEventListener('submit', function(event) {
             var email = document.getElementById('email').value;
@@ -113,6 +192,9 @@
                 event.preventDefault();
             }
         });
+
+        // Motivational Message (replacing countdown)
+        document.getElementById("countdown").innerHTML = "Keep pushing forward!";
     </script>
 </body>
-</html>            
+</html>
