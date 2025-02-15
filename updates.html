@@ -3,184 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chip's Corner - Updates</title>
+    <title>Latest Updates</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
         }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        header {
-            text-align: center;
-            padding: 20px 0;
-        }
-        
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #4CAF50;
-        }
-        
-        .updates {
-            margin: 20px 0;
-        }
-        
-        .update {
-            background-color: #fff;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .date {
-            display: block;
-            font-size: 0.9em;
-            color: #777;
-            margin-bottom: 5px;
-        }
-        
-        .content {
-            font-size: 1.1em;
-        }
-        
-        section {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin: 20px 0;
-        }
-        
-        section h2 {
-            color: #4CAF50;
-            margin-top: 0;
-        }
-        
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        form label {
-            margin: 10px 0 5px;
-            font-weight: bold;
-        }
-        
-        form input[type="email"],
-        form textarea {
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-        
-        form input[type="checkbox"] {
-            margin-right: 10px;
-        }
-        
-        form input[type="email"]:focus,
-        form textarea:focus {
-            border-color: #4CAF50;
-            outline: none;
-        }
-        
-        form button {
-            background-color: #4CAF50;
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
             color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-align: center;
+            padding: 20px;
         }
-        
-        form button:hover {
-            background-color: #45a049;
-            transform: scale(1.05);
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
         }
-        
-        .return-button {
+        header {
+            font-size: 2rem;
+            font-weight: 600;
+            padding: 20px;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+        }
+        .update-card {
+            background: rgba(255, 255, 255, 0.15);
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .update-card:hover {
+            transform: scale(1.03);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .hollow-knight-struggles {
+            background: #ff4d4d;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+        .return-button, button {
             display: block;
             width: 200px;
             margin: 20px auto;
-            padding: 10px;
+            padding: 12px;
             background-color: #4CAF50;
-            color: #fff;
+            color: white;
             text-align: center;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
         }
-        
-        .return-button:hover {
+        .return-button:hover, button:hover {
             background-color: #45a049;
             transform: scale(1.05);
         }
-
-        .countdown {
-            font-size: 2em;
-            text-align: center;
-            margin: 20px 0;
+        input, label {
+            display: block;
+            width: 100%;
+            margin: 10px auto;
             padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            font-size: 1em;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            opacity: 0.7;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Latest Updates</h1>
-        </header>
-        <div id="countdown" class="countdown"></div>
-        <div class="updates">
-            <div class="update">
-                <time class="date" datetime="2025-02-16">February 16, 2025</time>
-                <div class="content">
-                    Tried *Hollow Knight* recently and got wrecked by an early boss—Hornet, I think? Gave up for now, but I’m plotting my revenge. Meanwhile, I’ve been secretly training in *Elden Ring* and just beat a giant troll thing with a rusty sword. Feeling like a legend!
-                </div>
-            </div>
-            <div class="update">
-                <time class="date" datetime="2025-02-10">February 10, 2025</time>
-                <div class="content">
-                    Had a wild dream where I made an epic comeback in *Counter-Strike*. Dropped a 40-bomb in a ranked match and carried my team to victory. Woke up and decided to reinstall it—currently grinding my way up from Silver. Watch out, pros!
-                </div>
-            </div>
-            <div class="update">
-                <time class="date" datetime="2025-01-25">January 25, 2025</time>
-                <div class="content">
-                    Life’s been chaotic, so I took a break from big plans. Instead, I started a random side quest: building a Minecraft castle with a hidden lava moat. Took me 3 days, and then a creeper blew up half of it. Classic.
-                </div>
-            </div>
-            <div class="update">
-                <time class="date" datetime="2024-12-15">December 15, 2024</time>
-                <div class="content">
-                    Decided to dip my toes into *Stardew Valley* after a friend wouldn’t shut up about it. Now I’m obsessed with growing virtual potatoes and wooing a pixelated farmer named Abigail. Who knew farming could be this intense?
-                </div>
-            </div>
-            <div class="update">
-                <time class="date" datetime="2024-07-27">July 27, 2024</time>
-                <div class="content">
-                    Been grinding *Warframe*’s Heart of Deimos quest. Hit a glitch after a cutscene in the final part, so I’m exploring other nodes. Also, I accidentally spent 12 hours customizing my Warframe to look like a space ninja pirate. Worth it.
-                </div>
-            </div>
+        <header>Latest Updates</header>
+
+        <div class="hollow-knight-struggles">
+            "So, I attempted Hollow Knight. I thought I was ready. I was not.  
+            After **53 deaths** to Hornet, I realized I might not be cut out for this game.  
+            Beating her was supposed to open up more of the game, but instead, I rage-quit and played something less stressful... like Tetris."
         </div>
+
+        <div class="update-card">
+            <strong>January 15, 2025</strong>
+            <p>Picked up **Skyrim** again. Thought I'd focus on the main quest. Instead,  
+            I'm now a homeowner, a father of two, and somehow married to a random NPC.</p>
+        </div>
+
+        <div class="update-card">
+            <strong>December 10, 2024</strong>
+            <p>Tried Dark Souls because people say Hollow Knight is like a 2D Souls game.  
+            **They lied.** An undead soldier threw me off a cliff in 20 minutes.</p>
+        </div>
+
+        <div class="update-card">
+            <strong>July 27, 2024</strong>
+            <p>Still stuck in Warframe’s **Heart of Deimos** quest. Maybe if I ignore it long enough, the bug will fix itself?</p>
+        </div>
+
         <section>
             <h2>Newsletter Signup</h2>
-            <p>Sign up for my newsletter to follow my chaotic gaming adventures, epic wins, and occasional spectacular fails. No pressure, just vibes!</p>
+            <p>Sign up for random gaming updates, bad decisions, and occasional existential crises over boss fights.</p>
             <form id="signup-form" action="https://formspree.io/f/xgvwvjbe?redirect=https://cryptxc06.github.io/privacy-policy.html" method="post">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
@@ -189,11 +126,12 @@
                 <button type="submit">Subscribe</button>
             </form>
         </section>
+
         <a href="index.html" class="return-button">Return to Main Menu</a>
-        <footer>
-            <p>© 2025 Chip's Corner</p>
-        </footer>
+
+        <footer>&copy; 2025 Chip's Corner</footer>
     </div>
+
     <script>
         document.getElementById('signup-form').addEventListener('submit', function(event) {
             var email = document.getElementById('email').value;
@@ -204,17 +142,6 @@
                 event.preventDefault();
             }
         });
-
-        // Random Motivational Messages
-        const messages = [
-            "Keep pushing forward!",
-            "One more game, one more win!",
-            "You’re stronger than that boss!",
-            "Legends never quit!",
-            "The grind never stops!"
-        ];
-        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-        document.getElementById("countdown").innerHTML = randomMessage;
     </script>
 </body>
-</html>
+    </html>
