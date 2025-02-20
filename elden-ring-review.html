@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://pagead.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8486768995234253"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8486768995234253" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dive into our comprehensive Elden Ring review. Explore the stunning open world, challenging combat, and rich lore of FromSoftware's masterpiece. Rating: 9.5/10.">
+    <meta name="description" content="Chip's review of Elden Ring: Explore the open-world masterpiece from FromSoftware with stunning visuals, brutal combat, and deep lore. Rating: 9.5/10.">
     <title>Elden Ring Review - Chip's Corner</title>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKFS3GHRP8"></script>
@@ -15,169 +14,235 @@
       gtag('js', new Date());
       gtag('config', 'G-GKFS3GHRP8');
     </script>
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
+            font-family: 'Orbitron', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f4f4f4;
         }
+        
         header {
-            background: linear-gradient(to right, #4CAF50, #45a049);
-            color: white;
             text-align: center;
-            padding: 1em;
-            margin-bottom: 20px;
+            padding: 40px 0;
+            background: url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center;
+            background-size: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 128, 0.5);
         }
+        
         header h1 {
-            color: white;
             margin: 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-size: 3em;
+            color: #00ff80;
+            text-shadow: 0 0 10px #00ff80, 0 0 20px #00ff80;
+            animation: glow 1.5s infinite alternate;
         }
-        h1, h2 {
-            color: #4CAF50;
+        
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #00ff80, 0 0 20px #00ff80; }
+            to { text-shadow: 0 0 20px #00ff80, 0 0 30px #00ff80; }
         }
-        .game-info, .pros, .cons, .related-content {
-            background-color: #e9e9e9;
-            padding: 10px;
-            border-radius: 5px;
+        
+        .rating {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .star-rating {
+            font-size: 24px;
+            color: #FFD700;
+        }
+        
+        .toc {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #00ff80;
+            padding: 15px;
+            border-radius: 10px;
             margin-bottom: 20px;
-            transition: box-shadow 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 255, 128, 0.3);
+            transition: transform 0.3s ease;
         }
-        .game-info:hover, .pros:hover, .cons:hover, .related-content:hover {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        
+        .toc:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(0, 255, 128, 0.6);
         }
+        
+        .toc ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        .toc a {
+            color: #00ff80;
+            text-decoration: none;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        
+        .toc a:hover {
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff;
+        }
+        
+        section {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #00ff80;
+            box-shadow: 0 0 15px rgba(0, 255, 128, 0.3);
+            margin: 30px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(0, 255, 128, 0.6);
+        }
+        
+        h2 {
+            color: #00ff80;
+            margin-top: 0;
+            font-size: 2em;
+            text-shadow: 0 0 10px #00ff80;
+        }
+        
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+        
         .pros-cons {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
         }
+        
         .pros, .cons {
             flex-basis: 48%;
-            margin-bottom: 20px;
-        }
-        .rating {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #4CAF50;
-        }
-        .return-link {
-            display: block;
-            text-align: center;
-            margin-top: 20px;
-            color: #4CAF50;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        .return-link:hover {
-            text-decoration: underline;
-        }
-        .toc {
-            background-color: #e9e9e9;
-            border: 1px solid #ddd;
+            background: rgba(0, 255, 128, 0.1);
             padding: 15px;
-            margin-bottom: 20px;
+            border-radius: 10px;
+            margin: 10px 0;
+            transition: transform 0.3s ease;
         }
-        .toc ul {
-            list-style-type: none;
-            padding-left: 20px;
-        }
-        .toc a {
-            color: #4CAF50;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        .toc a:hover {
-            color: #45a049;
-            text-decoration: underline;
-        }
-        .star-rating {
-            font-size: 24px;
-            color: #FFD700;
-        }
-        .last-updated {
-            font-style: italic;
-            color: #666;
-            margin-top: 20px;
-        }
-        .explore-reviews-btn {
-            display: inline-block;
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 16px;
-            margin: 20px 0;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .explore-reviews-btn:hover {
-            background-color: #45a049;
+        
+        .pros:hover, .cons:hover {
             transform: scale(1.05);
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        
+        .pros h3, .cons h3 {
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff;
+            margin-top: 0;
         }
-        .fade-in {
-            animation: fadeIn 1s ease-out;
+        
+        ul {
+            padding-left: 20px;
         }
+        
+        .related-content {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #00ff80;
+            box-shadow: 0 0 15px rgba(0, 255, 128, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .related-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(0, 255, 128, 0.6);
+        }
+        
+        .related-content h3 {
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff;
+        }
+        
+        .related-content ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .related-content a {
+            color: #00ff80;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        
+        .related-content a:hover {
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff;
+        }
+        
+        .last-updated {
+            font-style: italic;
+            color: #b0b0b0;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .explore-reviews-btn, .return-link {
+            display: block;
+            width: 250px;
+            margin: 20px auto;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #00ff80, #ff00ff);
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .explore-reviews-btn:hover, .return-link:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+        }
+        
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #00ff80, #ff00ff);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(0, 255, 128, 0.5);
+            transition: transform 0.3s ease;
+            display: none;
+        }
+        
+        .scroll-top-btn:hover {
+            transform: scale(1.1);
+        }
+        
         @media (max-width: 768px) {
             .pros-cons {
                 flex-direction: column;
             }
             .pros, .cons {
                 flex-basis: 100%;
-                margin-bottom: 20px;
             }
         }
-        /* For WebKit browsers */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f4f4f4;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #4CAF50;
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #45a049;
-        }
-        .scroll-top-btn {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            padding: 10px;
-            font-size: 20px;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease;
-        }
-        .scroll-top-btn:hover {
-            background-color: #45a049;
-        }
-        .related-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-        .related-content.active {
-            max-height: 1000px; /* Adjust based on content height */
-        }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org/",
@@ -203,104 +268,111 @@
     </script>
 </head>
 <body>
-    <header>
-        <h1>Elden Ring Review: A Masterpiece of Open-World Design</h1>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Elden Ring Review: A Brutal Open-World Odyssey</h1>
+        </header>
 
-    <p class="rating">Rating: <span class="star-rating">★★★★★</span> 9.5/10</p>
+        <p class="rating">Rating: <span class="star-rating">★★★★★</span> 9.5/10</p>
 
-    <div class="toc">
-        <h2>Table of Contents</h2>
-        <ul>
-            <li><a href="#game-info">Game Info</a></li>
-            <li><a href="#visuals">Visuals and World-Building</a></li>
-            <li><a href="#gameplay">Gameplay and Mechanics</a></li>
-            <li><a href="#character">Character Customization and Builds</a></li>
-            <li><a href="#story">Story and Characters</a></li>
-            <li><a href="#sound">Sound and Music</a></li>
-            <li><a href="#performance">Performance and Technical Aspects</a></li>
-            <li><a href="#thoughts">Final Thoughts</a></li>
-        </ul>
-    </div>
-
-    <div id="game-info" class="game-info fade-in">
-        <strong>Developer:</strong> FromSoftware<br>
-        <strong>Publisher:</strong> Bandai Namco Entertainment<br>
-        <strong>Platforms:</strong> PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, PC<br>
-        <strong>Release Date:</strong> February 25, 2022
-    </div>
-
-    <p>From the minds of Hidetaka Miyazaki and George R.R. Martin comes <em>Elden Ring</em>, a game that stands as a testament to what open-world gaming can achieve. With its intricate world-building, challenging combat, and a story steeped in dark fantasy, <em>Elden Ring</em> is an experience that both fans of FromSoftware and newcomers will find deeply rewarding.</p>
-
-    <h2 id="visuals">Visuals and World-Building</h2>
-    <p>The first thing that strikes you about <em>Elden Ring</em> is its stunning world. The Lands Between, the game's setting, is a sprawling, interconnected landscape filled with secrets, mysteries, and dangers. From lush forests to desolate wastelands, each area is meticulously crafted, providing a sense of wonder and dread at every turn. The game's art direction is nothing short of breathtaking, with a gothic, surreal aesthetic that complements its dark narrative.</p>
-
-    <h2 id="gameplay">Gameplay and Mechanics</h2>
-    <p>At its core, <em>Elden Ring</em> retains the challenging combat mechanics that FromSoftware is known for. The game combines the methodical, punishing combat of the <em>Dark Souls</em> series with the agility and fluidity of <em>Sekiro: Shadows Die Twice</em>. Every enemy encounter requires strategy and skill, making each victory immensely satisfying.</p>
-    <p>What sets <em>Elden Ring</em> apart is its open-world design. Players have the freedom to explore at their own pace, discovering hidden dungeons, formidable bosses, and valuable treasures. The game encourages exploration with its numerous side quests and intricate lore, rewarding curiosity and perseverance.</p>
-    <p>The addition of a mount, the spectral steed Torrent, adds a new dimension to traversal and combat. Riding through the expansive landscapes feels liberating, and mounted combat introduces fresh tactical possibilities.</p>
-    <p>Magic and skills play a crucial role in <em>Elden Ring</em>, offering players a wide array of combat options. From devastating spells to unique weapon arts, the game provides countless ways to approach challenges. The flexibility in playstyle allows for creative problem-solving and encourages experimentation.</p>
-    <p>Multiplayer features add another layer of depth to the game. Players can summon allies for co-op play, leave helpful (or misleading) messages for others, and engage in PvP combat. These online elements create a sense of community and shared experience, even in the game's lonely, desolate world.</p>
-
-    <h2 id="character">Character Customization and Builds</h2>
-    <p><em>Elden Ring</em> offers unprecedented freedom in character creation and development. Players can choose from a variety of starting classes, each with unique attributes and equipment. As you progress, you can freely allocate points to different stats, allowing for highly specialized or well-rounded builds.</p>
-    <p>The game's equipment system is equally diverse, with a vast array of weapons, armor, and talismans to discover and upgrade. Each piece of gear can dramatically alter your playstyle, encouraging experimentation and multiple playthroughs. The ability to respec your character later in the game further supports build diversity and player choice.</p>
-
-    <h2 id="story">Story and Characters</h2>
-    <p>The collaboration between Miyazaki and Martin results in a rich, immersive narrative. While the story is delivered in the traditional FromSoftware style—through cryptic dialogues, environmental storytelling, and item descriptions—it feels more accessible than previous titles. The lore of the Lands Between is deep and engaging, with multiple layers waiting to be uncovered by diligent players.</p>
-    <p>Characters in <em>Elden Ring</em> are as enigmatic and memorable as ever. NPCs offer cryptic guidance and side quests that enrich the game's world and narrative. Each character has their own motivations and backstory, adding depth to the game's lore.</p>
-
-    <h2 id="sound">Sound and Music</h2>
-    <p>The game's sound design is superb, with atmospheric audio that enhances the sense of immersion. From the eerie silence of a forgotten ruin to the clashing of swords in intense battles, the audio experience is meticulously crafted. The soundtrack, composed by Yuka Kitamura and others, is hauntingly beautiful, perfectly complementing the game's dark fantasy setting.</p>
-
-    <h2 id="performance">Performance and Technical Aspects</h2>
-    <p>On current-gen consoles and PC, <em>Elden Ring</em> generally runs smoothly, with stunning visuals and quick load times. However, some players have reported occasional frame rate drops in certain areas or during intense battles. The PC version offers more graphical options and potentially higher frame rates, but may require some tweaking for optimal performance.</p>
-    <p>It's worth noting that the game has received several patches since launch, addressing various technical issues and balancing concerns. FromSoftware's commitment to improving the player experience is evident in their ongoing support and updates.</p>
-
-    <h2 id="thoughts">Final Thoughts</h2>
-    <p><em>Elden Ring</em> is a triumph of game design, blending the best elements of FromSoftware's previous titles with the expansive freedom of an open world. It's a game that challenges and rewards players, offering a deep and enriching experience. Whether you're a veteran of <em>Dark Souls</em> or a newcomer to FromSoftware's games, <em>Elden Ring</em> promises an unforgettable journey through a hauntingly beautiful world.</p>
-
-    <div class="pros-cons">
-        <div class="pros">
-            <h3>Pros:</h3>
+        <div class="toc">
+            <h2>Table of Contents</h2>
             <ul>
-                <li>Stunning open-world design</li>
-                <li>Challenging and rewarding combat</li>
-                <li>Deep, immersive lore</li>
-                <li>Freedom of exploration</li>
-                <li>Diverse character builds and playstyles</li>
-                <li>Engaging multiplayer features</li>
-                <li>Exceptional sound design and music</li>
+                <li><a href="#game-info">Game Info</a></li>
+                <li><a href="#visuals">Visuals and World-Building</a></li>
+                <li><a href="#gameplay">Gameplay and Mechanics</a></li>
+                <li><a href="#character">Character Customization and Builds</a></li>
+                <li><a href="#story">Story and Characters</a></li>
+                <li><a href="#sound">Sound and Music</a></li>
+                <li><a href="#performance">Performance and Technical Aspects</a></li>
+                <li><a href="#thoughts">Final Thoughts</a></li>
             </ul>
         </div>
-        <div class="cons">
-            <h3>Cons:</h3>
+
+        <section id="game-info">
+            <strong>Developer:</strong> FromSoftware<br>
+            <strong>Publisher:</strong> Bandai Namco Entertainment<br>
+            <strong>Platforms:</strong> PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, PC<br>
+            <strong>Release Date:</strong> February 25, 2022
+        </section>
+
+        <section>
+            <p>As Chip, a niche gamer with a penchant for chaos, I dove into *Elden Ring* expecting a FromSoftware classic—and it delivered beyond my wildest dreams. This isn’t just another open-world game; it’s a brutal, beautiful journey through the Lands Between, crafted by Hidetaka Miyazaki and enriched with George R.R. Martin’s lore. Here’s my take after hours of exploration, countless deaths, and a few triumphant victories.</p>
+        </section>
+
+        <section id="visuals">
+            <h2>Visuals and World-Building</h2>
+            <p>The Lands Between is a visual feast—think jagged cliffs glowing under a blood-red sky, crumbling castles shrouded in mist, and golden plains stretching into the horizon. FromSoftware’s gothic art direction shines here, blending beauty with despair in a way that’s both haunting and captivating. Every area feels alive, packed with secrets like hidden caves or towering bosses that make you question your life choices. It’s a world that demands you explore, and I couldn’t stop staring—even when a giant bear was tearing me apart.</p>
+        </section>
+
+        <section id="gameplay">
+            <h2>Gameplay and Mechanics</h2>
+            <p>The combat is pure FromSoftware—unforgiving, precise, and oh-so-addictive. It’s got the weighty feel of *Dark Souls* mixed with *Sekiro*’s speed, and I loved every second of it. Dodging a dragon’s fire breath or parrying a knight’s combo feels like a adrenaline-fueled dance. The open world adds a twist: you’re free to roam, tackle dungeons, or flee from bosses you’re not ready for (looking at you, Tree Sentinel). Torrent, your spectral steed, makes traversal a breeze and turns some fights into horseback showdowns—though I did fall off a cliff once or twice.</p>
+            <p>Exploration is king here. I stumbled into hidden crypts, fought optional minibosses, and found gear that changed my whole strategy. Magic and weapon skills are a blast too—I went from spamming fireballs to swinging a massive sword imbued with frost. The multiplayer’s a nice touch—summoning a friend saved my bacon against Margit, though invaders kept me on edge. It’s punishing, but every victory feels earned.</p>
+        </section>
+
+        <section id="character">
+            <h2>Character Customization and Builds</h2>
+            <p>Starting as a wretch with nothing but a club, I built my character into a spell-slinging warrior over time. The options are insane—stats, weapons, armor, talismans—all tweakable to fit your style. I experimented with a dexterity build, then respecced into a strength monster wielding a colossal hammer. The freedom’s addictive, though finding the right gear took some grinding. It’s perfect for replaying with a new approach each time.</p>
+        </section>
+
+        <section id="story">
+            <h2>Story and Characters</h2>
+            <p>The story’s a cryptic puzzle, as expected from FromSoftware. Piecing together the Lands Between’s history through item descriptions and vague NPC chats was intriguing, if a bit overwhelming. George R.R. Martin’s influence is subtle but there—think shattered kingdoms and tragic figures like Radahn or Melina. I got hooked on unraveling it, though it’s not spoon-fed. The characters stick with you—Fia’s creepy hugs and Blaidd’s wolfish loyalty left a mark.</p>
+        </section>
+
+        <section id="sound">
+            <h2>Sound and Music</h2>
+            <p>The soundscape is unreal. Silence in a foggy swamp builds tension, then a boss’s roar hits like a truck. The music, by Yuka Kitamura and crew, is epic—those swelling orchestral tracks during fights like Malenia’s had my heart pounding. It’s subtle outside combat, letting the world’s ambiance shine, but when it kicks in, it’s pure chills.</p>
+        </section>
+
+        <section id="performance">
+            <h2>Performance and Technical Aspects</h2>
+            <p>On my potato PC, *Elden Ring* ran decently after some tweaks—stable 40-50 FPS with medium settings. Consoles seem smoother, but I hit a few stutters in busy areas like Limgrave. Patches have ironed out most launch bugs, though I still got a random crash once. It’s not perfect, but the experience outweighs the hiccups.</p>
+        </section>
+
+        <section id="thoughts">
+            <h2>Final Thoughts</h2>
+            <p>*Elden Ring* is a masterpiece—brutal, breathtaking, and endlessly replayable. It’s FromSoftware at their peak, blending open-world freedom with that signature soul-crushing challenge. I’ve died more times than I can count, but every moment—whether slaying a dragon or just soaking in the view—was worth it. If you can handle the punishment, this is a must-play. 9.5/10 from me, Chip—only docked half a point for those occasional frame drops.</p>
+        </section>
+
+        <section class="pros-cons">
+            <div class="pros">
+                <h3>Pros:</h3>
+                <ul>
+                    <li>Gorgeous, expansive world</li>
+                    <li>Brutal yet rewarding combat</li>
+                    <li>Deep lore worth digging into</li>
+                    <li>Insane build variety</li>
+                    <li>Haunting soundtrack</li>
+                </ul>
+            </div>
+            <div class="cons">
+                <h3>Cons:</h3>
+                <ul>
+                    <li>Steep learning curve</li>
+                    <li>Minor performance stutters</li>
+                    <li>Story can feel too vague</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="related-content">
+            <h3>Related Content</h3>
             <ul>
-                <li>Occasional difficulty spikes</li>
-                <li>Cryptic narrative may not appeal to all players</li>
-                <li>Some technical issues on certain platforms</li>
+                <li><a href="dark-souls-3-review.html">Dark Souls 3 Review</a></li>
+                <li><a href="shadows-die-twice-review.html">Sekiro: Shadows Die Twice Review</a></li>
+                <li><a href="top-5-open-world-games-of-2024.html">Top 5 Open World Games of 2024</a></li>
             </ul>
-        </div>
+        </section>
+
+        <p class="last-updated">Last Updated: February 20, 2025</p>
+
+        <a href="game-reviews.html" class="explore-reviews-btn">Explore More Game Reviews</a>
+        <a href="index.html" class="return-link">Return to Main Page</a>
+
+        <button class="scroll-top-btn" onclick="scrollToTop()">↑</button>
     </div>
-
-    <p><em>Elden Ring</em> is a must-play for any fan of action RPGs, offering a masterclass in world-building and gameplay design. It's a game that will be remembered and celebrated for years to come.</p>
-
-    <div class="related-content fade-in">
-        <h3>Related Content</h3>
-        <ul>
-            <li><a href="dark-souls-3-review.html">Dark Souls 3 Review</a></li>
-            <li><a href="shadows-die-twice-review.html">Sekiro: Shadows Die Twice Review</a></li>
-            <li><a href="top-5-open-world-games-of-2024.html">Top 5 Open World Games of 2024</a></li>
-        </ul>
-    </div>
-
-    <p class="last-updated">Last Updated: August 5, 2024</p>
-
-    <a href="game-reviews.html" class="explore-reviews-btn">Explore More Game Reviews</a>
-
-    <a href="index.html" class="return-link">Return to Main Page</a>
-
-    <button class="scroll-top-btn" onclick="scrollToTop()">↑</button>
 
     <script>
         document.addEventListener('scroll', function() {
@@ -315,11 +387,6 @@
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const relatedContent = document.querySelector('.related-content');
-            relatedContent.classList.add('active');
-        });
     </script>
 </body>
 </html>
