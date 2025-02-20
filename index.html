@@ -14,6 +14,8 @@
       gtag('js', new Date());
       gtag('config', 'G-GKFS3GHRP8');
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
     <style>
         body {
             font-family: 'Orbitron', Arial, sans-serif;
@@ -63,7 +65,7 @@
         }
         
         .dropdown .button {
-            padding: 12px 25px;
+            padding: 15px 30px;
             background: linear-gradient(45deg, #00ff80, #ff00ff);
             color: #fff;
             border: none;
@@ -71,6 +73,7 @@
             font-size: 1.1em;
             cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 255, 128, 0.5);
         }
         
         .dropdown .button:hover {
@@ -304,6 +307,8 @@
             text-align: center;
             padding: 20px 0;
             font-size: 1em;
+            border-top: 1px solid #00ff80;
+            background: rgba(255, 255, 255, 0.05);
         }
         
         footer p {
@@ -320,6 +325,33 @@
             color: #ff00ff;
             text-shadow: 0 0 10px #ff00ff;
         }
+        
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #00ff80, #ff00ff);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(0, 255, 128, 0.5);
+            transition: transform 0.3s ease;
+            display: none;
+        }
+        
+        .scroll-top-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        @media (max-width: 600px) {
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.5em; }
+            p { font-size: 1em; }
+            .game-card { width: 100%; }
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -333,10 +365,10 @@
             <div class="dropdown">
                 <button class="button">Menu</button>
                 <div class="dropdown-content">
-                    <a href="#about">About Me</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#featured-games">Featured Games</a>
+                    <a href="index.html">Home</a>
                     <a href="updates.html">Updates</a>
+                    <a href="elden-ring-review.html">Elden Ring Review</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
                 </div>
             </div>
         </nav>
@@ -360,17 +392,17 @@
             <div class="stat-container">
                 <div class="stat-item">
                     <i class="fas fa-gamepad"></i>
-                    <span class="counter">015</span>
+                    <span class="counter">15</span>
                     <p>Games Played</p>
                 </div>
                 <div class="stat-item">
                     <i class="fas fa-clock"></i>
-                    <span class="counter">075</span>
+                    <span class="counter">75</span>
                     <p>Hours Streamed</p>
                 </div>
                 <div class="stat-item">
                     <i class="fas fa-users"></i>
-                    <span class="counter">030</span>
+                    <span class="counter">30</span>
                     <p>Subscribers</p>
                 </div>
             </div>
@@ -420,7 +452,7 @@
             <div class="game-of-the-month">
                 <img src="game-of-the-month.jpg" alt="Elden Ring">
                 <h3>Elden Ring</h3>
-                <p>An epic action RPG set in a vast, interconnected world.</p>
+                <p>I took down a giant troll with a rusty sword and now call myself the “Troll Slayer of the Lands Between.” Epic action RPG vibes!</p>
                 <a href="elden-ring-review.html" class="button">Read Review</a>
             </div>
         </section>
@@ -434,5 +466,22 @@
         <p>© 2025 Chip's Corner - Powered by Chaos</p>
         <p><a href="privacy-policy.html">Privacy Policy</a></p>
     </footer>
+    <button class="scroll-top-btn" onclick="scrollToTop()">↑</button>
+    <script>
+        $(document).ready(function() {
+            $('.counter').counterUp({ delay: 10, time: 1000 });
+        });
+        document.addEventListener('scroll', function() {
+            const scrollTopBtn = document.querySelector('.scroll-top-btn');
+            if (window.scrollY > 200) {
+                scrollTopBtn.style.display = 'block';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        });
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
-                                     </html>
+</html>
