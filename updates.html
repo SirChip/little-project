@@ -327,6 +327,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div id="motivational" class="motivational"></div>
         <div class="updates">
             <div class="update">
+                <time class="date" datetime="2025-04-02">April 2, 2025</time>
+                <div class="content">
+                    Hollow Knight: Silksong has been officially announced! It's finally coming! I'm so excited to dive into it. I might even stream it when it releases. Watch this space!
+                </div>
+            </div>
+            <div class="update">
+                <time class="date" datetime="2025-04-01">April 1, 2025</time>
+                <div class="content">
+                    Struggling against the Watcher Knights in Hollow Knight... why are there 6 of them blocking the way to the other Dreamer? This fight is intense, but I’m determined to push through!
+                </div>
+            </div>
+            <div class="update">
                 <time class="date" datetime="2025-02-16">February 16, 2025</time>
                 <div class="content">
                     Tried Hollow Knight recently and got wrecked by Hornet. Rage-quit for now, but I’m plotting my revenge. Meanwhile, I’ve been secretly training in Elden Ring and just beat a giant troll thing with a rusty sword. Feeling like a legend!
@@ -359,54 +371,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <section>
             <h2>Newsletter Signup</h2>
-            <p>Sign up for my newsletter to follow my chaotic gaming adventures, epic wins, and occasional spectacular fails. No pressure, just vibes!</p>
-            <form id="signup-form" action="https://formspree.io/f/xgvwvjbe?redirect=https://cryptxc06.github.io/privacy-policy.html" method="post">
-                <label for="email">Email:</label>
+            <p>Sign up for my newsletter to follow my chaotic gaming adventures, epic wins, and occasional spectacular fails!</p>
+            <form>
+                <label for="email">Email Address</label>
                 <input type="email" id="email" name="email" required>
-                <input type="checkbox" id="consent" name="consent" required>
-                <label for="consent">I consent to receive newsletters and updates.</label>
+                <label>
+                    <input type="checkbox" required>
+                    I agree to receive updates and newsletters
+                </label>
                 <button type="submit">Subscribe</button>
             </form>
         </section>
-        <a href="index.html" class="return-button">Return to Main Menu</a>
+        <a href="#" class="return-button">Back to Top</a>
+        <footer>
+            <p>&copy; 2025 Chip’s Corner. All Rights Reserved. | <a href="privacy-policy.html">Privacy Policy</a></p>
+        </footer>
     </div>
-    <footer>
-        <p>© 2025 Chip's Corner - Powered by Chaos</p>
-        <p><a href="privacy-policy.html">Privacy Policy</a></p>
-    </footer>
-    <button class="scroll-top-btn" onclick="scrollToTop()">↑</button>
+
     <script>
-        document.getElementById('signup-form').addEventListener('submit', function(event) {
-            var email = document.getElementById('email').value;
-            var consent = document.getElementById('consent').checked;
-            if (!email || !consent) {
-                alert('Please enter your email and agree to the consent.');
-                event.preventDefault();
-            }
-        });
-        const messages = [
-            "Keep pushing forward!",
-            "One more game, one more win!",
-            "You’re stronger than that boss!",
-            "Legends never quit!",
-            "The grind never stops!"
+        const motivationalQuotes = [
+            "Let your dreams lead the way...",
+            "Victory is for the persistent!",
+            "Gaming is not just a hobby, it's a way of life!",
+            "Epic battles await you in every game!"
         ];
-        let index = 0;
-        const motivational = document.getElementById("motivational");
-        setInterval(() => {
-            motivational.innerHTML = messages[index];
-            index = (index + 1) % messages.length;
-        }, 3000);
-        document.addEventListener('scroll', function() {
-            const scrollTopBtn = document.querySelector('.scroll-top-btn');
-            if (window.scrollY > 200) {
-                scrollTopBtn.style.display = 'block';
-            } else {
-                scrollTopBtn.style.display = 'none';
-            }
-        });
-        function scrollToTop() {
+
+        let currentIndex = 0;
+        const motivationalElement = document.getElementById("motivational");
+
+        function updateMotivationalQuote() {
+            motivationalElement.innerText = motivationalQuotes[currentIndex];
+            currentIndex = (currentIndex + 1) % motivationalQuotes.length;
+        }
+
+        updateMotivationalQuote();
+        setInterval(updateMotivationalQuote, 5000);
+
+        const returnButton = document.querySelector('.return-button');
+        returnButton.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        window.onscroll = () => {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                returnButton.style.display = "block";
+            } else {
+                returnButton.style.display = "none";
+            }
         }
     </script>
 </body>
