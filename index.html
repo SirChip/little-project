@@ -1,515 +1,705 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> <link rel="canonical" href="https://sirchip.site/" />
-<!-- Add the favicon link here -->
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PFV33FS4');</script>
-<!-- End Google Tag Manager --> 
-<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="746d66b4-ca1e-44bc-812f-c615fc4ebcf6" type="text/javascript" async></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8486768995234253" crossorigin="anonymous"></script>
+<head>
+    <link rel="canonical" href="https://sirchip.site/" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Keep your existing analytics scripts -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PFV33FS4');</script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore Chip's Corner, a gaming blog featuring reviews, recommendations, and insights from a niche gamer. Discover content on Brawlhalla, Warframe, and more.">
-    <meta name="keywords" content="gaming, brawlhalla, warframe, game reviews, streaming, chip gamer, niche gaming">
-    <!-- Open Graph Meta Tags -->
-<meta property="og:title" content="Sirchip – Gamer & Creator" />
-<meta property="og:description" content="Chip's Corner is a hub for digital experiments, gaming projects, and random creations. Dive into the chaotic, retro-coded world of Sirchip." />
-<meta property="og:image" content="https://sirchip.site/og-image.png" />
-<meta property="og:url" content="https://sirchip.site/" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Sirchip" />
-    <title>Chip's Corner</title>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKFS3GHRP8"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-GKFS3GHRP8');
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Chip's Corner - Gaming Universe</title>
+    
     <style>
-        body {
-            font-family: 'Orbitron', Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Orbitron', Arial, sans-serif;
+            background: #0a0a0a;
             color: #e0e0e0;
             overflow-x: hidden;
+            cursor: none;
         }
         
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        header {
-            text-align: center;
-            padding: 40px 0;
-            background: url('https://github.com/SirChip/SirChip.github.io/raw/ede5d96791109e23bd69ac3e9d80625adf76f593/setup.jpg'
-) no-repeat center;
-            background-size: cover;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 255, 128, 0.5);
-        }
-        
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-            color: #00ff80;
-            text-shadow: 0 0 10px #00ff80, 0 0 20px #00ff80;
-            animation: glow 1.5s infinite alternate;
-        }
-        
-        @keyframes glow {
-            from { text-shadow: 0 0 10px #00ff80, 0 0 20px #00ff80; }
-            to { text-shadow: 0 0 20px #00ff80, 0 0 30px #00ff80; }
-        }
-        
-        nav {
-            text-align: center;
-            margin: 20px 0;
-        }
-        
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .dropdown .button {
-            padding: 15px 30px;
-            background: linear-gradient(45deg, #00ff80, #ff00ff);
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 0 15px rgba(0, 255, 128, 0.5);
-        }
-        
-        .dropdown .button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
-        }
-        
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background: rgba(255, 255, 255, 0.1);
-            min-width: 160px;
-            box-shadow: 0 0 15px rgba(0, 255, 128, 0.3);
-            z-index: 1;
-            border-radius: 5px;
-            border: 1px solid #00ff80;
-        }
-        
-        .dropdown-content a {
-            color: #e0e0e0;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            transition: background 0.3s ease;
-        }
-        
-        .dropdown-content a:hover {
-            background: rgba(0, 255, 128, 0.3);
-        }
-        
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        
-        .profile-section {
-            text-align: center;
-            margin: 30px 0;
-        }
-        
-        .profile-picture-container {
-            width: 150px;
-            height: 150px;
-            margin: 0 auto;
-            border-radius: 50%;
-            overflow: hidden;
-            box-shadow: 0 0 15px rgba(0, 255, 128, 0.5);
+        /* Custom Cursor */
+        .cursor {
+            width: 20px;
+            height: 20px;
             border: 2px solid #00ff80;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: all 0.1s ease;
         }
         
-        .profile-picture {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .cursor-trail {
+            width: 8px;
+            height: 8px;
+            background: #ff00ff;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9998;
         }
         
-        section {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 25px;
-            border-radius: 10px;
-            border: 1px solid #00ff80;
-            box-shadow: 0 0 15px rgba(0, 255, 128, 0.3);
-            margin: 30px 0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 25px rgba(0, 255, 128, 0.6);
-        }
-        
-        h2 {
-            color: #00ff80;
-            margin-top: 0;
-            font-size: 2em;
-            text-shadow: 0 0 10px #00ff80;
-        }
-        
-        p {
-            font-size: 1.2em;
-            line-height: 1.5;
-        }
-        
-        .button-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-        
-        .button {
-            display: inline-block;
-            padding: 12px 25px;
-            background: linear-gradient(45deg, #00ff80, #ff00ff);
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin: 10px;
-        }
-        
-        .button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
-        }
-        
-        .stat-container {
-            display: flex;
-            justify-content: space-around;
-            padding: 20px 0;
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-item i {
-            font-size: 2em;
-            color: #ff00ff;
-            text-shadow: 0 0 10px #ff00ff;
-        }
-        
-        .stat-item .counter {
-            display: block;
-            font-size: 1.5em;
-            color: #00ff80;
-            text-shadow: 0 0 10px #00ff80;
-            margin: 10px 0;
-        }
-        
-        .stat-item p {
-            font-size: 1.2em;
-            margin: 0;
-        }
-        
-        .social-icons {
-            text-align: center;
-            margin-top: 20px;
-        }
-        
-        .social-icon {
-            font-size: 2em;
-            color: #00ff80;
-            margin: 0 15px;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-        
-        .social-icon:hover {
-            color: #ff00ff;
-            transform: scale(1.2);
-            text-shadow: 0 0 10px #ff00ff;
-        }
-        
-        .game-grid {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-        
-        .game-card {
-            width: 45%;
-            background: rgba(0, 255, 128, 0.1);
-            padding: 15px;
-            border-radius: 10px;
-            margin: 10px 0;
-            transition: transform 0.3s ease;
-        }
-        
-        .game-card:hover {
-            transform: scale(1.05);
-        }
-        
-        .game-image {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-        
-        .game-details h3 {
-            color: #ff00ff;
-            text-shadow: 0 0 10px #ff00ff;
-            margin: 10px 0;
-        }
-        
-        .game-link {
-            color: #00ff80;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .game-link:hover {
-            color: #ff00ff;
-            text-shadow: 0 0 10px #ff00ff;
-        }
-        
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-        }
-        
-        .video-container iframe {
-            position: absolute;
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 255, 128, 0.5);
+            z-index: -1;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
         }
         
-        .game-of-the-month {
-            text-align: center;
-        }
-        
-        .game-of-the-month img {
+        .floating-shapes {
+            position: absolute;
             width: 100%;
-            max-width: 300px;
-            height: auto;
-            border-radius: 10px;
-            margin: 10px 0;
+            height: 100%;
         }
         
-        .game-of-the-month h3 {
-            color: #ff00ff;
-            text-shadow: 0 0 10px #ff00ff;
-            margin: 10px 0;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            font-size: 1em;
-            border-top: 1px solid #00ff80;
-            background: rgba(255, 255, 255, 0.05);
-        }
-        
-        footer p {
-            margin: 5px 0;
-        }
-        
-        footer a {
-            color: #00ff80;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        footer a:hover {
-            color: #ff00ff;
-            text-shadow: 0 0 10px #ff00ff;
-        }
-        
-        .scroll-top-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: linear-gradient(45deg, #00ff80, #ff00ff);
-            color: #fff;
-            border: none;
+        .shape {
+            position: absolute;
+            background: linear-gradient(45deg, #00ff8020, #ff00ff20);
             border-radius: 50%;
-            padding: 10px;
-            font-size: 20px;
+            animation: float 20s infinite linear;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); }
+            100% { transform: translateY(-100px) rotate(360deg); }
+        }
+        
+        /* Hero Section - Split Layout */
+        .hero {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            padding: 0 2rem;
+            position: relative;
+        }
+        
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #00ff80, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: titlePulse 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes titlePulse {
+            0% { filter: drop-shadow(0 0 10px #00ff80); }
+            100% { filter: drop-shadow(0 0 30px #ff00ff); }
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: slideInUp 1s ease-out 0.5s forwards;
+        }
+        
+        .typing-text {
+            font-size: 1.2rem;
+            color: #00ff80;
+            border-right: 2px solid #00ff80;
+            animation: blink 1s infinite;
+            min-height: 1.5rem;
+        }
+        
+        @keyframes blink {
+            0%, 50% { border-color: transparent; }
+            51%, 100% { border-color: #00ff80; }
+        }
+        
+        .hero-right {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .profile-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+        
+        .profile-ring {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 3px solid;
+            border-color: #00ff80 transparent #ff00ff transparent;
+            border-radius: 50%;
+            animation: spin 3s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .profile-pic {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 3px solid #00ff80;
+            box-shadow: 0 0 50px rgba(0, 255, 128, 0.5);
+        }
+        
+        /* Floating Stats */
+        .floating-stats {
+            position: absolute;
+            top: 20%;
+            right: 10%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .stat-bubble {
+            background: rgba(0, 255, 128, 0.1);
+            border: 1px solid #00ff80;
+            border-radius: 50px;
+            padding: 1rem 1.5rem;
+            backdrop-filter: blur(10px);
+            animation: bobble 3s ease-in-out infinite;
             cursor: pointer;
-            box-shadow: 0 0 15px rgba(0, 255, 128, 0.5);
-            transition: transform 0.3s ease;
-            display: none;
+            transition: all 0.3s ease;
         }
         
-        .scroll-top-btn:hover {
+        .stat-bubble:hover {
             transform: scale(1.1);
+            background: rgba(255, 0, 255, 0.1);
+            border-color: #ff00ff;
         }
         
-        @media (max-width: 600px) {
-            h1 { font-size: 2em; }
-            h2 { font-size: 1.5em; }
-            p { font-size: 1em; }
-            .game-card { width: 100%; }
+        @keyframes bobble {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
         }
         
-        @keyframes countUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* Interactive Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
         }
-
-        .counter {
-            animation: countUp 1s ease-out;
+        
+        .grid-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #00ff80;
+            border-radius: 15px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+        
+        .grid-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 128, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .grid-card:hover::before {
+            left: 100%;
+        }
+        
+        .grid-card:hover {
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 0 20px 40px rgba(0, 255, 128, 0.3);
+            border-color: #ff00ff;
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .card-icon {
+            font-size: 2rem;
+            margin-right: 1rem;
+            color: #ff00ff;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            color: #00ff80;
+        }
+        
+        /* Gaming Terminal */
+        .terminal {
+            background: #000;
+            border: 1px solid #00ff80;
+            border-radius: 10px;
+            padding: 1rem;
+            font-family: 'Courier New', monospace;
+            margin: 2rem 0;
+        }
+        
+        .terminal-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: #00ff80;
+        }
+        
+        .terminal-content {
+            min-height: 200px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .terminal-line {
+            margin: 0.5rem 0;
+            animation: terminalType 0.05s ease-in-out;
+        }
+        
+        .terminal-input {
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        
+        .terminal-prompt {
+            color: #00ff80;
+            margin-right: 0.5rem;
+        }
+        
+        .terminal-cmd {
+            background: transparent;
+            border: none;
+            color: #e0e0e0;
+            font-family: inherit;
+            outline: none;
+            flex: 1;
+        }
+        
+        /* Potato PC Status */
+        .potato-status {
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            animation: potatoGlow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes potatoGlow {
+            0% { box-shadow: 0 0 20px rgba(255, 107, 107, 0.5); }
+            100% { box-shadow: 0 0 40px rgba(255, 217, 61, 0.8); }
+        }
+        
+        .potato-meter {
+            width: 100%;
+            height: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+        
+        .potato-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff6b6b, #ffd93d);
+            width: 25%;
+            animation: potatometerPulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes potatometerPulse {
+            0%, 100% { width: 20%; }
+            50% { width: 30%; }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 1rem;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+            
+            .floating-stats {
+                position: static;
+                margin-top: 2rem;
+            }
+        }
+        
+        @keyframes slideInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Navigation */
+        .nav-floating {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .nav-item {
+            background: rgba(0, 255, 128, 0.1);
+            border: 1px solid #00ff80;
+            border-radius: 50px;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            color: #00ff80;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav-item:hover {
+            background: rgba(255, 0, 255, 0.1);
+            border-color: #ff00ff;
+            color: #ff00ff;
+            transform: scale(1.1);
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body><!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFV33FS4"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    <div class="container">
-        <header>
-            <h1>Chip's Corner</h1>
-        </header>
-        <nav>
-            <div class="dropdown">
-                <button class="button">Menu</button>
-                <div class="dropdown-content">
-                    <a href="index.html">Home</a>
-                    <a href="updates.html">Updates</a>
-                    <a href="elden-ring-review.html">Elden Ring Review</a>
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                </div>
-            </div>
-        </nav>
-        <section class="profile-section">
-            <div class="profile-picture-container">
-                <img src="favicon.ico" alt="Chip - Gaming Content Creator and Streamer" class="profile-picture">
-            </div>
-        </section>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hi, I'm Chip, a niche gamer with a potato PC that somehow still runs. I'm a jack-of-all-trades in the gaming world, from spamming signature moves in Brawlhalla to slicing through enemies in Warframe. I've been known to clutch 1v5s in CS:2 and once built a Minecraft castle that took down a whole server...accidentally, of course!</p>
-            <p>Dive into my chaotic gaming universe!</p>
-            <div class="button-container">
-                <a href="#contact" class="button">Get in Touch</a>
-                <a href="gallery.html" class="button">View Gallery</a>
-                <a href="updates.html" class="button">Updates</a>
-            </div>
-        </section>
-        <aside id="stats">
-            <h2>Gaming Stats</h2>
-            <div class="stat-container">
-                <div class="stat-item">
-                    <i class="fas fa-gamepad"></i>
-                    <span class="counter">15</span>
-                    <p>Games Played</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-clock"></i>
-                    <span class="counter">75</span>
-                    <p>Hours Streamed</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-users"></i>
-                    <span class="counter">30</span>
-                    <p>Subscribers</p>
-                </div>
-            </div>
-        </aside>
-        <section id="contact">
-            <h2>Here is where you can find me</h2>
-            <div class="social-icons">
-                <a href="mailto:contact@sirchip.site" class="social-icon" aria-label="Send email to Chip"><i class="fas fa-envelope"></i></a>
-                <a href="https://youtube.com/@_sirchip?si=wmpT-45Pmy0nn1Za" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Visit Chip's YouTube channel"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.facebook.com/lilcybers?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Visit Chip's Facebook page"><i class="fab fa-facebook"></i></a>
-                <a href="https://twitter.com/_SirChip" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Visit Chip's Twitter profile"><i class="fab fa-twitter"></i></a>
-            </div>
-        </section>
-        <section id="partnerships">
-            <h2>Partnerships & Feedback</h2>
-            <p>For partnerships, feedback, or just to say hi, reach out to me at <a href="mailto:contact@sirchip.site">contact@sirchip.site</a>. I dont bite....i promise</p>
-        </section>
-        <section id="featured-games">
-            <h2>Featured Games</h2>
-            <div class="game-grid">
-                <article class="game-card">
-                    <img src="brawlhalla-picture.png" alt="Brawlhalla gameplay screenshot" class="game-image" loading="lazy">
-                    <div class="game-details">
-                        <h3 class="game-title">Brawlhalla</h3>
-                        <p class="game-description">A fast-paced platform fighter game where legends battle it out in intense combat.</p>
-                        <a href="https://www.brawlhalla.com/" class="game-link" target="_blank" rel="noopener noreferrer">Visit the Brawlhalla website</a>
-                    </div>
-                </article>
-                <article class="game-card">
-                    <img src="warframe-picture.jpg" alt="Warframe sci-fi action scene" class="game-image" loading="lazy">
-                    <div class="game-details">
-                        <h3 class="game-title">Warframe</h3>
-                        <p class="game-description">An online action game set in an evolving sci-fi world filled with ninjas, guns, and swords.</p>
-                        <a href="https://www.warframe.com/" class="game-link" target="_blank" rel="noopener noreferrer">Learn more about Warframe</a>
-                    </div>
-                </article>
-            </div>
-        </section>
-        <section id="latest-video">
-            <h2>Latest YouTube Video</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/31UYyOA5RaI?si=j7spB5kSWJCrwzjv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </section>
-        <section id="game-of-the-month">
-            <h2>Game of the Month</h2>
-            <div class="game-of-the-month">
-                <img src="game-of-the-month.jpg" alt="Elden Ring fantasy landscape" loading="lazy">
-                <h3>Elden Ring</h3>
-                <p>I took down a giant troll with a rusty sword and now call myself the "Troll Slayer of the Lands Between." Epic action RPG vibes!</p>
-                <a href="elden-ring-review.html" class="button">Read Review</a>
-            </div>
-        </section>
-        <section id="fan-art">
-            <h2>Fan Art Showcase</h2>
-            <p>If you have any fan art you wish to share, send it through my Discord and I will showcase the best ones here!</p>
-            <a href="https://discord.com/invite/aX4tw48ZvE" target="_blank" class="button">Join My Discord</a>
-        </section>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="floating-shapes" id="shapes"></div>
     </div>
-    <footer>
-        <p>© 2025 Chip's Corner - Powered by Chaos</p>
-        <p><a href="privacy-policy.html">Privacy Policy</a></p>
-    </footer>
-    <button class="scroll-top-btn" onclick="scrollToTop()">↑</button>
+    
+    <!-- Floating Navigation -->
+    <nav class="nav-floating">
+        <a href="#" class="nav-item">Home</a>
+        <a href="updates.html" class="nav-item">Updates</a>
+        <a href="elden-ring-review.html" class="nav-item">Reviews</a>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-left">
+            <h1 class="hero-title">CHIP'S CORNER</h1>
+            <p class="hero-subtitle">Welcome to my chaotic gaming universe</p>
+            <div class="typing-text" id="typing-text"></div>
+        </div>
+        
+        <div class="hero-right">
+            <div class="profile-container">
+                <div class="profile-ring"></div>
+                <img src="favicon.ico" alt="Chip - Gaming Creator" class="profile-pic">
+            </div>
+            
+            <div class="floating-stats">
+                <div class="stat-bubble">
+                    <div>🎮 <strong>15</strong> Games</div>
+                </div>
+                <div class="stat-bubble">
+                    <div>⏱️ <strong>75h</strong> Streamed</div>
+                </div>
+                <div class="stat-bubble">
+                    <div>👥 <strong>30</strong> Subs</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Interactive Content Grid -->
+    <div class="content-grid">
+        <!-- About Card -->
+        <div class="grid-card">
+            <div class="card-header">
+                <i class="fas fa-user card-icon"></i>
+                <h2 class="card-title">About the Potato Gamer</h2>
+            </div>
+            <p>Hi, I'm Chip, a niche gamer with a potato PC that somehow still runs. I'm a jack-of-all-trades in the gaming world, from spamming signature moves in Brawlhalla to slicing through enemies in Warframe.</p>
+            <p>I've been known to clutch 1v5s in CS:2 and once built a Minecraft castle that took down a whole server...accidentally, of course!</p>
+        </div>
+        
+        <!-- Potato PC Status -->
+        <div class="grid-card potato-status">
+            <div class="card-header">
+                <i class="fas fa-desktop card-icon"></i>
+                <h2 class="card-title" style="color: #000;">Potato PC Status</h2>
+            </div>
+            <div class="potato-meter">
+                <div class="potato-fill"></div>
+            </div>
+            <p style="color: #000;"><strong>Current Status:</strong> Somehow Still Running™</p>
+            <p style="color: #000;">⚠️ May explode during intensive gaming sessions</p>
+        </div>
+        
+        <!-- Gaming Terminal -->
+        <div class="grid-card">
+            <div class="card-header">
+                <i class="fas fa-terminal card-icon"></i>
+                <h2 class="card-title">Gaming Terminal</h2>
+            </div>
+            <div class="terminal">
+                <div class="terminal-header">
+                    <span>● ● ●</span>
+                    <span style="margin-left: auto;">chip@gaming-universe:~$</span>
+                </div>
+                <div class="terminal-content" id="terminal-content">
+                    <div class="terminal-line">Welcome to Chip's Gaming Terminal!</div>
+                    <div class="terminal-line">Type 'help' to see available commands</div>
+                </div>
+                <div class="terminal-input">
+                    <span class="terminal-prompt">$</span>
+                    <input type="text" class="terminal-cmd" id="terminal-input" placeholder="Enter command...">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Current Game -->
+        <div class="grid-card">
+            <div class="card-header">
+                <i class="fas fa-gamepad card-icon"></i>
+                <h2 class="card-title">Currently Playing</h2>
+            </div>
+            <div style="text-align: center;">
+                <img src="game-of-the-month.jpg" alt="Elden Ring" style="width: 100%; max-width: 200px; border-radius: 10px; margin-bottom: 1rem;">
+                <h3 style="color: #ff00ff;">Elden Ring</h3>
+                <p>Troll Slayer of the Lands Between</p>
+                <a href="elden-ring-review.html" class="nav-item" style="display: inline-block; margin-top: 1rem;">Read Review</a>
+            </div>
+        </div>
+        
+        <!-- Featured Games -->
+        <div class="grid-card">
+            <div class="card-header">
+                <i class="fas fa-star card-icon"></i>
+                <h2 class="card-title">Featured Games</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div style="text-align: center;">
+                    <img src="brawlhalla-picture.png" alt="Brawlhalla" style="width: 100%; border-radius: 5px; margin-bottom: 0.5rem;">
+                    <h4 style="color: #00ff80;">Brawlhalla</h4>
+                </div>
+                <div style="text-align: center;">
+                    <img src="warframe-picture.jpg" alt="Warframe" style="width: 100%; border-radius: 5px; margin-bottom: 0.5rem;">
+                    <h4 style="color: #00ff80;">Warframe</h4>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Social & Contact -->
+        <div class="grid-card">
+            <div class="card-header">
+                <i class="fas fa-rocket card-icon"></i>
+                <h2 class="card-title">Connect & Conquer</h2>
+            </div>
+            <p>Ready to join the chaos? Hit me up for partnerships, feedback, or just to say hi!</p>
+            <div style="display: flex; justify-content: space-around; margin-top: 1.5rem; font-size: 1.5rem;">
+                <a href="mailto:contact@sirchip.site" style="color: #00ff80; transition: all 0.3s ease;">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://youtube.com/@_sirchip?si=wmpT-45Pmy0nn1Za" target="_blank" style="color: #00ff80; transition: all 0.3s ease;">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://discord.com/invite/aX4tw48ZvE" target="_blank" style="color: #00ff80; transition: all 0.3s ease;">
+                    <i class="fab fa-discord"></i>
+                </a>
+                <a href="https://twitter.com/_SirChip" target="_blank" style="color: #00ff80; transition: all 0.3s ease;">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
     <script>
-        document.addEventListener('scroll', function() {
-            const scrollTopBtn = document.querySelector('.scroll-top-btn');
-            if (window.scrollY > 200) {
-                scrollTopBtn.style.display = 'block';
+        // Custom Cursor
+        const cursor = document.querySelector('.cursor');
+        let mouseX = 0, mouseY = 0;
+        
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+        
+        function animateCursor() {
+            cursor.style.left = mouseX + 'px';
+            cursor.style.top = mouseY + 'px';
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+        
+        // Floating Shapes Background
+        function createShape() {
+            const shape = document.createElement('div');
+            shape.className = 'shape';
+            const size = Math.random() * 50 + 10;
+            shape.style.width = size + 'px';
+            shape.style.height = size + 'px';
+            shape.style.left = Math.random() * 100 + '%';
+            shape.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            shape.style.animationDelay = Math.random() * 5 + 's';
+            
+            document.getElementById('shapes').appendChild(shape);
+            
+            setTimeout(() => {
+                shape.remove();
+            }, 25000);
+        }
+        
+        setInterval(createShape, 2000);
+        
+        // Typing Effect
+        const phrases = [
+            "Potato PC Warrior 🥔",
+            "Brawlhalla Spammer 🥊", 
+            "Warframe Ninja 🔫",
+            "CS:2 Clutch Master 💥",
+            "Minecraft Destroyer 🏰",
+            "Elden Ring Troll Slayer ⚔️"
+        ];
+        
+        let currentPhrase = 0;
+        let currentChar = 0;
+        let isDeleting = false;
+        
+        function typeWriter() {
+            const typingElement = document.getElementById('typing-text');
+            const current = phrases[currentPhrase];
+            
+            if (isDeleting) {
+                typingElement.textContent = current.substring(0, currentChar - 1);
+                currentChar--;
             } else {
-                scrollTopBtn.style.display = 'none';
+                typingElement.textContent = current.substring(0, currentChar + 1);
+                currentChar++;
+            }
+            
+            if (!isDeleting && currentChar === current.length) {
+                setTimeout(() => isDeleting = true, 2000);
+            } else if (isDeleting && currentChar === 0) {
+                isDeleting = false;
+                currentPhrase = (currentPhrase + 1) % phrases.length;
+            }
+            
+            setTimeout(typeWriter, isDeleting ? 50 : 100);
+        }
+        
+        typeWriter();
+        
+        // Terminal Commands
+        const terminalInput = document.getElementById('terminal-input');
+        const terminalContent = document.getElementById('terminal-content');
+        
+        const commands = {
+            help: "Available commands: help, about, games, stats, potato, clear, contact",
+            about: "I'm Chip, a gamer with a potato PC that defies all odds!",
+            games: "Currently playing: Elden Ring, Brawlhalla, Warframe, CS:2",
+            stats: "🎮 15 Games | ⏱️ 75h Streamed | 👥 30 Subscribers",
+            potato: "🥔 Potato PC Status: Somehow still running... barely!",
+            contact: "📧 contact@sirchip.site | 🐦 @_SirChip",
+            clear: "CLEAR"
+        };
+        
+        terminalInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                const command = terminalInput.value.toLowerCase().trim();
+                const output = commands[command] || `Command '${command}' not found. Type 'help' for available commands.`;
+                
+                // Add command to terminal
+                const cmdLine = document.createElement('div');
+                cmdLine.className = 'terminal-line';
+                cmdLine.innerHTML = `<span style="color: #00ff80;">$</span> ${terminalInput.value}`;
+                terminalContent.appendChild(cmdLine);
+                
+                if (command === 'clear') {
+                    terminalContent.innerHTML = '<div class="terminal-line">Terminal cleared!</div>';
+                } else {
+                    // Add output
+                    const outputLine = document.createElement('div');
+                    outputLine.className = 'terminal-line';
+                    outputLine.textContent = output;
+                    terminalContent.appendChild(outputLine);
+                }
+                
+                terminalInput.value = '';
+                terminalContent.scrollTop = terminalContent.scrollHeight;
             }
         });
         
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+        // Card Hover Effects
+        document.querySelectorAll('.grid-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'scale(2)';
+                cursor.style.backgroundColor = 'rgba(255, 0, 255, 0.3)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'scale(1)';
+                cursor.style.backgroundColor = 'transparent';
+            });
+        });
+        
+        // Social Link Hovers
+        document.querySelectorAll('a[style*="color: #00ff80"]').forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                link.style.color = '#ff00ff';
+                link.style.transform = 'scale(1.2)';
+            });
+            
+            link.addEventListener('mouseleave', () => {
+                link.style.color = '#00ff80';
+                link.style.transform = 'scale(1)';
+            });
+        });
     </script>
 </body>
 </html>
