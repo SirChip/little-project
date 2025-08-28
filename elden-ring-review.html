@@ -1,504 +1,658 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PFV33FS4');</script>
-<!-- End Google Tag Manager -->
-<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="746d66b4-ca1e-44bc-812f-c615fc4ebcf6" type="text/javascript" async></script>
+<head>
+    <link rel="canonical" href="https://sirchip.site/elden-ring-review.html" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PFV33FS4');</script>
+    <!-- End Google Tag Manager -->
+    
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="746d66b4-ca1e-44bc-812f-c615fc4ebcf6" type="text/javascript" async></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8486768995234253" crossorigin="anonymous"></script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Chip's review of Elden Ring: Explore the open-world masterpiece from FromSoftware with stunning visuals, brutal combat, and deep lore. Rating: 9.5/10.">
     <title>Elden Ring Review - Chip's Corner</title>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKFS3GHRP8"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-GKFS3GHRP8');
-    </script>
+    
     <style>
-        body {
-            font-family: 'Orbitron', Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Orbitron', Arial, sans-serif;
+            background: #0a0a0a;
             color: #e0e0e0;
             overflow-x: hidden;
+            cursor: none;
         }
         
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
+        /* Custom Cursor */
+        .cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #00ff80;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: all 0.1s ease;
         }
         
-        header {
-            text-align: center;
-            padding: 40px 0;
-            background: url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center;
-            background-size: cover;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 255, 128, 0.5);
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
         }
         
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-            color: #00ff80;
-            text-shadow: 0 0 10px #00ff80, 0 0 20px #00ff80;
-            animation: glow 1.5s infinite alternate;
-        }
-        
-        @keyframes glow {
-            from { text-shadow: 0 0 10px #00ff80, 0 0 20px #00ff80; }
-            to { text-shadow: 0 0 20px #00ff80, 0 0 30px #00ff80; }
-        }
-        
-        nav {
-            text-align: center;
-            margin: 20px 0;
-        }
-        
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .dropdown .button {
-            padding: 15px 30px;
-            background: linear-gradient(45deg, #00ff80, #ff00ff);
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 0 15px rgba(0, 255, 128, 0.5);
-        }
-        
-        .dropdown .button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
-        }
-        
-        .dropdown-content {
-            display: none;
+        .floating-shapes {
             position: absolute;
-            background: rgba(255, 255, 255, 0.1);
-            min-width: 160px;
-            box-shadow: 0 0 15px rgba(0, 255, 128, 0.3);
-            z-index: 1;
-            border-radius: 5px;
-            border: 1px solid #00ff80;
+            width: 100%;
+            height: 100%;
         }
         
-        .dropdown-content a {
-            color: #e0e0e0;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            transition: background 0.3s ease;
+        .shape {
+            position: absolute;
+            background: linear-gradient(45deg, #00ff8020, #ff00ff20);
+            border-radius: 50%;
+            animation: float 20s infinite linear;
         }
         
-        .dropdown-content a:hover {
-            background: rgba(0, 255, 128, 0.3);
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); }
+            100% { transform: translateY(-100px) rotate(360deg); }
         }
         
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        
-        .rating {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #ff00ff;
-            text-shadow: 0 0 10px #ff00ff;
-            text-align: center;
-            margin: 20px 0;
-        }
-        
-        .star-rating {
-            font-size: 24px;
-            color: #FFD700;
-        }
-        
-        .toc {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid #00ff80;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 0 15px rgba(0, 255, 128, 0.3);
-            transition: transform 0.3s ease;
-        }
-        
-        .toc:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 25px rgba(0, 255, 128, 0.6);
-        }
-        
-        .toc ul {
-            list-style-type: none;
-            padding-left: 20px;
-        }
-        
-        .toc a {
-            color: #00ff80;
-            text-decoration: none;
-            transition: color 0.3s ease, text-shadow 0.3s ease;
-        }
-        
-        .toc a:hover {
-            color: #ff00ff;
-            text-shadow: 0 0 10px #ff00ff;
-        }
-        
-        section {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 25px;
-            border-radius: 10px;
-            border: 1px solid #00ff80;
-            box-shadow: 0 0 15px rgba(0, 255, 128, 0.3);
-            margin: 30px 0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 25px rgba(0, 255, 128, 0.6);
-        }
-        
-        section::after {
-            content: '';
-            display: block;
-            height: 1px;
-            background: linear-gradient(to right, #00ff80, #ff00ff);
-            margin: 20px 0;
-        }
-        
-        h2 {
-            color: #00ff80;
-            margin-top: 0;
-            font-size: 2em;
-            text-shadow: 0 0 10px #00ff80;
-        }
-        
-        p {
-            font-size: 1.2em;
-            line-height: 1.5;
-        }
-        
-        .pros-cons {
+        /* Navigation */
+        .nav-floating {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1000;
             display: flex;
+            gap: 1rem;
+        }
+        
+        .nav-item {
+            background: rgba(0, 255, 128, 0.1);
+            border: 1px solid #00ff80;
+            border-radius: 50px;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            color: #00ff80;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav-item:hover {
+            background: rgba(255, 0, 255, 0.1);
+            border-color: #ff00ff;
+            color: #ff00ff;
+            transform: scale(1.1);
+        }
+        
+        .nav-item.active {
+            background: rgba(255, 0, 255, 0.2);
+            border-color: #ff00ff;
+            color: #ff00ff;
+        }
+        
+        /* Header Section */
+        .header {
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+        }
+        
+        .header-content {
+            z-index: 2;
+        }
+        
+        .header-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #00ff80, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: titlePulse 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes titlePulse {
+            0% { filter: drop-shadow(0 0 10px #00ff80); }
+            100% { filter: drop-shadow(0 0 30px #ff00ff); }
+        }
+        
+        .header-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+        
+        /* Review Container */
+        .review-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .review-grid {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 3rem;
+        }
+        
+        /* Main Review Content */
+        .review-main {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .review-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #00ff80;
+            border-radius: 15px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
+        
+        .review-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 128, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .review-card:hover::before {
+            left: 100%;
+        }
+        
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 255, 128, 0.3);
+            border-color: #ff00ff;
+        }
+        
+        .review-header {
+            display: flex;
+            align-items: center;
             justify-content: space-between;
+            margin-bottom: 1.5rem;
             flex-wrap: wrap;
         }
         
-        .pros, .cons {
-            flex-basis: 48%;
-            background: rgba(0, 255, 128, 0.1);
-            padding: 15px;
-            border-radius: 10px;
-            margin: 10px 0;
-            transition: transform 0.3s ease;
+        .review-title {
+            background: linear-gradient(45deg, #00ff80, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            font-size: 1.8rem;
         }
         
-        .pros:hover, .cons:hover {
-            transform: scale(1.05);
+        .review-rating {
+            background: rgba(255, 0, 255, 0.2);
+            color: #ff00ff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            border: 1px solid #ff00ff;
+        }
+        
+        .star-rating {
+            color: #FFD700;
+            margin-right: 0.5rem;
+        }
+        
+        .review-content {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #e0e0e0;
+        }
+        
+        .review-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Pros & Cons */
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .pros, .cons {
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+        
+        .pros {
+            background: rgba(0, 255, 128, 0.1);
+            border: 1px solid #00ff80;
+        }
+        
+        .cons {
+            background: rgba(255, 0, 0, 0.1);
+            border: 1px solid #ff3333;
         }
         
         .pros h3, .cons h3 {
-            color: #ff00ff;
-            text-shadow: 0 0 10px #ff00ff;
-            margin-top: 0;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
         }
         
-        ul {
-            padding-left: 20px;
+        .pros h3 {
+            color: #00ff80;
         }
         
-        .related-content {
+        .cons h3 {
+            color: #ff3333;
+        }
+        
+        .pros-icon, .cons-icon {
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .pros ul, .cons ul {
+            padding-left: 1.5rem;
+        }
+        
+        .pros li, .cons li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .sidebar-card {
             background: rgba(255, 255, 255, 0.05);
-            padding: 15px;
-            border-radius: 10px;
             border: 1px solid #00ff80;
-            box-shadow: 0 0 15px rgba(0, 255, 128, 0.3);
-            transition: transform 0.3s ease;
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
         }
         
-        .related-content:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 25px rgba(0, 255, 128, 0.6);
+        .sidebar-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 255, 128, 0.2);
         }
         
-        .related-content h3 {
-            color: #ff00ff;
-            text-shadow: 0 0 10px #ff00ff;
-        }
-        
-        .related-content ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        
-        .related-content a {
+        .sidebar-title {
             color: #00ff80;
-            transition: color 0.3s ease, text-shadow 0.3s ease;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
         }
         
-        .related-content a:hover {
+        .sidebar-icon {
+            margin-right: 0.5rem;
             color: #ff00ff;
-            text-shadow: 0 0 10px #ff00ff;
         }
         
-        .last-updated {
-            font-style: italic;
-            color: #b0b0b0;
-            text-align: center;
-            margin-top: 20px;
+        /* Game Info */
+        .game-info {
+            display: grid;
+            gap: 1rem;
         }
         
-        .explore-reviews-btn, .return-link {
-            display: block;
-            width: 250px;
-            margin: 20px auto;
-            padding: 12px 25px;
-            background: linear-gradient(45deg, #00ff80, #ff00ff);
-            color: #fff;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        .explore-reviews-btn:hover, .return-link:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
-        }
-        
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            font-size: 1em;
-            border-top: 1px solid #00ff80;
-            background: rgba(255, 255, 255, 0.05);
-        }
-        
-        footer p {
-            margin: 5px 0;
-        }
-        
-        footer a {
+        .info-label {
             color: #00ff80;
-            text-decoration: none;
-            transition: color 0.3s ease;
         }
         
-        footer a:hover {
+        .info-value {
             color: #ff00ff;
-            text-shadow: 0 0 10px #ff00ff;
+            text-align: right;
         }
         
-        .scroll-top-btn {
+        /* Back to Top */
+        .back-to-top {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 2rem;
+            right: 2rem;
             background: linear-gradient(45deg, #00ff80, #ff00ff);
-            color: #fff;
             border: none;
             border-radius: 50%;
-            padding: 10px;
-            font-size: 20px;
+            width: 50px;
+            height: 50px;
+            color: white;
+            font-size: 1.2rem;
             cursor: pointer;
-            box-shadow: 0 0 15px rgba(0, 255, 128, 0.5);
-            transition: transform 0.3s ease;
-            display: none;
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
         }
         
-        .scroll-top-btn:hover {
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
             transform: scale(1.1);
         }
         
-        @media (max-width: 768px) {
+        /* Responsive */
+        @media (max-width: 900px) {
+            .review-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-title {
+                font-size: 2.5rem;
+            }
+            
             .pros-cons {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-floating {
+                top: 1rem;
+                right: 1rem;
                 flex-direction: column;
             }
-            .pros, .cons {
-                flex-basis: 100%;
-            }
-        }
-        
-        @media (max-width: 600px) {
-            h1 { font-size: 2em; }
-            h2 { font-size: 1.5em; }
-            p { font-size: 1em; }
         }
     </style>
+    
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Review",
-      "itemReviewed": {
-        "@type": "VideoGame",
-        "name": "Elden Ring"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Chip"
-      },
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "9.5",
-        "bestRating": "10"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Chip's Corner"
-      }
-    }
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body><!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFV33FS4"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    <div class="container">
-        <header>
-            <h1>Elden Ring Review: A Brutal Open-World Odyssey</h1>
-        </header>
-        <nav>
-            <div class="dropdown">
-                <button class="button">Menu</button>
-                <div class="dropdown-content">
-                    <a href="index.html">Home</a>
-                    <a href="updates.html">Updates</a>
-                    <a href="elden-ring-review.html">Elden Ring Review</a>
-                    <a href="privacy-policy.html">Privacy Policy</a>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFV33FS4"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="floating-shapes" id="shapes"></div>
+    </div>
+    
+    <!-- Floating Navigation -->
+    <nav class="nav-floating">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="updates.html" class="nav-item">Updates</a>
+        <a href="elden-ring-review.html" class="nav-item active">Review</a>
+        <a href="privacy-policy.html" class="nav-item">Privacy</a>
+    </nav>
+    
+    <!-- Header -->
+    <section class="header">
+        <div class="header-content">
+            <h1 class="header-title">ELDEN RING REVIEW</h1>
+            <p class="header-subtitle">A brutal open-world odyssey that tests your limits</p>
+        </div>
+    </section>
+    
+    <!-- Review Container -->
+    <div class="review-container">
+        <div class="review-grid">
+            <!-- Main Review -->
+            <div class="review-main">
+                <div class="review-card">
+                    <div class="review-header">
+                        <h2 class="review-title">ELDEN RING</h2>
+                        <div class="review-rating">
+                            <span class="star-rating">★★★★★</span> 9.5/10
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>Yo, it's Chip—your resident chaos gamer with a potato PC that barely survived this beast of a game. <em>Elden Ring</em> hit me like a dragon's tail swipe, and I'm here to break it down after weeks of dying, exploring, and loving every brutal minute.</p>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <h2 class="review-title">Visuals and World-Building</h2>
+                    <div class="review-content">
+                        <p>The Lands Between is a visual feast—think jagged cliffs glowing under a blood-red sky, crumbling castles shrouded in mist, and golden plains stretching into the horizon. FromSoftware's gothic art direction shines here, blending beauty with despair in a way that's both haunting and captivating.</p>
+                        <p>Every area feels alive, packed with secrets like hidden caves or towering bosses that make you question your life choices. It's a world that demands you explore, and I couldn't stop staring—even when a giant bear was tearing me apart.</p>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <h2 class="review-title">Gameplay and Mechanics</h2>
+                    <div class="review-content">
+                        <p>The combat is pure FromSoftware—unforgiving, precise, and oh-so-addictive. It's got the weighty feel of <em>Dark Souls</em> mixed with <em>Sekiro</em>'s speed, and I loved every second of it. Dodging a dragon's fire breath or parrying a knight's combo feels like an adrenaline-fueled dance.</p>
+                        <p>The open world adds a twist: you're free to roam, tackle dungeons, or flee from bosses you're not ready for (looking at you, Tree Sentinel). Torrent, your spectral steed, makes traversal a breeze and turns some fights into horseback showdowns—though I did fall off a cliff once or twice.</p>
+                        <p>Exploration is king here. I stumbled into hidden crypts, fought optional minibosses, and found gear that changed my whole strategy. Magic and weapon skills are a blast too—I went from spamming fireballs to swinging a massive sword imbued with frost.</p>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <h2 class="review-title">Character Customization and Builds</h2>
+                    <div class="review-content">
+                        <p>Starting as a wretch with nothing but a club, I built my character into a spell-slinging warrior over time. The options are insane—stats, weapons, armor, talismans—all tweakable to fit your style.</p>
+                        <p>I experimented with a dexterity build, then respecced into a strength monster wielding a colossal hammer. The freedom's addictive, though finding the right gear took some grinding. It's perfect for replaying with a new approach each time.</p>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <h2 class="review-title">Story and Characters</h2>
+                    <div class="review-content">
+                        <p>The story's a cryptic puzzle, as expected from FromSoftware. Piecing together the Lands Between's history through item descriptions and vague NPC chats was intriguing, if a bit overwhelming.</p>
+                        <p>George R.R. Martin's influence is subtle but there—think shattered kingdoms and tragic figures like Radahn or Melina. I got hooked on unraveling it, though it's not spoon-fed. The characters stick with you—Fia's creepy hugs and Blaidd's wolfish loyalty left a mark.</p>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <h2 class="review-title">Sound and Music</h2>
+                    <div class="review-content">
+                        <p>The soundscape is unreal. Silence in a foggy swamp builds tension, then a boss's roar hits like a truck. The music, by Yuka Kitamura and crew, is epic—those swelling orchestral tracks during fights like Malenia's had my heart pounding.</p>
+                        <p>It's subtle outside combat, letting the world's ambiance shine, but when it kicks in, it's pure chills.</p>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <h2 class="review-title">Performance and Technical Aspects</h2>
+                    <div class="review-content">
+                        <p>On my potato PC, <em>Elden Ring</em> ran decently after some tweaks—stable 40-50 FPS with medium settings. Consoles seem smoother, but I hit a few stutters in busy areas like Limgrave.</p>
+                        <p>Patches have ironed out most launch bugs, though I still got a random crash once. It's not perfect, but the experience outweighs the hiccups.</p>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <h2 class="review-title">Final Thoughts</h2>
+                    <div class="review-content">
+                        <p><em>Elden Ring</em> is a masterpiece—brutal, breathtaking, and endlessly replayable. It's FromSoftware at their peak, blending open-world freedom with that signature soul-crushing challenge.</p>
+                        <p>I've died more times than I can count, but every moment—whether slaying a dragon or just soaking in the view—was worth it. If you can handle the punishment, this is a must-play. 9.5/10 from me, Chip—only docked half a point for those occasional frame drops.</p>
+                    </div>
+                    
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h3><i class="fas fa-plus-circle pros-icon"></i> Pros</h3>
+                            <ul>
+                                <li>Gorgeous, expansive world</li>
+                                <li>Brutal yet rewarding combat</li>
+                                <li>Deep lore worth digging into</li>
+                                <li>Insane build variety</li>
+                                <li>Haunting soundtrack</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cons">
+                            <h3><i class="fas fa-minus-circle cons-icon"></i> Cons</h3>
+                            <ul>
+                                <li>Steep learning curve</li>
+                                <li>Minor performance stutters</li>
+                                <li>Story can feel too vague</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-        <p class="rating">Rating: <span class="star-rating">★★★★★</span> 9.5/10</p>
-        <div class="toc">
-            <h2>Table of Contents</h2>
-            <ul>
-                <li><a href="#game-info">Game Info</a></li>
-                <li><a href="#visuals">Visuals and World-Building</a></li>
-                <li><a href="#gameplay">Gameplay and Mechanics</a></li>
-                <li><a href="#character">Character Customization and Builds</a></li>
-                <li><a href="#story">Story and Characters</a></li>
-                <li><a href="#sound">Sound and Music</a></li>
-                <li><a href="#performance">Performance and Technical Aspects</a></li>
-                <li><a href="#thoughts">Final Thoughts</a></li>
-            </ul>
+            
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Game Info -->
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title">
+                        <i class="fas fa-info-circle sidebar-icon"></i>
+                        Game Info
+                    </h3>
+                    <div class="game-info">
+                        <div class="info-item">
+                            <span class="info-label">Developer:</span>
+                            <span class="info-value">FromSoftware</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Publisher:</span>
+                            <span class="info-value">Bandai Namco</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Platforms:</span>
+                            <span class="info-value">PS4, PS5, Xbox, PC</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Release Date:</span>
+                            <span class="info-value">Feb 25, 2022</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Genre:</span>
+                            <span class="info-value">Action RPG</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">My Playtime:</span>
+                            <span class="info-value">85+ hours</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Game Cover -->
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title">
+                        <i class="fas fa-gamepad sidebar-icon"></i>
+                        The Masterpiece
+                    </h3>
+                    <div style="text-align: center;">
+                        <img src="elden-ring-cover.jpg" alt="Elden Ring" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+                        <h4 style="color: #ff00ff; margin-bottom: 0.5rem;">Elden Ring</h4>
+                        <p style="font-size: 0.9rem; opacity: 0.8;">Tarnished of the Lands Between</p>
+                    </div>
+                </div>
+                
+                <!-- Back to Home -->
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title">
+                        <i class="fas fa-arrow-left sidebar-icon"></i>
+                        More Content
+                    </h3>
+                    <p style="margin-bottom: 1rem; font-size: 0.9rem;">Check out my other gaming adventures and updates!</p>
+                    <a href="index.html" class="nav-item" style="display: block; text-align: center; margin-top: 1rem;">Back to Home</a>
+                </div>
+            </div>
         </div>
-        <section>
-            <p>Yo, it’s Chip—your resident chaos gamer with a potato PC that barely survived this beast of a game. *Elden Ring* hit me like a dragon’s tail swipe, and I’m here to break it down after weeks of dying, exploring, and loving every brutal minute.</p>
-        </section>
-        <section id="game-info">
-            <strong>Developer:</strong> FromSoftware<br>
-            <strong>Publisher:</strong> Bandai Namco Entertainment<br>
-            <strong>Platforms:</strong> PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, PC<br>
-            <strong>Release Date:</strong> February 25, 2022
-        </section>
-        <section id="visuals">
-            <h2>Visuals and World-Building</h2>
-            <p>The Lands Between is a visual feast—think jagged cliffs glowing under a blood-red sky, crumbling castles shrouded in mist, and golden plains stretching into the horizon. FromSoftware’s gothic art direction shines here, blending beauty with despair in a way that’s both haunting and captivating. Every area feels alive, packed with secrets like hidden caves or towering bosses that make you question your life choices. It’s a world that demands you explore, and I couldn’t stop staring—even when a giant bear was tearing me apart.</p>
-        </section>
-        <section id="gameplay">
-            <h2>Gameplay and Mechanics</h2>
-            <p>The combat is pure FromSoftware—unforgiving, precise, and oh-so-addictive. It’s got the weighty feel of *Dark Souls* mixed with *Sekiro*’s speed, and I loved every second of it. Dodging a dragon’s fire breath or parrying a knight’s combo feels like a adrenaline-fueled dance. The open world adds a twist: you’re free to roam, tackle dungeons, or flee from bosses you’re not ready for (looking at you, Tree Sentinel). Torrent, your spectral steed, makes traversal a breeze and turns some fights into horseback showdowns—though I did fall off a cliff once or twice.</p>
-            <p>Exploration is king here. I stumbled into hidden crypts, fought optional minibosses, and found gear that changed my whole strategy. Magic and weapon skills are a blast too—I went from spamming fireballs to swinging a massive sword imbued with frost. The multiplayer’s a nice touch—summoning a friend saved my bacon against Margit, though invaders kept me on edge. It’s punishing, but every victory feels earned.</p>
-        </section>
-        <section id="character">
-            <h2>Character Customization and Builds</h2>
-            <p>Starting as a wretch with nothing but a club, I built my character into a spell-slinging warrior over time. The options are insane—stats, weapons, armor, talismans—all tweakable to fit your style. I experimented with a dexterity build, then respecced into a strength monster wielding a colossal hammer. The freedom’s addictive, though finding the right gear took some grinding. It’s perfect for replaying with a new approach each time.</p>
-        </section>
-        <section id="story">
-            <h2>Story and Characters</h2>
-            <p>The story’s a cryptic puzzle, as expected from FromSoftware. Piecing together the Lands Between’s history through item descriptions and vague NPC chats was intriguing, if a bit overwhelming. George R.R. Martin’s influence is subtle but there—think shattered kingdoms and tragic figures like Radahn or Melina. I got hooked on unraveling it, though it’s not spoon-fed. The characters stick with you—Fia’s creepy hugs and Blaidd’s wolfish loyalty left a mark.</p>
-        </section>
-        <section id="sound">
-            <h2>Sound and Music</h2>
-            <p>The soundscape is unreal. Silence in a foggy swamp builds tension, then a boss’s roar hits like a truck. The music, by Yuka Kitamura and crew, is epic—those swelling orchestral tracks during fights like Malenia’s had my heart pounding. It’s subtle outside combat, letting the world’s ambiance shine, but when it kicks in, it’s pure chills.</p>
-        </section>
-        <section id="performance">
-            <h2>Performance and Technical Aspects</h2>
-            <p>On my potato PC, *Elden Ring* ran decently after some tweaks—stable 40-50 FPS with medium settings. Consoles seem smoother, but I hit a few stutters in busy areas like Limgrave. Patches have ironed out most launch bugs, though I still got a random crash once. It’s not perfect, but the experience outweighs the hiccups.</p>
-        </section>
-        <section id="thoughts">
-            <h2>Final Thoughts</h2>
-            <p>*Elden Ring* is a masterpiece—brutal, breathtaking, and endlessly replayable. It’s FromSoftware at their peak, blending open-world freedom with that signature soul-crushing challenge. I’ve died more times than I can count, but every moment—whether slaying a dragon or just soaking in the view—was worth it. If you can handle the punishment, this is a must-play. 9.5/10 from me, Chip—only docked half a point for those occasional frame drops.</p>
-        </section>
-        <section class="pros-cons">
-            <div class="pros">
-                <h3>Pros:</h3>
-                <ul>
-                    <li>Gorgeous, expansive world</li>
-                    <li>Brutal yet rewarding combat</li>
-                    <li>Deep lore worth digging into</li>
-                    <li>Insane build variety</li>
-                    <li>Haunting soundtrack</li>
-                </ul>
-            </div>
-            <div class="cons">
-                <h3>Cons:</h3>
-                <ul>
-                    <li>Steep learning curve</li>
-                    <li>Minor performance stutters</li>
-                    <li>Story can feel too vague</li>
-                </ul>
-            </div>
-        </section>
-        <section class="related-content">
-            <h3>Related Content</h3>
-            <ul>
-                <li><a href="dark-souls-3-review.html">Dark Souls 3 Review</a></li>
-                <li><a href="shadows-die-twice-review.html">Sekiro: Shadows Die Twice Review</a></li>
-                <li><a href="top-5-open-world-games-of-2024.html">Top 5 Open World Games of 2024</a></li>
-            </ul>
-        </section>
-        <p class="last-updated">Last Updated: February 20, 2025</p>
-        <a href="game-reviews.html" class="explore-reviews-btn">Explore More Game Reviews</a>
-        <a href="index.html" class="return-link">Return to Main Page</a>
     </div>
-    <footer>
-        <p>© 2025 Chip's Corner - Powered by Chaos</p>
-        <p><a href="privacy-policy.html">Privacy Policy</a></p>
-    </footer>
-    <button class="scroll-top-btn" onclick="scrollToTop()">↑</button>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
     <script>
-        document.addEventListener('scroll', function() {
-            const scrollTopBtn = document.querySelector('.scroll-top-btn');
-            const sections = document.querySelectorAll('section[id]');
-            const tocLinks = document.querySelectorAll('.toc a');
-            if (window.scrollY > 200) {
-                scrollTopBtn.style.display = 'block';
+        // Custom Cursor
+        const cursor = document.querySelector('.cursor');
+        let mouseX = 0, mouseY = 0;
+        
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+        
+        function animateCursor() {
+            cursor.style.left = mouseX + 'px';
+            cursor.style.top = mouseY + 'px';
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+        
+        // Floating Shapes Background
+        function createShape() {
+            const shape = document.createElement('div');
+            shape.className = 'shape';
+            const size = Math.random() * 50 + 10;
+            shape.style.width = size + 'px';
+            shape.style.height = size + 'px';
+            shape.style.left = Math.random() * 100 + '%';
+            shape.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            shape.style.animationDelay = Math.random() * 5 + 's';
+            
+            document.getElementById('shapes').appendChild(shape);
+            
+            setTimeout(() => {
+                shape.remove();
+            }, 25000);
+        }
+        
+        setInterval(createShape, 2000);
+        
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
             } else {
-                scrollTopBtn.style.display = 'none';
+                backToTop.classList.remove('visible');
             }
-            let currentSection = '';
-            sections.forEach(section => {
-                if (window.scrollY >= section.offsetTop - 100) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
-            tocLinks.forEach(link => {
-                link.style.textShadow = '';
-                if (link.getAttribute('href') === `#${currentSection}`) {
-                    link.style.textShadow = '0 0 10px #ff00ff';
-                }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
         });
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+        
+        // Card Hover Effects
+        document.querySelectorAll('.review-card, .sidebar-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'scale(1.5)';
+                cursor.style.backgroundColor = 'rgba(255, 0, 255, 0.3)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'scale(1)';
+                cursor.style.backgroundColor = 'transparent';
+            });
+        });
     </script>
 </body>
-</html>
+    </html>
