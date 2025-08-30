@@ -4,74 +4,30 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://sirchip.site/</loc>
-  <lastmod>2025-05-27T12:44:42+00:00</lastmod>
+  <lastmod>2025-08-30T14:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://sirchip.site/index.html</loc>
-  <lastmod>2025-05-27T12:44:42+00:00</lastmod>
+  <lastmod>2025-08-30T14:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sirchip.site/updates.html</loc>
-  <lastmod>2025-05-27T12:44:42+00:00</lastmod>
+  <lastmod>2025-08-30T14:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sirchip.site/elden-ring-review.html</loc>
-  <lastmod>2025-05-27T12:44:42+00:00</lastmod>
+  <lastmod>2025-08-30T14:00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://sirchip.site/privacy-policy.html</loc>
-  <lastmod>2025-05-27T12:44:42+00:00</lastmod>
+  <lastmod>2025-08-30T14:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-<url>
-  <loc>https://sirchip.site/gallery.html</loc>
-  <lastmod>2025-05-27T12:44:42+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://sirchip.site/dark-souls-3-review.html</loc>
-  <lastmod>2025-05-27T12:44:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://sirchip.site/shadows-die-twice-review.html</loc>
-  <lastmod>2025-05-27T12:44:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://sirchip.site/top-5-open-world-games-of-2024.html</loc>
-  <lastmod>2025-05-27T12:44:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://sirchip.site/game-reviews.html</loc>
-  <lastmod>2025-05-27T12:44:42+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://sirchip.site/Top-10-RPGs-of-2024.html</loc>
-  <lastmod>2025-05-27T12:44:42+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://sirchip.site/Top-5-Action-Games-of-2024.html</loc>
-  <lastmod>2025-05-27T12:44:42+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://sirchip.site/starfield-review.html</loc>
-  <lastmod>2025-05-27T12:44:42+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-
-
 </urlset>
